@@ -13,7 +13,7 @@ class HeaderTitle extends Component {
         };
 
         return (
-            <div className='headerTitle'>
+            <div className='headerTitle' id='start'>
                 <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
                 <img src={decoration} alt='decoration'/>
                 <div className='headerButtons'>
