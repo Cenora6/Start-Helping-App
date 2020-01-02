@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-class Home extends Component {
+class Register extends Component {
 
     render() {
         return (
-            <div>Home</div>
+            <div>Register</div>
         )
     }
 }
 
-export default Home;
+export default Register;
