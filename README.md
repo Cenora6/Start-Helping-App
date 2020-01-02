@@ -2,7 +2,7 @@
 ## Start Helping Application
 
 ### Description
-This is a basic app, which you can use  to donate your old clothes to others.
+This is a basic app, which you can use to donate your old books, games, etc. to others.
 
 ### Technologies:
 - HTML5

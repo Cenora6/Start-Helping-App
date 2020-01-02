@@ -1,0 +1,47 @@
+.threeColumns {
+  height: 24rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: transparent url('../../assets/3 Columns Background.png');
+
+  .oneColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21.875rem;
+    padding-bottom: 1.8rem;
+
+    h2 {
+      color: #5E5322;
+      font-family: $font-base;
+      font-weight: 300;
+      font-size: 5.625rem;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      color: #3C3C3C;
+      letter-spacing: -0.36px;
+      font-weight: 400;
+      font-family: $font-base;
+      font-size: 1.125rem;
+      margin-bottom: 1.75rem;
+    }
+
+    p {
+      letter-spacing: -0.32px;
+      color: #3C3C3C;
+      font-family: $font-alt;
+      font-size: 1rem;
+      font-weight: 100;
+      text-align: center;
+      line-height: 2rem;
+    }
+
+
+  }
+
+
+}

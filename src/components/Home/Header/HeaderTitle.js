@@ -8,7 +8,6 @@ class HeaderTitle extends Component {
 
         const buttonStyle = {
             textDecoration: "none",
-            paddingLeft: "1rem",
             paddingTop: "2.3125rem",
             color: "#3C3C3C",
         };
@@ -18,8 +17,8 @@ class HeaderTitle extends Component {
                 <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
                 <img src={decoration} alt='decoration'/>
                 <div className='headerButtons'>
-                    <p><Link to='/logowanie' style={buttonStyle}> Oddaj<br/>rzeczy</Link></p>
-                    <p><Link to='/logowanie' style={buttonStyle}> Zorganizuj zbiórkę</Link></p>
+                    <Link to='/logowanie' style={buttonStyle}> <p>Oddaj<br/>rzeczy</p></Link>
+                    <Link to='/logowanie' style={buttonStyle}><p> Zorganizuj zbiórkę</p></Link>
                 </div>
             </div>
         )
