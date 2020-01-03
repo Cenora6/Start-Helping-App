@@ -14,7 +14,7 @@ class Donate extends Component {
         return (
             <section className='donateSection'>
                 <Link to='/logowanie' style={buttonStyle}>
-                    <p class='donateButton'>
+                    <p className='donateButton'>
                         Oddaj<br/> rzeczy
                     </p>
                 </Link>
