@@ -171,7 +171,7 @@ class ContactUs extends Component {
                             {this.state.validMessage && <span style={errorMsg}>Wiadomość musi mieć co najmniej 120 znaków!</span>}
                         </div>
                         <div className='sendFormButton'>
-                            <button>Wyślij</button>
+                            <button className='hoverLink'>Wyślij</button>
                         </div>
                     </form>
 

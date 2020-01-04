@@ -13,7 +13,7 @@ class Donate extends Component {
 
         return (
             <section className='donateSection'>
-                <Link to='/logowanie' style={buttonStyle}>
+                <Link to='/logowanie' style={buttonStyle} className='hoverLink'>
                     <p className='donateButton'>
                         Oddaj<br/> rzeczy
                     </p>

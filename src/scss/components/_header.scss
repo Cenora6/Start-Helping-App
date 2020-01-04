@@ -29,7 +29,6 @@ header {
   .register {
     border: 0.75px solid #FAD648;
   }
-
 }
 
 .navigationLinks {
@@ -45,6 +44,7 @@ header {
     &:hover {
       border: 0.75px solid #3C3C3C;
       cursor: pointer;
+      padding: 0.5rem 1.2rem;
     }
   }
 }
@@ -85,4 +85,8 @@ header {
       text-align: center;
     }
   }
+}
+
+.hoverLink:hover {
+  opacity: 0.5;
 }
