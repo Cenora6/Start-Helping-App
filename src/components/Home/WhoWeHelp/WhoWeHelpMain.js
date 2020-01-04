@@ -44,8 +44,6 @@ class WhoWeHelpMain extends Component {
         return buttons;
     };
 
-    //style={{border: `${this.state.border[i]}`}}
-
     buildList = () => {
 
         const {currentPage, itemsPerPage, visibleOrganizationType} = this.state;
