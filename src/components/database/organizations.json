@@ -21,34 +21,34 @@
           "donations": "ubrania, jedzenie, ciepłe koce"
         },
         {
-          "name": "Fundacja “Lorem ipsum 1“",
-          "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "donations": "Ut, enim, ad, minim, veniam, quis"
-        },
-        {
-          "name": "Fundacja “Lorem ipsum 2“",
-          "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "donations": "Ut, enim, ad, minim, veniam, quis"
-        },
-        {
-          "name": "Fundacja “Lorem ipsum 3“",
-          "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "donations": "Ut, enim, ad, minim, veniam, quis"
-        },
-        {
           "name": "Fundacja “Lorem ipsum 4“",
           "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "donations": "Ut, enim, ad, minim, veniam, quis"
         },
         {
-          "name": "Fundacja “Lorem ipsum 5“",
+          "name": "Fundacja “Lorem Ipsum 5”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Mi, quis, hendrerit, dolor"
+        },
+        {
+          "name": "Fundacja “Lorem Ipsum 6”",
+          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "donations": "Ut, aliquam, purus, sit, amet"
+        },
+        {
+          "name": "Fundacja “Lorem Ipsum 7”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Egestas, sed, tempus "
+        },
+        {
+          "name": "Fundacja “Lorem ipsum 8“",
           "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           "donations": "Ut, enim, ad, minim, veniam, quis"
         },
         {
-          "name": "Fundacja “Lorem ipsum 6“",
-          "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "donations": "Ut, enim, ad, minim, veniam, quis"
+          "name": "Fundacja “Lorem Ipsum 9”",
+          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "donations": "Egestas, sed, tempus "
         }
       ]
     },
@@ -74,18 +74,18 @@
         },
         {
           "name": "Organizacja “Lorem Ipsum 4”",
-          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
           "donations": "Ut, aliquam, purus, sit, amet"
         },
         {
           "name": "Organizacja “Lorem Ipsum 5”",
-          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
           "donations": "Egestas, sed, tempus "
         },
         {
           "name": "Organizacja “Lorem Ipsum 6“",
-          "mission": "Scelerisque in dictum non consectetur a erat nam.",
-          "donations": "Mi, quis, hendrerit, dolor"
+          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "donations": "quisque, id, diam, vel, quam"
         }
       ]
     },
