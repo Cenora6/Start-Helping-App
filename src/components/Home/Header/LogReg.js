@@ -14,8 +14,8 @@ class LogReg extends Component {
 
         return (
             <div className='logReg'>
-                <Link to='/logowanie' style={linkStyle}><span>Zaloguj</span></Link>
-                <Link to='/rejestracja' style={linkStyle}><span className='register'>Załóż konto</span></Link>
+                <Link to='/logowanie' style={linkStyle}><span className='hoverLink'>Zaloguj</span></Link>
+                <Link to='/rejestracja' style={linkStyle}><span className='register hoverLink'>Załóż konto</span></Link>
             </div>
         )
     }
