@@ -24,12 +24,12 @@ header {
 
   span {
     padding: 0.5625rem 0.625rem;
-
-    &:hover {
-      border: 0.75px solid #FAD648;
-    }
-
   }
+
+  .register {
+    border: 0.75px solid #FAD648;
+  }
+
 }
 
 .navigationLinks {
