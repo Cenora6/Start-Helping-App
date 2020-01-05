@@ -96,9 +96,7 @@ class WhoWeHelpMain extends Component {
                     <ul className='organizationType'>
 
                         {allOrganizations.map((organization, index) => {
-                            console.log("index", index);
-                            console.log("organizacja:", this.state.visibleOrganizationType);
-                            return <li id={index}
+                            return <li key={index}
                                        onClick={(e) => this.changeOrganization(e, index)}
                                        className={this.state.visibleOrganizationType === index ? "active" : ""}>{organization.name}</li>
 
