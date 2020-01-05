@@ -76,7 +76,7 @@ class Login extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "54%",
+            top: "32rem",
             width: "15.1rem"
         };
 
@@ -86,7 +86,7 @@ class Login extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "64.2%",
+            top: "38.05rem",
             width: "15.1rem"
         };
 

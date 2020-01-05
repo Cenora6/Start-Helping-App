@@ -115,22 +115,30 @@ class ContactUs extends Component {
             textAlign: "center",
             width: "50%",
             lineHeight: "1.5rem",
+
         };
 
         const errorStyle = {
             fontSize: "0.8rem",
             margin: 0,
             borderTop: "1px solid red",
-            paddingTop: "1rem",
+            paddingTop: "0.5rem",
             color: "red",
+            position: "absolute",
+            top: "15.4rem",
+            width: "15rem",
         };
 
         const errorMsg = {
             fontSize: "0.8rem",
             marginTop: "-3rem",
             borderTop: "1px solid red",
-            paddingTop: "1rem",
+            paddingTop: "0.5rem",
             color: "red",
+            position: "absolute",
+            top: "28.85rem",
+            width: "33.4rem",
+
         };
 
         return (

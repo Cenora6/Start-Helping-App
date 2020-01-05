@@ -92,7 +92,7 @@ class Register extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "48.9%",
+            top: "29rem",
             width: "15.1rem"
         };
 
@@ -102,7 +102,7 @@ class Register extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "59.1%",
+            top: "35.05rem",
             width: "15.1rem"
         };
 
@@ -112,7 +112,7 @@ class Register extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "69.3%",
+            top: "41.1rem",
             width: "15.1rem"
         };
 
