@@ -43,7 +43,7 @@
 
     h2 {
       letter-spacing: -0.76px;
-      color: #3C3C3C;
+      color: $buttonBorder;
       text-align: center;
       font-size: 2.375rem;
       font-family: $font-base;
@@ -56,7 +56,7 @@
       align-items: center;
 
       span {
-        color: #3C3C3C;
+        color: $buttonBorder;
         font-family: $font-base;
         font-size: 1rem;
         margin: 1rem 0;
@@ -76,7 +76,7 @@
           border-top: none;
           border-left: none;
           border-right: none;
-          border-bottom: 1px solid #000;
+          border-bottom: 1px solid $formBorderBottomColor;
           line-height: 1.5rem;
           opacity: 0.5;
         }
@@ -127,7 +127,7 @@
   align-items: flex-end;
 
   button {
-    border: 0.75px solid #3C3C3C;
+    border: 0.75px solid $buttonBorder;
     padding: 0.8rem 3rem;
     font-size: 1.125rem;
     font-family: $font-base;

@@ -30,13 +30,12 @@ class Login extends Component {
 
         this.setState({
             formSend: false,
-            validName: false,
+            validPassword: false,
             validEmail: false,
         });
 
         e.preventDefault();
         const {password, email} = this.state;
-        console.log(password.length);
 
         const emailValidation = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -77,7 +76,7 @@ class Login extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "52.2%",
+            top: "54%",
             width: "15.1rem"
         };
 
@@ -87,7 +86,7 @@ class Login extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "62.1%",
+            top: "64.2%",
             width: "15.1rem"
         };
 
