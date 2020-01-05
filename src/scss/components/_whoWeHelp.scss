@@ -34,19 +34,9 @@
         font-family: $font-base;
         line-height: 1.5rem;
         cursor: pointer;
-        border: none;
         padding: 2rem 0;
         &:hover {
-          outline-color: $buttonHoverColor;
-          border: 2px solid $buttonHoverColor;
-          margin: -0.2rem 2.88rem;
-        }
-        &:focus {
-          outline-color: $buttonHoverColor;
-          border: 2px solid $buttonHoverColor;
-        }
-        &:target {
-          color: red;
+          opacity: 0.5;
         }
       }
     }
@@ -122,9 +112,11 @@
   background: transparent;
   border: none;
 
-  &:hover,
-  &:active {
-    border: 2px solid $formBorderBottomColor;
-    margin: 0.8rem 2.2rem;
+  &:hover {
+    opacity: 0.5;
   }
+}
+
+.active {
+  border: 1px solid $buttonBorder;
 }

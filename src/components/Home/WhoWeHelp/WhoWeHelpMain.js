@@ -8,11 +8,13 @@ class WhoWeHelpMain extends Component {
         allButtons: 3,
         itemsPerPage: 3,
         currentPage: 1,
+        active: "",
     };
 
-    changeOrganization = (id) => {
+    changeOrganization = (e, i) => {
+
         let buttonNumber;
-        const organizationsNumber = parseInt(organizations.organizations[id].items.length, 10);
+        const organizationsNumber = parseInt(organizations.organizations[i].items.length, 10);
 
         if (organizationsNumber !== 3 && organizationsNumber % 3 === 0) {
             buttonNumber = organizationsNumber / 3;
@@ -21,9 +23,10 @@ class WhoWeHelpMain extends Component {
         }
 
         this.setState({
-            visibleOrganizationType: id,
+            visibleOrganizationType: i,
             allButtons: buttonNumber,
-            currentPage: 1
+            currentPage: 1,
+            active: i,
         });
     };
 
@@ -31,6 +34,7 @@ class WhoWeHelpMain extends Component {
 
         this.setState({
             currentPage: i,
+            active: i,
         });
     };
 
@@ -38,7 +42,9 @@ class WhoWeHelpMain extends Component {
         let buttons = [];
         for (let i = 1; i <= this.state.allButtons; i++) {
             buttons.push(
-                <button key={i} onClick={ (e) => this.changeSite(e, i)} className={`buttonDisplay`}>{i}</button>
+                <button key={i}
+                        onClick={ (e) => this.changeSite(e, i)}
+                        className={`buttonDisplay ${this.state.currentPage === i ? "active" : ""}`}>{i}</button>
             );
         }
         return buttons;
@@ -80,15 +86,24 @@ class WhoWeHelpMain extends Component {
         let foundationList;
         foundationList = this.buildList();
 
+        const allOrganizations = organizations.organizations;
+
         return (
             <section className='whoWeHelp' id='whoWeHelp'>
                 <div className='whoWeHelpDesc'>
                     <h2>Komu pomagamy?</h2>
                     <img src={decoration} alt='decoration'/>
                     <ul className='organizationType'>
-                        <li id='1' onClick={() => this.changeOrganization(0)}>{organizations.organizations[0].name}</li>
-                        <li id='2' onClick={() => this.changeOrganization(1)}>{organizations.organizations[1].name}</li>
-                        <li id='3' onClick={() => this.changeOrganization(2)}>{organizations.organizations[2].name}</li>
+
+                        {allOrganizations.map((organization, index) => {
+                            console.log("index", index);
+                            console.log("organizacja:", this.state.visibleOrganizationType);
+                            return <li id={index}
+                                       onClick={(e) => this.changeOrganization(e, index)}
+                                       className={this.state.visibleOrganizationType === index ? "active" : ""}>{organization.name}</li>
+
+                        })}
+
                     </ul>
                     <p className='organizationDescription'>
                         {organizations.organizations[this.state.visibleOrganizationType].description}
