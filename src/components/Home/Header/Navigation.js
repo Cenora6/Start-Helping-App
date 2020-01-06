@@ -5,9 +5,6 @@ class Navigation extends Component {
 
     render() {
 
-
-        //<Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
-
         return (
             <div className='navigationLinks'>
                 <Link activeClass="active" to="start" spy={true} smooth={true} offset={50} duration={500}>

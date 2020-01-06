@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: $font-base;
 
   .registerEmailName {
     display: flex;
@@ -14,7 +15,6 @@
 
     span {
       color: $buttonBorder;
-      font-family: $font-base;
       margin-bottom: 1rem;
     }
 

@@ -3,15 +3,16 @@ import Navigation from "../Home/Header/Navigation";
 import LogReg from "../Home/Header/LogReg";
 import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
+import {FirebaseContext, withFirebase} from '../firebase/context';
+import {withRouter} from "react-router-dom"
 
-
-class Login extends Component {
+class LoginForm extends Component {
     state = {
         email: "",
         password: "",
-        formSend: false,
         validEmail: false,
         validPassword: false,
+        loginError: false,
     };
 
     handleEmailChange = (e) => {
@@ -29,9 +30,9 @@ class Login extends Component {
     handleFormSubmit = (e) => {
 
         this.setState({
-            formSend: false,
             validPassword: false,
             validEmail: false,
+            loginError: false,
         });
 
         e.preventDefault();
@@ -42,11 +43,31 @@ class Login extends Component {
         if (emailValidation.test(email) &&
             password.length >= 6) {
 
-            this.setState({
-                formSend: true,
-                password: "",
-                email: "",
-            });
+            this.props.firebase
+                .doSignInWithEmailAndPassword(email, password)
+                .then(authUser => {
+                    this.setState({
+                        email: "",
+                        password: ""
+                    });
+                    console.log("sukces!");
+
+                    console.log(authUser.user.email);
+
+                    sessionStorage.setItem("email", `${this.state.email}`);
+                    const { history } = this.props;
+                    history.push("/");
+                })
+                .catch((error) => {
+
+                    if (error.code === 'auth/user-not-found') {
+                        this.setState({
+                            loginError: true,
+                            email: "",
+                            password: "",
+                        })
+                    }
+                });
 
         } else {
             if (password.length < 6) {
@@ -76,7 +97,7 @@ class Login extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "32rem",
+            top: "31.7rem",
             width: "15.1rem"
         };
 
@@ -86,38 +107,61 @@ class Login extends Component {
             paddingTop: "0.5rem",
             color: "red",
             position: "absolute",
-            top: "38.05rem",
+            top: "37.75rem",
             width: "15.1rem"
         };
 
+        const errorLogin = {
+            fontSize: "1rem",
+            paddingTop: "0.5rem",
+            color: "red",
+            position: "absolute",
+            top: "25.5rem",
+        };
+
+        return (
+            <>
+                <form className='loginFormProper'>
+                    {this.state.loginError && <span style={errorLogin}>Podany email nie istnieje w bazie!</span>}
+                    <div className='loginEmailName'>
+                        <span>Email</span>
+                        <input type='text' value={this.state.email} onChange={this.handleEmailChange}/>
+                        {this.state.validEmail && <span style={errorEmail}>Podany email jest nieprawidłowy!</span>}
+                    </div>
+                    <div className='loginEmailName'>
+                        <span>Hasło</span>
+                        <input type='password' value={this.state.password} onChange={this.handlePasswordChange}/>
+                        {this.state.validPassword && <span style={errorPassword}>Podane hasło jest za krótkie!</span>}
+                    </div>
+                </form>
+
+                <div className='loginButtons'>
+                    <Link to='/rejestracja' style={linkStyle}><span>Załóż konto</span></Link>
+                    <span className='logIn' onClick={this.handleFormSubmit}>Zaloguj się</span>
+                </div>
+            </>
+        )
+    }
+}
+
+const LoginIn = withRouter(withFirebase(LoginForm));
+
+class Login extends Component {
+    render() {
         return (
             <>
                 <section className='loginNavigation'>
                     <LogReg/>
                     <Navigation/>
                 </section>
+
                 <section className='loginForm'>
                     <h3>Zaloguj się</h3>
                     <img src={decoration} alt='decoration'/>
 
-                    <div className='loginFormProper'>
-                        <div className='loginEmailName'>
-                            <span>Email</span>
-                            <input type='text' value={this.state.email} onChange={this.handleEmailChange}/>
-                            {this.state.validEmail && <span style={errorEmail}>Podany email jest nieprawidłowy!</span>}
-                        </div>
-                        <div className='loginEmailName'>
-                            <span>Hasło</span>
-                            <input type='password' value={this.state.password} onChange={this.handlePasswordChange}/>
-                            {this.state.validPassword && <span style={errorPassword}>Podane hasło jest za krótkie!</span>}
-                        </div>
-                    </div>
-
-                    <div className='loginButtons'>
-                        <Link to='/rejestracja' style={linkStyle}><span>Załóż konto</span></Link>
-                        <span className='logIn' onClick={this.handleFormSubmit}>Zaloguj się</span>
-                    </div>
-
+                    <FirebaseContext.Consumer>
+                        {firebase => <LoginIn firebase={firebase} />}
+                    </FirebaseContext.Consumer>
 
                 </section>
             </>

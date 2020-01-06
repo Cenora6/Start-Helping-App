@@ -4,7 +4,6 @@ import LogReg from "../Home/Header/LogReg";
 import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
 
-
 class LogOut extends Component {
 
     render() {

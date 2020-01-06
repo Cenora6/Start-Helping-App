@@ -7,7 +7,6 @@ import WhoWeHelpMain from "./WhoWeHelp/WhoWeHelpMain";
 import ContactUs from "./ContactUs/ContactUs";
 
 class Home extends Component {
-
     render() {
         return (
             <>

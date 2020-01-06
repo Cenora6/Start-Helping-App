@@ -1,18 +1,27 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import app from 'firebase/app';
 import 'firebase/auth';
 
-const firebaseConfig = {
-    apiKey: "AIzaSyAaQjBrEiTqu7qvcEQ2iOvFt4Cjf__2mTQ",
-    authDomain: "your-travel-destination.firebaseapp.com",
-    databaseURL: "https://your-travel-destination.firebaseio.com",
-    projectId: "your-travel-destination",
-    storageBucket: "your-travel-destination.appspot.com",
-    messagingSenderId: "301738468152",
-    appId: "1:301738468152:web:357c260487f968eb9f17cd",
-    measurementId: "G-M86S2CSQX5"
+const config = {
+    apiKey: "AIzaSyDQ7IP4NYTrzVoKnxSUc7cX5MOdq7ywnSA",
+    authDomain: "start-helping-app.firebaseapp.com",
+    databaseURL: "https://start-helping-app.firebaseio.com",
+    projectId: "start-helping-app",
+    storageBucket: "start-helping-app.appspot.com",
+    messagingSenderId: "965137549147",
+    appId: "1:965137549147:web:1abe9b8c9e316c6ec53c7e"
 };
 
-firebase.initializeApp(firebaseConfig);
+class Firebase {
+    constructor() {
+        app.initializeApp(config);
+        this.auth = app.auth();
+    }
 
-export default firebase;
+    doCreateUserWithEmailAndPassword = (email, password) =>
+        this.auth.createUserWithEmailAndPassword(email, password);
+    doSignInWithEmailAndPassword = (email, password) =>
+        this.auth.signInWithEmailAndPassword(email, password);
+    doSignOut = () => this.auth.signOut();
+}
+
+export default Firebase;
