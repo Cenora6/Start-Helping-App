@@ -1,35 +1,11 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import {withFirebase} from "../../firebase/context";
-
-const logOutStyle = {
-    textDecoration: "none",
-    paddingLeft: "1rem",
-    opacity: "0.5",
-    color: "#000",
-};
-
-const SignOutButton = ( firebase ) => (
-    <Link to='/wylogowano' style={logOutStyle} onClick={firebase.doSignOut} >
-        <span className='hoverLink'>Wyloguj</span>
-    </Link>
-);
-
-const SignOutBut = withFirebase(SignOutButton);
 
 class LogReg extends Component {
 
-    // logOut = (e) => {
-    //     e.preventDefault();
-    //     firebase
-    //         .doSignOut()
-    //         .then(() =>
-    //             console.log("wylogowano!")
-    //         ).catch( (error) => {
-    //         alert(error);
-    //     });
-    // };
-
+    handleSessionEnd = () => {
+        sessionStorage.clear();
+    };
 
     render() {
 
@@ -40,28 +16,30 @@ class LogReg extends Component {
             color: "#737373",
         };
 
-
-        const Navigation =  ({ authUser }) => (
-            <>
-                {authUser ? <LoggedOut /> : <LoggedIn />}
-            </>
-        );
+        const logOutStyle = {
+            textDecoration: "none",
+            paddingLeft: "1rem",
+            opacity: "0.5",
+            color: "#000",
+        };
 
         const LoggedOut =
-        <>
-            <div className='logReg'>
-                <Link to='/logowanie' style={linkStyle}><span className='hoverLink'>Zaloguj</span></Link>
-                <Link to='/rejestracja' style={linkStyle}><span className='register hoverLink'>Załóż konto</span></Link>
-            </div>
-        </>;
+            <>
+                <div className='logReg'>
+                    <Link to='/logowanie' style={linkStyle}><span className='hoverLink'>Zaloguj</span></Link>
+                    <Link to='/rejestracja' style={linkStyle}><span className='register hoverLink'>Załóż konto</span></Link>
+                </div>
+            </>;
 
         const LoggedIn =
             <>
                 <div className='logReg'>
-                    <span>Cześć username </span>
+                    <span>Cześć {sessionStorage.getItem("email")}</span>
                     <Link to='/oddaj-rzeczy' style={linkStyle}><span className='giveTheThings hoverLink'>Oddaj rzeczy</span></Link>
 
-                    <SignOutButton/>
+                    <Link to='/wylogowano' style={logOutStyle} onClick={this.handleSessionEnd} >
+                        <span className='hoverLink'>Wyloguj</span>
+                    </Link>
 
                 </div>
             </>;

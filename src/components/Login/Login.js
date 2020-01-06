@@ -52,9 +52,7 @@ class LoginForm extends Component {
                     });
                     console.log("sukces!");
 
-                    console.log(authUser.user.email);
-
-                    sessionStorage.setItem("email", `${this.state.email}`);
+                    sessionStorage.setItem("email", `${authUser.user.email}`);
                     const { history } = this.props;
                     history.push("/");
                 })
