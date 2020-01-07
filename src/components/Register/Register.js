@@ -64,7 +64,7 @@ class RegisterForm extends Component {
                     });
                     console.log("sukces!");
 
-                    sessionStorage.setItem("email", `${this.state.email}`);
+                    sessionStorage.setItem("email", `${authUser.user.email}`);
                     const { history } = this.props;
                     history.push("/");
                 })

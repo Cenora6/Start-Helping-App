@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import ContactUs from "../Home/ContactUs/ContactUs";
+import GiveThingsAwayHeader from "./GiveThingsHeader";
+import GiveThingsAwayForm from "./GiveThingsForm";
 
 class GiveThingsAwayMain extends Component {
 
@@ -6,7 +9,9 @@ class GiveThingsAwayMain extends Component {
 
         return (
             <>
-                <span>ODDAJ RZECZY</span>
+                <GiveThingsAwayHeader/>
+                <GiveThingsAwayForm/>
+                <ContactUs/>
             </>
         )
     }

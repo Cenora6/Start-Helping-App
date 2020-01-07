@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Navigation from "../Home/Header/Navigation";
+import NavigationLogin from "../Home/Header/Navigation";
 import LogReg from "../Home/Header/LogReg";
 import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
@@ -150,7 +150,7 @@ class Login extends Component {
             <>
                 <section className='loginNavigation'>
                     <LogReg/>
-                    <Navigation/>
+                    <NavigationLogin/>
                 </section>
 
                 <section className='loginForm'>
