@@ -11,32 +11,35 @@ class Step1 extends Component {
                     <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
                 </div>
 
-                <div className='step1'>
+                <div className='steps'>
                     <span className='stepNum'>Krok 1/4</span>
                     <span className='choose'>Zaznacz co chcesz oddać:</span>
-                    <form className='checkboxForm'>
-                        <div className='checkboxOptions'>
-                            <input type='checkbox'/>
-                            <span>ubrania, które nadają się do ponownego użycia</span>
+
+                    <form className='radioForm'>
+                        <div className='radioOptions'>
+                            <input type='radio' id='clothesToUse' name="whatToGive" value="clothesToUse"/>
+                            <label htmlFor='clothesToUse'>ubrania, które nadają się do ponownego użycia</label>
                         </div>
-                        <div className='checkboxOptions'>
-                            <input type='checkbox'/>
-                            <span>ubrania, do wyrzucenia</span>
+                        <div className='radioOptions'>
+                            <input type='radio' id='clothesToThrow' name="whatToGive" value="clothesToThrow"/>
+                            <label htmlFor='clothesToThrow'>ubrania, do wyrzucenia</label>
                         </div>
-                        <div className='checkboxOptions'>
-                            <input type='checkbox'/>
-                            <span>zabawki</span>
+                        <div className='radioOptions'>
+                            <input type='radio' id='toys' name="whatToGive" value="toys"/>
+                            <label htmlFor='toys'>zabawki</label>
                         </div>
-                        <div className='checkboxOptions'>
-                            <input type='checkbox'/>
-                            <span>książki</span>
+                        <div className='radioOptions'>
+                            <input type='radio' id='books' name="whatToGive" value="books"/>
+                            <label htmlFor='books'>książki</label>
                         </div>
-                        <div className='checkboxOptions'>
-                            <input type='checkbox'/>
-                            <span>inne</span>
+                        <div className='radioOptions'>
+                            <input type='radio' id='others' name="whatToGive" value="others"/>
+                            <label htmlFor='others'>inne</label>
                         </div>
                     </form>
-                    <span className='nextButton'>Dalej</span>
+                    <div className='nextPrevButtons'>
+                        <span className='nextButton hoverLink' onClick={this.props.handleNext}>Dalej</span>
+                    </div>
                 </div>
             </>
         )

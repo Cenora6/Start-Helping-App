@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import Login from "../../Login/Login";
 
 class Navigation extends Component {
 
@@ -36,7 +35,7 @@ class Navigation extends Component {
         } else {
             return (
                 <div className='navigationLinks'>
-                    <NavLink activeClass="active" style={linkStyle} exact to={"/"}>
+                    <NavLink style={linkStyle} exact to={"/"}>
                         <div>Start</div>
                     </NavLink>
                     <Link activeClass="active" to="whatIsIt" spy={true} smooth={true} offset={50} duration={500}>
