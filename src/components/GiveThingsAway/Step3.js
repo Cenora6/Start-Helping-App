@@ -35,23 +35,28 @@ class Step3 extends Component {
 
                         <form className='checkboxFormHelp'>
                             <div className='checkboxOptionsHelp'>
-                                <input type='checkbox' id='kids' name="whoToHelp" value="kids"/>
+                                <input type='checkbox' id='kids' name="whoToHelp" value="dzieciom"
+                                onClick={this.props.handleCheckboxChange}/>
                                 <label htmlFor='kids'>dzieciom</label>
                             </div>
                             <div className='checkboxOptionsHelp'>
-                                <input type='checkbox' id='mothers' name="whoToHelp" value="mothers"/>
+                                <input type='checkbox' id='mothers' name="whoToHelp" value="samotnym matkom"
+                                       onClick={this.props.handleCheckboxChange}/>
                                 <label htmlFor='mothers'>samotnym matkom</label>
                             </div>
                             <div className='checkboxOptionsHelp'>
-                                <input type='checkbox' id='homeless' name="whoToHelp" value="homeless"/>
+                                <input type='checkbox' id='homeless' name="whoToHelp" value="bezdomnym"
+                                       onClick={this.props.handleCheckboxChange}/>
                                 <label htmlFor='homeless'>bezdomnym</label>
                             </div>
                             <div className='checkboxOptionsHelp'>
-                                <input type='checkbox' id='disabled' name="whoToHelp" value="disabled"/>
+                                <input type='checkbox' id='disabled' name="whoToHelp" value="niepełnosprawnym"
+                                       onClick={this.props.handleCheckboxChange}/>
                                 <label htmlFor='disabled'>niepełnosprawnym</label>
                             </div>
                             <div className='checkboxOptionsHelp'>
-                                <input type='checkbox' id='old' name="whoToHelp" value="old"/>
+                                <input type='checkbox' id='old' name="whoToHelp" value="osobom starszym"
+                                       onClick={this.props.handleCheckboxChange}/>
                                 <label htmlFor='old'>osobom starszym</label>
                             </div>
                         </form>

@@ -17,7 +17,7 @@ class Step5 extends Component {
                         <h2>Oddajesz:</h2>
                         <div className='giveThingsAndWhere'>
                             <img src={shirt} alt={shirt}/>
-                            <span>4 worki, ubrania w dobrym stanie, dzieciom</span>
+                            <span>{this.props.selectValue} worki, {this.props.radioValue}, {this.props.checkboxValue}</span>
                         </div>
                         <div className='giveThingsAndWhere'>
                             <img src={arrows} alt={arrows}/>
@@ -31,19 +31,19 @@ class Step5 extends Component {
                             <span className='title'>Adres odbioru:</span>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Ulica</span>
-                                <span>Prosta 51</span>
+                                <span>{this.props.street}</span>
                             </div>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Miasto</span>
-                                <span>Warszawa</span>
+                                <span>{this.props.city}</span>
                             </div>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Kod pocztowy</span>
-                                <span>90-209</span>
+                                <span>{this.props.zipcode}</span>
                             </div>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Numer telefonu</span>
-                                <span>473 839 483</span>
+                                <span>{this.props.phone}</span>
                             </div>
                         </div>
 
@@ -51,15 +51,15 @@ class Step5 extends Component {
                             <span className='title'>Termin odbioru:</span>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Termin odbioru</span>
-                                <span>17.10.2019</span>
+                                <span>{this.props.date}9</span>
                             </div>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Godzina</span>
-                                <span>17:30</span>
+                                <span>{this.props.time}</span>
                             </div>
                             <div className='summaryInput'>
                                 <span className='inputTitle'>Uwagi do kuriera</span>
-                                <span>uwagi</span>
+                                <span>{this.props.notes}</span>
                             </div>
                         </div>
 

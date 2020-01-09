@@ -4,7 +4,6 @@ import Select from 'react-styled-select';
 class Step2 extends Component {
 
     render() {
-
         const options = [
             { label: "1", value: 1},
             { label: "2", value: 2},
@@ -28,20 +27,17 @@ class Step2 extends Component {
                         <span>Liczba 60L worków:</span>
 
                         <Select
+                            value={this.props.value}
+                            onChange={(option, id) => this.props.handleSelectChange(option, {value: id})}
+                            getOptionLabel={option => option}
+                            getOptionValue={option => option}
                             searchable={false}
                             className="selectTheme"
                             options={options}
                             placeholder={"— wybierz —"}
                         />
 
-                        {/*<select>*/}
-                        {/*    <option value="0">-wybierz-</option>*/}
-                        {/*    <option value="1">1</option>*/}
-                        {/*    <option value="2">2</option>*/}
-                        {/*    <option value="3">3</option>*/}
-                        {/*    <option value="4">4</option>*/}
-                        {/*    <option value="5">5</option>*/}
-                        {/*</select>*/}
+                        {/*this.props.selectedOption*/}
 
                     </div>
                     <div className='nextPrevButtons'>

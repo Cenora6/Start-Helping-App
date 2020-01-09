@@ -17,23 +17,30 @@ class Step1 extends Component {
 
                     <form className='radioForm'>
                         <div className='radioOptions'>
-                            <input type='radio' id='clothesToUse' name="whatToGive" value="clothesToUse"/>
+                            <input type='radio' id='clothesToUse' name="whatToGive"
+                                   value="ubrania, które nadają się do ponownego użycia"
+                                   onClick={this.props.handleRadioChange}/>
                             <label htmlFor='clothesToUse'>ubrania, które nadają się do ponownego użycia</label>
                         </div>
                         <div className='radioOptions'>
-                            <input type='radio' id='clothesToThrow' name="whatToGive" value="clothesToThrow"/>
+                            <input type='radio' id='clothesToThrow' name="whatToGive"
+                                   value="ubrania, do wyrzucenia"
+                                   onClick={this.props.handleRadioChange}/>
                             <label htmlFor='clothesToThrow'>ubrania, do wyrzucenia</label>
                         </div>
                         <div className='radioOptions'>
-                            <input type='radio' id='toys' name="whatToGive" value="toys"/>
+                            <input type='radio' id='toys' name="whatToGive"
+                                   value="zabawki" onClick={this.props.handleRadioChange}/>
                             <label htmlFor='toys'>zabawki</label>
                         </div>
                         <div className='radioOptions'>
-                            <input type='radio' id='books' name="whatToGive" value="books"/>
+                            <input type='radio' id='books' name="whatToGive"
+                                   value="książki" onClick={this.props.handleRadioChange}/>
                             <label htmlFor='books'>książki</label>
                         </div>
                         <div className='radioOptions'>
-                            <input type='radio' id='others' name="whatToGive" value="others"/>
+                            <input type='radio' id='others' name="whatToGive"
+                                   value="inne" onClick={this.props.handleRadioChange}/>
                             <label htmlFor='others'>inne</label>
                         </div>
                     </form>

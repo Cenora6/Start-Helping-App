@@ -389,6 +389,9 @@
     background: transparent;
     border: 0.75px solid $buttonBorder;
     padding: 0 1rem;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5rem;
+    font-weight: 300;
   }
 
   textarea {
@@ -460,4 +463,40 @@
     line-height: 3.4375rem;
     margin-bottom: 1.625rem;
   }
+}
+
+.errorStyle {
+  font-size: 0.8rem;
+  color: red;
+  position: absolute;
+}
+
+.errorStreet {
+  top: 85rem;
+  left: 19rem;
+}
+
+.errorCity {
+  top: 89.6rem;
+  left: 19rem;
+}
+
+.errorPostcode {
+  top: 94rem;
+  left: 18rem;
+}
+
+.errorPhone {
+  top: 100rem;
+  left: 19rem;
+}
+
+.errorDate {
+  top: 85.3rem;
+  left: 55rem;
+}
+
+.errorTime {
+  top: 89.6rem;
+  left: 55rem;
 }

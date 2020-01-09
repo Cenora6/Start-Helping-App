@@ -115,7 +115,6 @@ class ContactUs extends Component {
             textAlign: "center",
             width: "50%",
             lineHeight: "1.5rem",
-
         };
 
         const errorStyle = {
