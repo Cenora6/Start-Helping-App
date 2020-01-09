@@ -3,6 +3,7 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
+import Step5 from "./Step5";
 
 class GiveThingsAwayForm extends Component {
 
@@ -46,8 +47,13 @@ class GiveThingsAwayForm extends Component {
                 <Step4 handleNext={this.handleNext} handlePrevious={this.handlePrevious}/>
             </>;
 
+        const step5 =
+            <>
+                <Step5 handleNext={this.handleNext} handlePrevious={this.handlePrevious}/>
+            </>;
 
-        const counter = this.state.counter
+
+        const counter = this.state.counter;
 
         if (counter === 2) {
             return step2
@@ -55,8 +61,8 @@ class GiveThingsAwayForm extends Component {
             return step3
         } else if (this.state.counter === 4) {
             return step4
-            // } else if (this.state.counter === 5) {
-            //     return step5
+        } else if (this.state.counter === 5) {
+            return step5
             // } else if (this.state.counter === 6) {
             //     return step6
         }

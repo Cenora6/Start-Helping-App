@@ -313,7 +313,6 @@
   width: 50%;
   font-family: $font-base;
 
-
   .checkboxOptionsHelp {
     padding: 1rem;
 
@@ -337,7 +336,6 @@
       font-weight: 300;
       border: 1px solid $buttonBorder;
       padding: 0.8rem 1rem;
-
     }
 
     input[type=checkbox] {
@@ -366,16 +364,8 @@
     font-family: $font-base;
   }
 
-
-  .address {
-
+  .address, .date {
     margin: 1rem 1rem 6.2rem 8.875rem;
-
-  }
-
-  .date {
-    margin: 1rem 1rem 6.2rem 8.875rem;
-
   }
 
   .input {
@@ -391,7 +381,6 @@
       line-height: 2rem;
       width: 30%;
     }
-
   }
 
   input {
@@ -410,7 +399,48 @@
     padding: 0.5rem 1rem;
     resize: none;
   }
+}
 
+.whatToGiveSummary {
+  margin-left: 8.875rem;
+  font-size: 1.5rem;
+  margin-top: 2.8125rem;
 
+  .giveThingsAndWhere {
+    margin-top: 1rem;
 
+    img {
+      margin: 0 1.25rem 0 0;
+      width: 3.125rem;
+    }
+  }
+}
+
+.addressDate {
+  .summaryAddress {
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .summaryInput {
+    margin: 1.875rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2rem;
+    }
+
+    .inputTitle {
+      width: 40%;
+    }
+  }
+}
+
+.summaryAddress, .summaryDate {
+  margin: 1rem 1rem 2.4rem 8.875rem;
 }
