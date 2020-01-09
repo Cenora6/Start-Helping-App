@@ -14,7 +14,7 @@ class Step1 extends Component {
                 <div className='steps'>
                     <span className='stepNum'>Krok 1/4</span>
                     <span className='choose'>Zaznacz co chcesz oddać:</span>
-
+                    {this.props.radioError && <span className="errorStyle errorRadio">Zaznacz jedną z opcji!</span>}
                     <form className='radioForm'>
                         <div className='radioOptions'>
                             <input type='radio' id='clothesToUse' name="whatToGive"

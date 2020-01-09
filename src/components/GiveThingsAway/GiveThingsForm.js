@@ -11,9 +11,12 @@ class GiveThingsAwayForm extends Component {
     state = {
         counter: 1,
         radioValue: "",
+        radioError: false,
         selectedOption: "",
-        optionValue: "",
+        errorSelect: false,
         checkboxValue: "",
+        selectedCityOrOrganization: "",
+        errorStep3: false,
         city: "",
         street: "",
         zipcode: "",
@@ -30,15 +33,61 @@ class GiveThingsAwayForm extends Component {
     };
 
     handleNext = () => {
-        this.setState({
-            counter: this.state.counter + 1,
-        });
+
+        if (this.state.counter === 1) {
+            if (this.state.radioValue !== "") {
+                this.setState({
+                    counter: this.state.counter + 1,
+                });
+            } else {
+                if (this.state.radioValue === "") {
+                    this.setState({
+                        radioError: true,
+                    });
+                }
+            }
+        } else if (this.state.counter === 2) {
+            if (this.state.selectedOption !== "") {
+                this.setState({
+                    counter: this.state.counter + 1,
+                });
+            } else {
+                if (this.state.selectedOption === "") {
+                    this.setState({
+                        errorSelect: true,
+                    });
+                }
+            }
+        } else if (this.state.counter === 3) {
+            console.log(this.state.selectedCityOrOrganization);
+            if (this.state.checkboxValue !== "" && this.state.selectedCityOrOrganization !== "") {
+                this.setState({
+                    counter: this.state.counter + 1,
+                });
+            } else {
+                if (this.state.checkboxValue === "" || this.state.selectedCityOrOrganization === "") {
+                    this.setState({
+                        errorStep3: true,
+                    });
+                }
+            }
+        }
     };
 
     handlePrevious = () => {
         this.setState({
+            radioError: false,
+            errorSelect: false,
+            errorCheckbox: false,
+            errorStep3: false,
             counter: this.state.counter - 1,
         });
+    };
+
+    handlewriteOrganization = (e) => {
+        this.setState({
+            selectedCityOrOrganization: e.target.value,
+        })
     };
 
     handleChange = (e) => {
@@ -58,8 +107,13 @@ class GiveThingsAwayForm extends Component {
     handleSelectChange = (value) => {
         this.setState({
             selectedOption: value,
-            optionValue: value,
-        });
+        })
+    };
+
+    handleSelectCityChange = (value) => {
+        this.setState({
+            selectedOptionCity: value,
+        })
     };
 
     handleCheckboxChange = (e) => {
@@ -135,19 +189,23 @@ class GiveThingsAwayForm extends Component {
 
         const step1 =
             <>
-                <Step1 handleNext={this.handleNext} handleRadioChange={this.handleRadioChange}/>
+                <Step1 handleNext={this.handleNext} handleRadioChange={this.handleRadioChange}
+                       radioError={this.state.radioError}/>
             </>;
 
         const step2 =
             <>
                 <Step2 handleNext={this.handleNext} handlePrevious={this.handlePrevious}
-                       handleSelectChange={(option, id) => this.handleSelectChange(this.props.selectedOption, id)}
-                       optionValue={this.state.optionValue}/>
+                       handleSelectChange={(option) => this.handleSelectChange(this.props.selectedOption)}
+                       optionValue={this.state.optionValue} errorSelect={this.state.errorSelect}/>
             </>;
 
         const step3 =
             <>
-                <Step3 handleNext={this.handleNext} handlePrevious={this.handlePrevious} handleCheckboxChange={this.handleCheckboxChange}/>
+                <Step3 handleNext={this.handleNext} handlePrevious={this.handlePrevious}
+                       handleCheckboxChange={this.handleCheckboxChange} errorStep3={this.state.errorStep3}
+                       handleSelectCityChange={(option) => this.handleSelectCityChange(this.props.selectedCityOrOrganization)}
+                       handlewriteOrganization={this.handlewriteOrganization}/>
             </>;
 
         const step4 =
@@ -175,18 +233,24 @@ class GiveThingsAwayForm extends Component {
 
         const counter = this.state.counter;
 
-        if (counter === 2) {
+        if(counter === 1) {
+            return step1
+        }
+        if(counter === 2) {
             return step2
-        } else if (counter === 3) {
+        }
+        if(counter === 3) {
             return step3
-        } else if (this.state.counter === 4) {
+        }
+        if(counter === 4) {
             return step4
-        } else if (this.state.counter === 5) {
+        }
+        if(counter === 5) {
             return step5
-        } else if (this.state.counter === 6) {
+        }
+        if(counter === 6) {
             return step6
         }
-        return step1
     }
 }
 

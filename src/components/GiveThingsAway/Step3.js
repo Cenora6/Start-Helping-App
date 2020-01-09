@@ -24,7 +24,11 @@ class Step3 extends Component {
                     <span className='stepNum'>Krok 3/4</span>
                     <span className='choose'>Lokalizacja:</span>
                     <div className='selectForm localization'>
-                        <Select searchable={false}
+                        <Select value={this.props.value}
+                                onChange={(option) => this.props.handleSelectCityChange(option)}
+                                getOptionLabel={option => option}
+                                getOptionValue={option => option}
+                                searchable={false}
                                 className="selectTheme cities"
                                 options={options}
                                 placeholder={"— wybierz —"}
@@ -36,7 +40,7 @@ class Step3 extends Component {
                         <form className='checkboxFormHelp'>
                             <div className='checkboxOptionsHelp'>
                                 <input type='checkbox' id='kids' name="whoToHelp" value="dzieciom"
-                                onClick={this.props.handleCheckboxChange}/>
+                                       onClick={this.props.handleCheckboxChange}/>
                                 <label htmlFor='kids'>dzieciom</label>
                             </div>
                             <div className='checkboxOptionsHelp'>
@@ -62,9 +66,11 @@ class Step3 extends Component {
                         </form>
 
                         <span className='chooseHelp'>Wpisz nazwę konkretnej organizacji (opcjonalnie)</span>
-                        <input type='text'/>
+                            <input type='text' id='organization' name="organization" onChange={this.props.handlewriteOrganization}/>
 
                     </div>
+                    {this.props.errorStep3 && <span className="errorStyle errorRadio">
+                        Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
                     <div className='nextPrevButtons'>
                         <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
                         <span className='nextButton hoverLink' onClick={this.props.handleNext}>Dalej</span>
