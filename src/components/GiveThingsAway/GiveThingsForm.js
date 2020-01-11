@@ -5,13 +5,9 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Step5 from "./Step5";
 import Step6 from "./Step6";
-import {FirebaseContext, withFirebase} from '../firebase/context';
-import {withRouter} from "react-router-dom"
-import LogReg from "../Home/Header/LogReg";
-import NavigationLogin from "../Home/Header/Navigation";
-import decoration from "../../assets/Decoration.svg";
+import {withFirebase} from '../firebase/context';
 
-class GiveThingsAwayFormB extends Component {
+class GiveThingsAwayForm extends Component {
 
     state = {
         counter: 1,
@@ -35,6 +31,7 @@ class GiveThingsAwayFormB extends Component {
         errorPhone: false,
         errorDate: false,
         errorTime: false,
+        donation: {},
     };
 
     handleNext = () => {
@@ -200,27 +197,45 @@ class GiveThingsAwayFormB extends Component {
         }
     };
 
-    handleConfirm = (email) => {
+    handleConfirm = () => {
 
         const donation = {
-            what: this.state.radioValue,
-            howMany: this.state.selectedOption,
-            where: this.state.selectedCityOrOrganization,
-            who: this.state.checkboxValues,
-            address: [
-                {
-                    street: this.state.street,
+            donation: {
+                what: this.state.radioValue,
+                howMany: this.state.selectedOption,
+                where: this.state.selectedCityOrOrganization,
+                who: this.state.checkboxValues,
+                address: {street: this.state.street,
                     city: this.state.city,
-                    zipcode: this.props.zipcode,
+                    zipcode: this.state.zipcode,
                     phone: this.state.phone,
                     date: this.state.date,
                     time: this.state.time,
-                    notes: this.state.notes
-                }
-            ]
+                    notes: this.state.notes}
+            }
         };
 
-        this.props.addDonation(donation, email).then(r => console.log(r))
+        this.setState({
+            donation: donation,
+        });
+
+        const donationMap = Object.keys(donation).map(key => ({
+            ...donation[key],
+        }));
+
+        this.props.firebase.
+        addDonation()
+            .add({
+                donations: donationMap,
+                email: sessionStorage.getItem("email"),
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                console.log("Zapisane dane: ", docRef);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
 
     };
 
@@ -296,21 +311,4 @@ class GiveThingsAwayFormB extends Component {
     }
 }
 
-
-const GiveThingsAwayFormA = withRouter(withFirebase(GiveThingsAwayFormB));
-
-class GiveThingsAwayForm extends Component {
-    render() {
-        return (
-            <>
-                    <FirebaseContext.Consumer>
-                        {firebase => <GiveThingsAwayFormA firebase={firebase} />}
-                    </FirebaseContext.Consumer>
-
-            </>
-        )
-    }
-}
-
-
-export default GiveThingsAwayForm;
+export default withFirebase(GiveThingsAwayForm);

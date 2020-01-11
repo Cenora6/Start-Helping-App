@@ -23,35 +23,7 @@ class Firebase {
         this.auth.createUserWithEmailAndPassword(email, password);
     doSignInWithEmailAndPassword = (email, password) =>
         this.auth.signInWithEmailAndPassword(email, password);
-    doSignOut = () => this.auth.signOut();
-
-    //addHistory = (places, email) => {
-    //
-    //     places.forEach( name => {
-    //         firebase.firestore().collection("history").add({
-    //             place: name,
-    //             email: email
-    //         })
-    //             .then(function(docRef) {
-    //                 console.log("Document written with ID: ", docRef.id);
-    //             })
-    //             .catch(function(error) {
-    //                 console.error("Error adding document: ", error);
-    //             });
-    //     })
-
-    addDonation = (donation, email) =>
-        this.db.collection("donations").add({
-            donation: donation,
-            email: email,
-        })
-            .then(function(docRef) {
-                console.log("Document written with ID: ", docRef.id);
-            })
-            .catch(function(error) {
-                console.error("Error adding document: ", error);
-            });
+    addDonation = () => this.db.collection('donations');
 
 }
-
 export default Firebase;
