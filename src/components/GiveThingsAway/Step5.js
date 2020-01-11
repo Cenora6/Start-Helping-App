@@ -17,11 +17,11 @@ class Step5 extends Component {
                         <h2>Oddajesz:</h2>
                         <div className='giveThingsAndWhere'>
                             <img src={shirt} alt={shirt}/>
-                            <span>{this.props.selectValue} worki, {this.props.radioValue}, {this.props.checkboxValue}</span>
+                            <span>{this.props.selectValue} worki, {this.props.radioValue}, {this.props.checkboxValues.join(', ')}</span>
                         </div>
                         <div className='giveThingsAndWhere'>
                             <img src={arrows} alt={arrows}/>
-                            <span>dla lokalizacji: Warszawa</span>
+                            <span>dla lokalizacji: {this.props.selectedCityOrOrganization}</span>
                         </div>
                     </div>
 
@@ -67,7 +67,7 @@ class Step5 extends Component {
 
                     <div className='nextPrevButtons'>
                         <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
-                        <span className='nextButton hoverLink' onClick={this.props.handleNext}>Potwierdzam</span>
+                        <span className='nextButton hoverLink' onClick={this.props.handleConfirm}>Potwierdzam</span>
                     </div>
 
                 </section>

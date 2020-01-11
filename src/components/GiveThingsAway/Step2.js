@@ -27,8 +27,8 @@ class Step2 extends Component {
                         <span>Liczba 60L worków:</span>
 
                         <Select
-                            value={this.props.value}
-                            onChange={(option, id) => this.props.handleSelectChange(option, {value: id})}
+                            value={this.props.selectedOption}
+                            onChange={this.props.handleSelectChange}
                             getOptionLabel={option => option}
                             getOptionValue={option => option}
                             searchable={false}

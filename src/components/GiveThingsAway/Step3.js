@@ -24,8 +24,8 @@ class Step3 extends Component {
                     <span className='stepNum'>Krok 3/4</span>
                     <span className='choose'>Lokalizacja:</span>
                     <div className='selectForm localization'>
-                        <Select value={this.props.value}
-                                onChange={(option) => this.props.handleSelectCityChange(option)}
+                        <Select value={this.props.selectedCityOrOrganization}
+                                onChange={this.props.handleSelectCityChange}
                                 getOptionLabel={option => option}
                                 getOptionValue={option => option}
                                 searchable={false}

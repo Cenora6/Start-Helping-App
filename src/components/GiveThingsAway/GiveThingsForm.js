@@ -5,8 +5,13 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Step5 from "./Step5";
 import Step6 from "./Step6";
+import {FirebaseContext, withFirebase} from '../firebase/context';
+import {withRouter} from "react-router-dom"
+import LogReg from "../Home/Header/LogReg";
+import NavigationLogin from "../Home/Header/Navigation";
+import decoration from "../../assets/Decoration.svg";
 
-class GiveThingsAwayForm extends Component {
+class GiveThingsAwayFormB extends Component {
 
     state = {
         counter: 1,
@@ -14,7 +19,7 @@ class GiveThingsAwayForm extends Component {
         radioError: false,
         selectedOption: "",
         errorSelect: false,
-        checkboxValue: "",
+        checkboxValues: [],
         selectedCityOrOrganization: "",
         errorStep3: false,
         city: "",
@@ -59,13 +64,12 @@ class GiveThingsAwayForm extends Component {
                 }
             }
         } else if (this.state.counter === 3) {
-            console.log(this.state.selectedCityOrOrganization);
-            if (this.state.checkboxValue !== "" && this.state.selectedCityOrOrganization !== "") {
+            if (this.state.checkboxValues !== "" && this.state.selectedCityOrOrganization !== "") {
                 this.setState({
                     counter: this.state.counter + 1,
                 });
             } else {
-                if (this.state.checkboxValue === "" || this.state.selectedCityOrOrganization === "") {
+                if (this.state.checkboxValues === "" || this.state.selectedCityOrOrganization === "") {
                     this.setState({
                         errorStep3: true,
                     });
@@ -87,7 +91,8 @@ class GiveThingsAwayForm extends Component {
     handlewriteOrganization = (e) => {
         this.setState({
             selectedCityOrOrganization: e.target.value,
-        })
+        });
+        console.log("city (written)", e.target.value)
     };
 
     handleChange = (e) => {
@@ -107,22 +112,32 @@ class GiveThingsAwayForm extends Component {
     handleSelectChange = (value) => {
         this.setState({
             selectedOption: value,
-        })
+        });
+        console.log('Ile worków', value)
     };
 
     handleSelectCityChange = (value) => {
         this.setState({
-            selectedOptionCity: value,
-        })
+            selectedCityOrOrganization: value,
+        });
+        console.log("Miasto lub lokalizacja", value)
     };
 
     handleCheckboxChange = (e) => {
+
+        const checkboxValues = this.state.checkboxValues;
+        let array;
+
+        if (e.target.checked) {
+            checkboxValues.push(e.target.value)
+        } else {
+            array = checkboxValues.indexOf(e.target.value);
+            checkboxValues.splice(array, 1)
+        }
+
         this.setState({
-            checkboxValue: e.target.value,
+            checkboxValues: checkboxValues
         });
-
-        console.log(`Komu:`,  e.target.value);
-
     };
 
     handleSubmit = (e) => {
@@ -185,6 +200,30 @@ class GiveThingsAwayForm extends Component {
         }
     };
 
+    handleConfirm = (email) => {
+
+        const donation = {
+            what: this.state.radioValue,
+            howMany: this.state.selectedOption,
+            where: this.state.selectedCityOrOrganization,
+            who: this.state.checkboxValues,
+            address: [
+                {
+                    street: this.state.street,
+                    city: this.state.city,
+                    zipcode: this.props.zipcode,
+                    phone: this.state.phone,
+                    date: this.state.date,
+                    time: this.state.time,
+                    notes: this.state.notes
+                }
+            ]
+        };
+
+        this.props.addDonation(donation, email).then(r => console.log(r))
+
+    };
+
     render(){
 
         const step1 =
@@ -196,7 +235,8 @@ class GiveThingsAwayForm extends Component {
         const step2 =
             <>
                 <Step2 handleNext={this.handleNext} handlePrevious={this.handlePrevious}
-                       handleSelectChange={(option) => this.handleSelectChange(this.props.selectedOption)}
+                       selectedOption={this.state.selectedOption}
+                       handleSelectChange={this.handleSelectChange}
                        optionValue={this.state.optionValue} errorSelect={this.state.errorSelect}/>
             </>;
 
@@ -204,7 +244,7 @@ class GiveThingsAwayForm extends Component {
             <>
                 <Step3 handleNext={this.handleNext} handlePrevious={this.handlePrevious}
                        handleCheckboxChange={this.handleCheckboxChange} errorStep3={this.state.errorStep3}
-                       handleSelectCityChange={(option) => this.handleSelectCityChange(this.props.selectedCityOrOrganization)}
+                       handleSelectCityChange={this.handleSelectCityChange} selectedCityOrOrganization={this.state.selectedCityOrOrganization}
                        handlewriteOrganization={this.handlewriteOrganization}/>
             </>;
 
@@ -220,10 +260,12 @@ class GiveThingsAwayForm extends Component {
 
         const step5 =
             <>
-                <Step5 handleNext={this.handleNext} handlePrevious={this.handlePrevious}
+                <Step5 handleConfirm={this.handleConfirm} handlePrevious={this.handlePrevious}
                        radioValue={this.state.radioValue} selectValue={this.state.selectedOption}
-                       checkboxValue={this.state.checkboxValue} city={this.state.city} street={this.state.street} zipcode={this.state.zipcode}
-                       phone={this.state.phone} date={this.state.date} time={this.state.time} notes={this.state.notes}
+                       checkboxValues={this.state.checkboxValues} city={this.state.city} street={this.state.street}
+                       zipcode={this.state.zipcode} phone={this.state.phone}
+                       selectedCityOrOrganization={this.state.selectedCityOrOrganization} date={this.state.date}
+                       time={this.state.time} notes={this.state.notes}
                 />
             </>;
         const step6 =
@@ -253,5 +295,22 @@ class GiveThingsAwayForm extends Component {
         }
     }
 }
+
+
+const GiveThingsAwayFormA = withRouter(withFirebase(GiveThingsAwayFormB));
+
+class GiveThingsAwayForm extends Component {
+    render() {
+        return (
+            <>
+                    <FirebaseContext.Consumer>
+                        {firebase => <GiveThingsAwayFormA firebase={firebase} />}
+                    </FirebaseContext.Consumer>
+
+            </>
+        )
+    }
+}
+
 
 export default GiveThingsAwayForm;
