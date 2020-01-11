@@ -89,7 +89,6 @@ class GiveThingsAwayForm extends Component {
         this.setState({
             selectedCityOrOrganization: e.target.value,
         });
-        console.log("city (written)", e.target.value)
     };
 
     handleChange = (e) => {
@@ -102,7 +101,6 @@ class GiveThingsAwayForm extends Component {
         this.setState({
             radioValue: e.target.value,
         });
-        console.log(`Co oddajemy:`, e.target.value);
 
     };
 
@@ -110,14 +108,12 @@ class GiveThingsAwayForm extends Component {
         this.setState({
             selectedOption: value,
         });
-        console.log('Ile worków', value)
     };
 
     handleSelectCityChange = (value) => {
         this.setState({
             selectedCityOrOrganization: value,
         });
-        console.log("Miasto lub lokalizacja", value)
     };
 
     handleCheckboxChange = (e) => {
@@ -231,12 +227,14 @@ class GiveThingsAwayForm extends Component {
             })
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
-                console.log("Zapisane dane: ", docRef);
             })
             .catch(function(error) {
                 console.error("Error adding document: ", error);
             });
 
+        this.setState({
+            counter: this.state.counter + 1,
+        });
     };
 
     render(){
