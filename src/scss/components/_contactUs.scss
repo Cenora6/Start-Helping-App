@@ -1,8 +1,38 @@
 .contactUs {
   display: flex;
-  justify-items: center;
-  align-items: center;
+  flex-direction: column;
   position: relative;
+  justify-content: center;
+  height: 20rem;
+  margin: 0 3rem;
+
+  @media only screen and (min-width: 1025px) {
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  &:before {
+    content: "";
+    background-image: url("./../../assets/Background-Contact-Form.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: right;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.2;
+    transform: scaleX(-1);
+    margin: 0 3rem;
+
+    @media only screen and (min-width: 1025px) {
+      content: none;
+    }
+  }
 
   .contactUsImage {
     display: flex;
@@ -160,5 +190,22 @@
     font-family: $font-base;
     font-size: 1rem;
     font-weight: 300;
+  }
+}
+
+.contactIcons {
+  font-family: $font-base;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  img {
+    width: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+.contactList {
+  font-family: $font-base;
+  li {
+    line-height: 1.5rem;
   }
 }

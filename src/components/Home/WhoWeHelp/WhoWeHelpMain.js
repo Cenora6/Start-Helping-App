@@ -112,37 +112,67 @@ class WhoWeHelpMain extends Component {
         const isMobile = width <= 767;
 
         if (isMobile) {
-            return(
-                <section className='whoWeHelp' id='whoWeHelp'>
-                    <div className='whoWeHelpDesc'>
-                        <h2>Komu pomagamy?</h2>
-                        <img src={decoration} alt='decoration'/>
-                        <ul className='organizationType'>
-                            {allOrganizations.map((organization, index) => {
-                                return (
-                                    <>
-                                        <li key={index}>
-                                            <span>{organization.name}</span>
-                                            <p>{organization.description}</p>
-                                        </li>
-                                    </>
-                                )
-                            })}
-                        </ul>
-                    </div>
+            if (sessionStorage.getItem("email") == null) {
+                return (
+                    <section className='whoWeHelp' id='whoWeHelp'>
+                        <div className='whoWeHelpDesc'>
+                            <h2>Komu pomagamy?</h2>
+                            <img src={decoration} alt='decoration'/>
+                            <ul className='organizationType'>
+                                {allOrganizations.map((organization, index) => {
+                                    return (
+                                        <>
+                                            <li key={index}>
+                                                <span>{organization.name}</span>
+                                                <p>{organization.description}</p>
+                                            </li>
+                                        </>
+                                    )
+                                })}
+                            </ul>
+                        </div>
 
-                    <div className='registerTitle'>Chcesz oddać swoje rzeczy lub zorganizować zbiórkę lokalną?</div>
-                    <div className='registerButton hoverLink'>
-                        <Link to='/rejestracja' style={buttonStyle} className='hoverLink'>
-                            <p>Załóż konto</p>
-                        </Link>
-                    </div>
+                        <div className='registerTitle'>Chcesz oddać swoje rzeczy lub zorganizować zbiórkę lokalną?</div>
+                        <div className='registerButton hoverLink'>
+                            <Link to='/rejestracja' style={buttonStyle} className='hoverLink'>
+                                <p>Załóż konto</p>
+                            </Link>
+                        </div>
+                    </section>
+                )
+            } else {
+                return (
+                    <section className='whoWeHelp' id='whoWeHelp'>
+                        <div className='whoWeHelpDesc'>
+                            <h2>Komu pomagamy?</h2>
+                            <img src={decoration} alt='decoration'/>
+                            <ul className='organizationType'>
+                                {allOrganizations.map((organization, index) => {
+                                    return (
+                                        <>
+                                            <li key={index}>
+                                                <span>{organization.name}</span>
+                                                <p>{organization.description}</p>
+                                            </li>
+                                        </>
+                                    )
+                                })}
+                            </ul>
+                        </div>
 
-
-                </section>
-            )
+                        <div className='registerTitle'>Chcesz oddać swoje rzeczy lub zorganizować zbiórkę lokalną?</div>
+                        <div className='registerButton hoverLink buttonsAfterLogin'>
+                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
+                                <p className='firstButton'>Oddaj rzeczy</p>
+                            </Link>
+                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
+                                <p>Zorganizuj zbiórkę</p>
+                            </Link>
+                        </div>
+                    </section>
+                )
+            }
         } else {
-
             return (
                 <section className='whoWeHelp' id='whoWeHelp'>
                     <div className='whoWeHelpDesc'>

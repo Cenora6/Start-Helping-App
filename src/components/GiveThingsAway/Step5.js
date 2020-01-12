@@ -6,10 +6,8 @@ class Step5 extends Component {
 
     render() {
 
-
         return (
             <>
-
                 <section className='steps'>
                     <span className='choose'>Podsumowanie Twojej darowizny</span>
 

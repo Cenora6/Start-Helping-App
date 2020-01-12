@@ -7,6 +7,7 @@ import WhoWeHelpMain from "./WhoWeHelp/WhoWeHelpMain";
 import ContactUs from "./ContactUs/ContactUs";
 import Navigation from "./Header/Navigation";
 import HeaderTitle from "./Header/HeaderTitle";
+import Summary from "../GiveThingsAway/Summary";
 
 class Home extends Component {
 
@@ -31,15 +32,27 @@ class Home extends Component {
         const isMobile = width <= 767;
 
         if (isMobile) {
-            return (
-                <>
-                    <Navigation/>
-                    <HeaderTitle/>
-                    <StepsMain/>
-                    <WhoWeHelpMain/>
-                    <ContactUs/>
-                </>
-            )
+            if (sessionStorage.getItem("email") == null) {
+                return (
+                    <>
+                        <Navigation/>
+                        <HeaderTitle/>
+                        <StepsMain/>
+                        <WhoWeHelpMain/>
+                        <ContactUs/>
+                    </>
+                )
+            } else {
+                return (
+                    <>
+                        <Navigation/>
+                        <Summary/>
+                        <StepsMain/>
+                        <WhoWeHelpMain/>
+                        <ContactUs/>
+                    </>
+                )
+            }
 
         } else {
             return (

@@ -176,5 +176,19 @@
     width: 17rem;
     text-align: center;
   }
+}
+
+.buttonsAfterLogin {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0 1rem;
+  }
+
+  .firstButton {
+    padding: 2.1rem 0;
+  }
+
 
 }

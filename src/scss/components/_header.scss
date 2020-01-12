@@ -106,6 +106,7 @@ width: 100%;
   left: 0;
   right: 0;
   top: 0;
+  z-index: 1000;
 
   .hamburger {
     top: 0;
@@ -134,7 +135,7 @@ width: 100%;
     position: fixed;
     width: 2.25rem;
     height: 1.875rem;
-    right: 10rem;
+    right: 3rem;
     top: 1rem;
   }
 
@@ -189,7 +190,7 @@ width: 100%;
   flex-direction: column;
   margin: 3rem 2rem;
 
-  &::before {
+  &:before {
     content: "";
     background-image: url("./../../assets/Home-Hero-Image.jpg");
     background-size: contain;
