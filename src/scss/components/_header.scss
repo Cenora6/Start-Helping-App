@@ -4,6 +4,7 @@ header {
   .headerImage {
     flex-grow: 0;
     margin: 0 -30rem 0;
+width: 100%;
   }
 
   .headerNavigation {
@@ -94,3 +95,86 @@ header {
   color: $textColor;
   border: 0.75px solid $registerBorderColor;
 }
+
+.mobileNavigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: $registerBorderColor;
+  width: 100%;
+
+  .hamburger {
+    margin: 2rem;
+  }
+
+  #page-wrap {
+    text-align: center;
+    overflow: auto;
+  }
+
+  .bm-item {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: $boxColor;
+    transition: color 0.2s;
+    font-family: $font-base;
+  }
+
+  .bm-item:hover {
+    color: white;
+  }
+
+  .bm-burger-button {
+    position: fixed;
+    width: 2.25rem;
+    height: 1.875rem;
+    right: 3rem;
+    top: 1rem;
+  }
+
+  .bm-burger-bars {
+    background: $buttonBorder;
+  }
+
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  .bm-cross {
+    background: $boxColor;
+  }
+
+  .bm-menu {
+    background: $buttonBorder;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+
+  .bm-item-list {
+    color: $buttonBorder;
+  }
+
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .line {
+    border: 2px solid $registerBorderColor;
+    margin: 1rem 0;
+  }
+
+  .hello {
+    font-style: italic;
+    font-size: 0.9rem;
+    font-family: $font-alt;
+    color: $registerBorderColor;
+  }
+
+}
+

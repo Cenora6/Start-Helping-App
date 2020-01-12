@@ -147,7 +147,6 @@ class GiveThingsAwayForm extends Component {
 
         const {street, city, zipcode, phone, date, time} = this.state;
         console.log(street, city, zipcode, phone, date, time);
-        console.log(this.state.counter);
 
         const postcodeValidation = /[0-9]{2}-[0-9]{3}/;
         const phoneValidation = /^([0-9]{9})$/;

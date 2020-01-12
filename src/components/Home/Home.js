@@ -5,19 +5,54 @@ import StepsMain from "./ThreeSimpleSteps/StepsMain";
 import AboutUs from "./AboutUs/AboutUs";
 import WhoWeHelpMain from "./WhoWeHelp/WhoWeHelpMain";
 import ContactUs from "./ContactUs/ContactUs";
+import Navigation from "./Header/Navigation";
+import HeaderTitle from "./Header/HeaderTitle";
 
 class Home extends Component {
+
+    state = {
+        width: window.innerWidth,
+    };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render() {
-        return (
-            <>
-                <MainHeader/>
-                <ThreeColumns/>
-                <StepsMain/>
-                <AboutUs/>
-                <WhoWeHelpMain/>
-                <ContactUs/>
-            </>
-        )
+        const { width } = this.state;
+        const isMobile = width <= 767;
+
+        if (isMobile) {
+            return (
+                <>
+                    <Navigation/>
+                    <HeaderTitle/>
+                    <StepsMain/>
+                    <WhoWeHelpMain/>
+                    <ContactUs/>
+                </>
+            )
+
+        } else {
+            return (
+                <>
+                    <MainHeader/>
+                    <ThreeColumns/>
+                    <StepsMain/>
+                    <AboutUs/>
+                    <WhoWeHelpMain/>
+                    <ContactUs/>
+                </>
+            )
+        }
     }
 }
 
