@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import decoration from '../../../assets/Decoration.svg'
 import organizations from './../../database/organizations.json';
+import {Link} from "react-router-dom";
 
 class WhoWeHelpMain extends Component {
     state = {
@@ -9,6 +10,19 @@ class WhoWeHelpMain extends Component {
         itemsPerPage: 3,
         currentPage: 1,
         active: "",
+        width: window.innerWidth,
+    };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
     };
 
     changeOrganization = (e, i) => {
@@ -80,6 +94,12 @@ class WhoWeHelpMain extends Component {
 
     render() {
 
+        const buttonStyle = {
+            textDecoration: "none",
+            paddingTop: "2.3125rem",
+            color: "#3C3C3C",
+        };
+
         let buttonList;
         buttonList = this.showButtons();
 
@@ -88,31 +108,67 @@ class WhoWeHelpMain extends Component {
 
         const allOrganizations = organizations.organizations;
 
-        return (
-            <section className='whoWeHelp' id='whoWeHelp'>
-                <div className='whoWeHelpDesc'>
-                    <h2>Komu pomagamy?</h2>
-                    <img src={decoration} alt='decoration'/>
-                    <ul className='organizationType'>
+        const { width } = this.state;
+        const isMobile = width <= 767;
 
-                        {allOrganizations.map((organization, index) => {
-                            return <li key={index}
-                                       onClick={(e) => this.changeOrganization(e, index)}
-                                       className={this.state.visibleOrganizationType === index ? "active" : ""}>{organization.name}</li>
+        if (isMobile) {
+            return(
+                <section className='whoWeHelp' id='whoWeHelp'>
+                    <div className='whoWeHelpDesc'>
+                        <h2>Komu pomagamy?</h2>
+                        <img src={decoration} alt='decoration'/>
+                        <ul className='organizationType'>
+                            {allOrganizations.map((organization, index) => {
+                                return (
+                                    <>
+                                        <li key={index}>
+                                            <span>{organization.name}</span>
+                                            <p>{organization.description}</p>
+                                        </li>
+                                    </>
+                                )
+                            })}
+                        </ul>
+                    </div>
 
-                        })}
+                    <div className='registerTitle'>Chcesz oddać swoje rzeczy lub zorganizować zbiórkę lokalną?</div>
+                    <div className='registerButton hoverLink'>
+                        <Link to='/rejestracja' style={buttonStyle} className='hoverLink'>
+                            <p>Załóż konto</p>
+                        </Link>
+                    </div>
 
-                    </ul>
-                    <p className='organizationDescription'>
-                        {organizations.organizations[this.state.visibleOrganizationType].description}
-                    </p>
-                </div>
-                {foundationList}
-                <div className='showButtonsStyle'>
-                    {buttonList}
-                </div>
-            </section>
-        )
+
+                </section>
+            )
+        } else {
+
+            return (
+                <section className='whoWeHelp' id='whoWeHelp'>
+                    <div className='whoWeHelpDesc'>
+                        <h2>Komu pomagamy?</h2>
+                        <img src={decoration} alt='decoration'/>
+                        <ul className='organizationType'>
+
+                            {allOrganizations.map((organization, index) => {
+                                return <li key={index}
+                                           onClick={(e) => this.changeOrganization(e, index)}
+                                           className={this.state.visibleOrganizationType === index ? "active" : ""}>{organization.name}</li>
+
+                            })}
+
+                        </ul>
+                        <p className='organizationDescription'>
+                            {organizations.organizations[this.state.visibleOrganizationType].description}
+                        </p>
+                    </div>
+                    {foundationList}
+                    <div className='showButtonsStyle'>
+                        {buttonList}
+                    </div>
+                </section>
+            )
+        }
     }
 }
 

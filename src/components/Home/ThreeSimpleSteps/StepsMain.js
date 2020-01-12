@@ -53,8 +53,6 @@ class StepsMain extends Component {
                             </div>
                         </div>
                     </section>
-
-                    <Donate/>
                 </>
             )
         } else {

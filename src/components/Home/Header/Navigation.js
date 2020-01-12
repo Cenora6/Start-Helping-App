@@ -63,7 +63,6 @@ class Navigation extends Component {
                                 <div>Zarejestruj się</div>
                             </NavLink>
                         </Menu>
-
                     </section>
                 )
             } else {
