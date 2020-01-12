@@ -20,20 +20,23 @@ class Summary extends Component {
         this.props.firebase.getDonation().where("email", "==", email)
             .get()
             .then((donations => {
-                    const numberArray = [];
+                    const donationsNumber = [];
                     const bagsArray = [];
 
-                donations.forEach(doc => {
+                    donations.forEach(doc => {
                         const donation = doc.data();
-                    donation.id = doc.id;
-                        console.log(donations); // wyświetla wszystkie miejsca (email: ..., place: {...} )
+                        donation.id = doc.id;
+                        const bags = donation.donations[0].howMany;
 
-                    // numberArray.push(donation);
+                        donationsNumber.push(donation);
+                        bagsArray.push(bags);
+
                     });
 
+                    const allBags = bagsArray.reduce((a, b) => a + b, 0);
                     this.setState({
-                        fundations: numberArray,
-                        bags: bagsArray,
+                        fundations: donationsNumber.length,
+                        bags: allBags,
                     })
                 })
             )
@@ -55,11 +58,11 @@ class Summary extends Component {
                     </div>
                     <div className='summaryStatistics'>
                         <div className='statistics'>
-                            <span>0</span>
+                            <span>{this.state.bags}</span>
                             <p>oddanych worków</p>
                         </div>
                         <div className='statistics'>
-                            <span>0</span>
+                            <span>{this.state.fundations}</span>
                             <p>wspartych organizacji</p>
                         </div>
                         <div className='statistics'>
