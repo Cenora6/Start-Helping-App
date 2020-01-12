@@ -67,23 +67,23 @@ width: 100%;
     padding-bottom: 1.5625rem;
     line-height: 3.4375rem;
   }
+}
 
-  .headerButtons {
-    padding-top: 4.0625rem;
-    display: flex;
-    line-height: 45px;
+.headerButtons {
+  padding-top: 4.0625rem;
+  display: flex;
+  line-height: 45px;
 
-    p {
-      padding: 1rem 0.3rem;
-      border: 0.75px solid $buttonBorder;
-      margin-left: 2.75rem;
-      font-size: 2.25rem;
-      font-family: $font-base;
-      font-weight: 300;
-      text-transform: uppercase;
-      width: 17rem;
-      text-align: center;
-    }
+  p {
+    padding: 1rem 0.3rem;
+    border: 0.75px solid $buttonBorder;
+    margin-left: 2.75rem;
+    font-size: 2.25rem;
+    font-family: $font-base;
+    font-weight: 300;
+    text-transform: uppercase;
+    width: 17rem;
+    text-align: center;
   }
 }
 
@@ -98,12 +98,16 @@ width: 100%;
 
 .mobileNavigation {
   display: flex;
+  position: fixed;
   justify-content: flex-end;
   align-items: flex-end;
   background: $registerBorderColor;
   width: 100%;
+  right: 0;
+  top: 0;
 
   .hamburger {
+    top: 0;
     margin: 2rem;
   }
 
@@ -175,6 +179,47 @@ width: 100%;
     font-family: $font-alt;
     color: $registerBorderColor;
   }
-
 }
 
+.headerMobile {
+  display: flex;
+  height: 30rem;
+  flex-direction: column;
+  margin: 3rem 2rem;
+
+  &::before {
+    content: "";
+    background-image: url("./../../assets/Home-Hero-Image.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.2;
+  }
+
+  .mobileSubtitle {
+    font-size: 1.5rem;
+    font-family: $font-base;
+    text-align: center;
+    margin: 4rem 0;
+  }
+
+  .mobileTitle {
+    text-align: left;
+    font-size: 2.375rem;
+    font-family: $font-base;
+    font-weight: 500;
+    letter-spacing: -0.76px;
+    color: $buttonBorder;
+    padding-bottom: 1.5625rem;
+    line-height: 3.4375rem;
+  }
+
+  .headerButtons {
+    justify-content: flex-end;
+  }
+}
