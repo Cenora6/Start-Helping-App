@@ -106,7 +106,7 @@ class Step3 extends Component {
                                    onChange={this.props.handlewriteOrganization}/>
 
                         </div>
-                        {this.props.errorStep3 && <span className="errorStyle errorRadio">
+                        {this.props.errorStep3 && <span className="errorStyle errorLocalization">
                         Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
                         <div className='nextPrevButtons'>
                             <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
@@ -174,7 +174,7 @@ class Step3 extends Component {
                                    onChange={this.props.handlewriteOrganization}/>
 
                         </div>
-                        {this.props.errorStep3 && <span className="errorStyle errorRadio">
+                        {this.props.errorStep3 && <span className="errorStyle errorLocalization">
                         Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
                         <div className='nextPrevButtons'>
                             <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>

@@ -181,7 +181,7 @@
   }
 
   .radioForm {
-    margin: 0 3.125rem 1rem 5.875rem;
+    margin: 0 3.125rem 3.5rem 5.875rem;
 
     @media only screen and (min-width: 1025px) {
       margin: 0 3.125rem 3.125rem 8.875rem;
@@ -253,7 +253,6 @@
       font-size: 1.5rem;
       margin-top: 2rem;
       margin-left: 8.875rem;
-      width: 3%;
       padding: 1.5rem 4rem;
     }
   }
@@ -271,7 +270,6 @@
       margin-left: 8.875rem;
       font-size: 1.5rem;
       margin-top: 2rem;
-      width: 3%;
       padding: 1.5rem 4rem;
     }
   }
@@ -281,15 +279,15 @@
   display: flex;
   vertical-align: middle;
   position: relative;
-  margin: 0 3.125rem 20.5rem 5.875rem;
+  margin: 0 3.125rem 23rem 5.875rem;
 
-@media only screen and (min-width: 1025px) {
-  margin: 3.0625rem 3.125rem 21.5rem 8.875rem;
+  @media only screen and (min-width: 1025px) {
+    margin: 3.0625rem 3.125rem 21.5rem 8.875rem;
 
-  span {
-    margin-right: 2rem;
+    span {
+      margin-right: 2rem;
+    }
   }
-}
 
   span {
     padding-top: 0.6rem;
@@ -379,11 +377,20 @@
 
 .chooseHelp {
   font-size: 1.25rem;
-  margin-left: 8.875rem;
+  margin-left: 3rem;
+
+  @media only screen and (min-width: 1025px) {
+    margin-left: 8.875rem;
+  }
+
 }
 
 .localization {
-  margin: 3.0625rem 3.125rem 3rem 8.875rem;
+  margin: 0.5rem 3.125rem 2rem 3rem;
+
+  @media only screen and (min-width: 1025px) {
+    margin: 2.5rem 3.125rem 3rem 8.875rem;
+  }
 }
 
 .whoYouHelp {
@@ -392,16 +399,20 @@
   flex-direction: column;
 
   input[type='text'] {
-    width: 35.625rem;
     height: 2.5rem;
     background: transparent;
-    margin: 1rem 1rem 5.1rem 9.875rem;
     border: 1px solid $buttonBorder;
     font-family: $font-base;
     font-size: 1.125rem;
     line-height: 1.5rem;
     padding: 0 1rem;
     font-weight: 300;
+    margin: 1rem 3rem 5.1rem 3rem;
+
+    @media only screen and (min-width: 1025px) {
+      margin: 1rem 1rem 5.1rem 9.875rem;
+      width: 35.625rem;
+    }
   }
 }
 
@@ -413,14 +424,23 @@
   width: 100%;
   height: 10rem;
   font-family: $font-base;
+  margin: 1rem 0 3rem 0;
 
   @media only screen and (min-width: 1025px) {
-
-    width: 50%;
+    width: 80%;
+    margin: 1rem 0 1.5rem 0;
   }
 
   .checkboxOptionsHelp {
     padding: 1rem;
+
+    &:first-of-type {
+      margin-left: 2rem;
+    }
+
+    &:nth-of-type(4) {
+       margin-left: 2rem;
+     }
 
     @media only screen and (min-width: 1025px) {
       &:first-of-type {
@@ -470,7 +490,14 @@
 
 .addressDate {
   display: flex;
-  margin-top: 3.125rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 1025px) {
+    flex-direction: row;
+    margin-top: 3.125rem;
+  }
 
   .title {
     font-size: 1.5rem;
@@ -478,42 +505,71 @@
   }
 
   .address, .date {
-    margin: 1rem 1rem 0 8.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 1025px) {
+      display: block;
+      margin: 1rem 1rem 0 8.875rem;
+    }
   }
 
   .input {
-    margin: 1.75rem 0;
+    margin: 0.5rem 0;
     display: flex;
     justify-content: space-between;
-    width: 26rem;
+    width: 100%;
 
-    label {
-      font-size: 1.5rem;
+    @media only screen and (min-width: 1025px) {
+      margin: 1.75rem 0;
+      width: 26rem;
+
+      label {
+        font-size: 1.5rem;
+        width: 30%;
+      }
+    }
+
+      label {
+      font-size: 1.2rem;
       font-family: $font-base;
       font-weight: 300;
       line-height: 2rem;
-      width: 30%;
+      width: 50%;
     }
   }
 
   input {
-    width: 16rem;
-    height: 2.5rem;
     background: transparent;
     border: 0.75px solid $buttonBorder;
     padding: 0 1rem;
     font-family: "Open Sans", sans-serif;
     line-height: 1.5rem;
     font-weight: 300;
+    height: 2rem;
+    width: 15rem;
+
+    @media only screen and (min-width: 1025px) {
+      width: 16rem;
+      height: 2.5rem;
+    }
+
   }
 
   textarea {
-    width: 16rem;
+    width: 15rem;
     height: 7.5rem;
     background: transparent;
     border: 0.75px solid $buttonBorder;
     padding: 0.5rem 1rem;
     resize: none;
+
+    @media only screen and (min-width: 1025px) {
+      width: 16rem;
+    }
+
   }
 }
 
@@ -585,41 +641,81 @@
 }
 
 .errorStreet {
-  top: 86rem;
-  left: 19rem;
+  top: 58rem;
+  left: 36rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 87.5rem;
+    left: 24rem;
+  }
 }
 
 .errorCity {
-  top: 90.4rem;
-  left: 19rem;
+  top: 63rem;
+  left: 36rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 92rem;
+    left: 24rem;
+  }
 }
 
 .errorPostcode {
-  top: 94.8rem;
-  left: 18rem;
+  top: 65.5rem;
+  left: 36rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 96rem;
+    left: 23rem;
+  }
 }
 
 .errorPhone {
-  top: 100.5rem;
-  left: 19rem;
+  top: 69rem;
+  left: 36rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 100.5rem;
+    left: 24rem;
+  }
 }
 
 .errorDate {
-  top: 86rem;
-  left: 55rem;
+  top: 72rem;
+  left: 36rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 86.5rem;
+    left: 60rem;
+  }
 }
 
 .errorTime {
-  top: 90.4rem;
-  left: 55rem;
+  top: 75rem;
+  left: 36rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 91rem;
+    left: 60rem;
+  }
 }
 
 .errorRadio {
-  top: 83rem;
+  top: 84rem;
   right: 9.5rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 107.6rem;
+    top: 108rem;
+    left: 11rem;
+  }
+}
+
+.errorLocalization {
+  top: 84rem;
+  right: 7rem;
+
+  @media only screen and (min-width: 1025px) {
+    top: 108rem;
     left: 11rem;
   }
 }
@@ -674,3 +770,6 @@
   }
 }
 
+.addressButtons {
+  margin-top: -1rem;
+}

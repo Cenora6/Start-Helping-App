@@ -61,12 +61,12 @@ class GiveThingsAwayForm extends Component {
                 }
             }
         } else if (this.state.counter === 3) {
-            if (this.state.checkboxValues !== "" && this.state.selectedCityOrOrganization !== "") {
+            if (this.state.checkboxValues.length !== 0 && this.state.selectedCityOrOrganization !== "") {
                 this.setState({
                     counter: this.state.counter + 1,
                 });
             } else {
-                if (this.state.checkboxValues === "" || this.state.selectedCityOrOrganization === "") {
+                if (this.state.checkboxValues === 0 || this.state.selectedCityOrOrganization === "") {
                     this.setState({
                         errorStep3: true,
                     });
@@ -218,8 +218,8 @@ class GiveThingsAwayForm extends Component {
             ...donation[key],
         }));
 
-        this.props.firebase.
-        addDonation()
+        this.props.firebase
+            .addDonation()
             .add({
                 donations: donationMap,
                 email: sessionStorage.getItem("email"),
