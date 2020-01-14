@@ -58,19 +58,19 @@ class Step5 extends Component {
                                 <span className='title'>Adres odbioru:</span>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Ulica</span>
-                                    <span>{this.props.street}</span>
+                                    <input type='text' value={this.props.street}/>
                                 </div>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Miasto</span>
-                                    <span>{this.props.city}</span>
+                                    <input type='text' value={this.props.city}/>
                                 </div>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Kod pocztowy</span>
-                                    <span>{this.props.zipcode}</span>
+                                    <input type='text' value={this.props.zipcode}/>
                                 </div>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Numer telefonu</span>
-                                    <span>{this.props.phone}</span>
+                                    <input type='text' value={this.props.phone}/>
                                 </div>
                             </div>
 
@@ -78,15 +78,15 @@ class Step5 extends Component {
                                 <span className='title'>Termin odbioru:</span>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Termin odbioru</span>
-                                    <span>{this.props.date}9</span>
+                                    <input type='text' value={this.props.date}/>
                                 </div>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Godzina</span>
-                                    <span>{this.props.time}</span>
+                                    <input type='text' value={this.props.time}/>
                                 </div>
                                 <div className='summaryInput'>
                                     <span className='inputTitle'>Uwagi do kuriera</span>
-                                    <span>{this.props.notes}</span>
+                                    <input type='text' value={this.props.notes}/>
                                 </div>
                             </div>
 

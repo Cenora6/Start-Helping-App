@@ -439,8 +439,8 @@
     }
 
     &:nth-of-type(4) {
-       margin-left: 2rem;
-     }
+      margin-left: 2rem;
+    }
 
     @media only screen and (min-width: 1025px) {
       &:first-of-type {
@@ -491,7 +491,6 @@
 .addressDate {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   @media only screen and (min-width: 1025px) {
@@ -532,7 +531,7 @@
       }
     }
 
-      label {
+    label {
       font-size: 1.2rem;
       font-family: $font-base;
       font-weight: 300;
@@ -622,6 +621,10 @@
 
     .inputTitle {
       width: 40%;
+      text-align: right;
+      @media only screen and (min-width: 1025px) {
+        text-align: left;
+      }
     }
   }
 }
@@ -636,7 +639,7 @@
 
 .summaryStep {
   height: 45rem;
-  background: $boxColor;
+  background: url("./../../assets/Background-Form.jpg");
 }
 
 .thankYou {
@@ -665,14 +668,17 @@
 }
 
 .errorStyle {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: red;
   position: absolute;
+  @media only screen and (min-width: 1025px) {
+    font-size: 0.8rem;
+  }
 }
 
 .errorStreet {
   top: 58rem;
-  left: 36rem;
+  left: 35rem;
 
   @media only screen and (min-width: 1025px) {
     top: 87.5rem;
@@ -681,8 +687,8 @@
 }
 
 .errorCity {
-  top: 63rem;
-  left: 36rem;
+  top: 61rem;
+  left: 35rem;
 
   @media only screen and (min-width: 1025px) {
     top: 92rem;
@@ -691,8 +697,8 @@
 }
 
 .errorPostcode {
-  top: 65.5rem;
-  left: 36rem;
+  top: 63.5rem;
+  left: 35rem;
 
   @media only screen and (min-width: 1025px) {
     top: 96rem;
@@ -701,8 +707,8 @@
 }
 
 .errorPhone {
-  top: 69rem;
-  left: 36rem;
+  top: 67rem;
+  left: 35rem;
 
   @media only screen and (min-width: 1025px) {
     top: 100.5rem;
@@ -712,7 +718,7 @@
 
 .errorDate {
   top: 72rem;
-  left: 36rem;
+  left: 35rem;
 
   @media only screen and (min-width: 1025px) {
     top: 86.5rem;
@@ -722,7 +728,7 @@
 
 .errorTime {
   top: 75rem;
-  left: 36rem;
+  left: 35rem;
 
   @media only screen and (min-width: 1025px) {
     top: 91rem;
@@ -755,7 +761,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
-  background: $boxColor;
+  background: url("./../../assets/Background-Form.jpg");
 
   img {
     width: 2rem;
@@ -790,7 +796,7 @@
 .titleStep {
   display: flex;
   justify-content: center;
-  background: $boxColor;
+  background: url("./../../assets/Background-Form.jpg");
   padding: 2rem 0;
 
   .mobilechoose {

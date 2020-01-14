@@ -71,6 +71,10 @@ class Navigation extends Component {
                         <div className='hamburger' id='hamburger'>
                         </div>
                         <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"}>
+
+                            <NavLink to="/">
+                                <div>Start</div>
+                            </NavLink>
                             <Link activeClass="active" to="summary" spy={true} smooth={true} offset={50}
                                   duration={500}>
                                 <div>Twoje statystyki</div>
