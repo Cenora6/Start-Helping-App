@@ -555,7 +555,6 @@
       width: 16rem;
       height: 2.5rem;
     }
-
   }
 
   textarea {
@@ -569,14 +568,20 @@
     @media only screen and (min-width: 1025px) {
       width: 16rem;
     }
-
   }
 }
 
 .whatToGiveSummary {
-  margin-left: 8.875rem;
-  font-size: 1.5rem;
-  margin-top: 2.8125rem;
+  font-size: 1.2rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+
+  @media only screen and (min-width: 1025px) {
+    margin-left: 8.875rem;
+    margin-top: 2.8125rem;
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
 
   .giveThingsAndWhere {
     margin-top: 1rem;
@@ -596,15 +601,23 @@
   }
 
   .summaryInput {
-    margin: 1.875rem 0;
+    margin: 0.5rem 0;
     display: flex;
     justify-content: space-between;
-    width: 20rem;
+    width: 30rem;
+
+    @media only screen and (min-width: 1025px) {
+      width: 20rem;
+      margin: 1.875rem 0;
+    }
 
     span {
-      font-size: 1.5rem;
       font-weight: 300;
       line-height: 2rem;
+
+      @media only screen and (min-width: 1025px) {
+        font-size: 1.5rem;
+      }
     }
 
     .inputTitle {
@@ -614,7 +627,16 @@
 }
 
 .summaryAddress, .summaryDate {
-  margin: 1rem 1rem 2.4rem 8.875rem;
+  margin: 1rem;
+
+  @media only screen and (min-width: 1025px) {
+    margin: 1rem 1rem 2.4rem 8.875rem;
+  }
+}
+
+.summaryStep {
+  height: 45rem;
+  background: $boxColor;
 }
 
 .thankYou {
@@ -622,13 +644,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+
+  @media only screen and (min-width: 1025px) {
+    width: 70%;
+
+    p {
+      font-size: 2.5rem;
+      width: 42rem;
+    }
+  }
 
   p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
-    width: 42rem;
+    width: 30rem;
     line-height: 3.4375rem;
     margin-bottom: 1.625rem;
   }
