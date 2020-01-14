@@ -26,6 +26,37 @@ You can register and login to your own account, where you fill a form. There you
 - ```npm install``` to install all dependencies
 - ```npm start``` and ```http://localhost:3000/``` in the browser to preview the app :)
 
-## Preview
+### Preview
 
-<img src="src/assets/preview/Give Things 1.png" width="300" >
+> Main view 
+
+<img src="src/assets/preview/Main 1.png" width="300" > 
+<img src="src/assets/preview/Main 2.png" width="300" > 
+<img src="src/assets/preview/Main 3.png" width="300" > 
+<img src="src/assets/preview/Main 4.png" width="300" > 
+<img src="src/assets/preview/Main 5.png" width="300" > 
+
+> Login and Register with validation
+
+<img src="src/assets/preview/Login.png" width="300" > 
+<img src="src/assets/preview/Register.png" width="300" > 
+
+> Form and view after Login
+
+<img src="src/assets/preview/Give Things 1.png" width="300" > 
+<img src="src/assets/preview/Give Things Form 1.png" width="300" >
+<img src="src/assets/preview/Give Things Form 2.png" width="300" >
+<img src="src/assets/preview/Give Things Form 2a.png" width="300" >
+<img src="src/assets/preview/Give Things Form 3.png" width="300" >
+<img src="src/assets/preview/Give Things Form 3a.png" width="300" >
+<img src="src/assets/preview/Give Things Form 4.png" width="300" >
+<img src="src/assets/preview/Give Things Form 4a.png" width="300" >
+<img src="src/assets/preview/Give Things Form 5.png" width="300" >
+
+> Mobile version
+
+<img src="src/assets/preview/Mobile 1.png" width="300" >
+<img src="src/assets/preview/Mobile 2.png" width="300" >
+<img src="src/assets/preview/Mobile 3.png" width="300" >
+<img src="src/assets/preview/Mobile 4.png" width="300" >
+<img src="src/assets/preview/Mobile 5.png" width="300" >
