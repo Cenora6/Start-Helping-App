@@ -30,7 +30,7 @@ You can register and login to your own account, where you fill a form. There you
 
 > Main view 
 
-<img src="src/assets/preview/Main 1.png" width="300" > <img src="src/assets/preview/Main 2.png" width="300" > <img src="src/assets/preview/Main 3.png" width="300" > <img src="src/assets/preview/Main 4.png" width="300" > <img src="src/assets/preview/Main 5.png" width="300" > 
+<img src="src/assets/preview/Main 1.png" width="250" > <img src="src/assets/preview/Main 2.png" width="250" > <img src="src/assets/preview/Main 3.png" width="250" > <img src="src/assets/preview/Main 4.png" width="300" > <img src="src/assets/preview/Main 5.png" width="300" > 
 
 > Login and Register with validation
 
@@ -43,4 +43,4 @@ You can register and login to your own account, where you fill a form. There you
 
 > Mobile version
 
-<img src="src/assets/preview/Mobile 1.png" width="300" ><img src="src/assets/preview/Mobile 2.png" width="300" ><img src="src/assets/preview/Mobile 3.png" width="300" ><img src="src/assets/preview/Mobile 4.png" width="300" ><img src="src/assets/preview/Mobile 5.png" width="300" >
+<img src="src/assets/preview/Mobile 1 .png" width="300" ><img src="src/assets/preview/Mobile 2.png" width="300" ><img src="src/assets/preview/Mobile 3.png" width="300" ><img src="src/assets/preview/Mobile 4.png" width="300" ><img src="src/assets/preview/Mobile 5.png" width="300" >
