@@ -427,7 +427,7 @@
   margin: 1rem 0 3rem 0;
 
   @media only screen and (min-width: 1025px) {
-    width: 80%;
+    width: 60%;
     margin: 1rem 0 1.5rem 0;
   }
 
@@ -495,7 +495,7 @@
 
   @media only screen and (min-width: 1025px) {
     flex-direction: row;
-    margin-top: 3.125rem;
+    margin-top: 1rem;
   }
 
   .title {
@@ -606,7 +606,7 @@
     width: 30rem;
 
     @media only screen and (min-width: 1025px) {
-      width: 20rem;
+      width: 25rem;
       margin: 1.875rem 0;
     }
 
@@ -616,14 +616,15 @@
 
       @media only screen and (min-width: 1025px) {
         font-size: 1.5rem;
+        width: 60%;
       }
     }
 
     .inputTitle {
-      width: 40%;
       text-align: right;
       @media only screen and (min-width: 1025px) {
         text-align: left;
+        width: 35%;
       }
     }
   }
@@ -633,7 +634,7 @@
   margin: 1rem;
 
   @media only screen and (min-width: 1025px) {
-    margin: 1rem 1rem 2.4rem 8.875rem;
+    margin: 1rem 1rem 0 8.875rem;
   }
 }
 
@@ -681,8 +682,8 @@
   left: 35rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 87.5rem;
-    left: 24rem;
+    top: 86.5rem;
+    left: 21rem;
   }
 }
 
@@ -691,8 +692,8 @@
   left: 35rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 92rem;
-    left: 24rem;
+    top: 91rem;
+    left: 21rem;
   }
 }
 
@@ -701,8 +702,8 @@
   left: 35rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 96rem;
-    left: 23rem;
+    top: 95rem;
+    left: 20rem;
   }
 }
 
@@ -711,8 +712,8 @@
   left: 35rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 100.5rem;
-    left: 24rem;
+    top: 99.5rem;
+    left: 21rem;
   }
 }
 
@@ -721,8 +722,8 @@
   left: 35rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 86.5rem;
-    left: 60rem;
+    top: 85.5rem;
+    left: 57rem;
   }
 }
 
@@ -731,8 +732,8 @@
   left: 35rem;
 
   @media only screen and (min-width: 1025px) {
-    top: 91rem;
-    left: 60rem;
+    top: 90rem;
+    left: 57rem;
   }
 }
 
