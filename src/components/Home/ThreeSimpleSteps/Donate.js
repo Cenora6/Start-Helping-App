@@ -11,15 +11,27 @@ class Donate extends Component {
             color: "#3C3C3C",
         };
 
-        return (
-            <section className='donateSection'>
-                <Link to='/logowanie' style={buttonStyle} className='hoverLink'>
-                    <p className='donateButton'>
-                        Oddaj<br/> rzeczy
-                    </p>
-                </Link>
-            </section>
-        )
+        if (sessionStorage.getItem("email") == null) {
+            return (
+                <section className='donateSection'>
+                    <Link to='/logowanie' style={buttonStyle} className='hoverLink'>
+                        <p className='donateButton'>
+                            Oddaj<br/> rzeczy
+                        </p>
+                    </Link>
+                </section>
+            )
+        } else {
+            return (
+                <section className='donateSection'>
+                    <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
+                        <p className='donateButton'>
+                            Oddaj<br/> rzeczy
+                        </p>
+                    </Link>
+                </section>
+            )
+        }
     }
 }
 

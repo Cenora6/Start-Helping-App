@@ -3,6 +3,54 @@ import Select from 'react-styled-select';
 import info from "../../assets/Icon-8.svg";
 import lastStep from "../../assets/Icon-7.svg";
 
+class Step3Form extends Component {
+    render() {
+        return (
+            <div className='whoYouHelp'>
+                <span className='chooseHelp'>Komu chcesz pomóc?</span>
+
+                <form className='checkboxFormHelp'>
+                    <div className='checkboxOptionsHelp'>
+                        <input type='checkbox' id='kids' name="whoToHelp" value="dzieciom"
+                               onClick={this.props.handleCheckboxChange}
+                               checked={ this.props.checkboxValues.indexOf("dzieciom") > -1}/>
+                        <label htmlFor='kids'>dzieciom</label>
+                    </div>
+                    <div className='checkboxOptionsHelp'>
+                        <input type='checkbox' id='mothers' name="whoToHelp" value="samotnym matkom"
+                               onClick={this.props.handleCheckboxChange}
+                               checked={ this.props.checkboxValues.indexOf("samotnym matkom") > -1}/>
+                        <label htmlFor='mothers'>samotnym matkom</label>
+                    </div>
+                    <div className='checkboxOptionsHelp'>
+                        <input type='checkbox' id='homeless' name="whoToHelp" value="bezdomnym"
+                               onClick={this.props.handleCheckboxChange}
+                               checked={ this.props.checkboxValues.indexOf("bezdomnym") > -1}/>
+                        <label htmlFor='homeless'>bezdomnym</label>
+                    </div>
+                    <div className='checkboxOptionsHelp'>
+                        <input type='checkbox' id='disabled' name="whoToHelp" value="niepełnosprawnym"
+                               onClick={this.props.handleCheckboxChange}
+                               checked={ this.props.checkboxValues.indexOf("niepełnosprawnym") > -1}/>
+                        <label htmlFor='disabled'>niepełnosprawnym</label>
+                    </div>
+                    <div className='checkboxOptionsHelp'>
+                        <input type='checkbox' id='old' name="whoToHelp" value="osobom starszym"
+                               onClick={this.props.handleCheckboxChange}
+                               checked={ this.props.checkboxValues.indexOf("osobom starszym") > -1}/>
+                        <label htmlFor='old'>osobom starszym</label>
+                    </div>
+                </form>
+
+                <span className='chooseHelp'>Wpisz nazwę konkretnej organizacji (opcjonalnie)</span>
+                <input type='text' id='organization' name="organization"
+                       onChange={this.props.handlewriteOrganization}/>
+
+            </div>
+        )
+    }
+}
+
 class Step3 extends Component {
     state = {
         width: window.innerWidth,
@@ -32,6 +80,8 @@ class Step3 extends Component {
 
         const {width} = this.state;
         const isMobile = width <= 767;
+
+        console.log(this.props.value, this.props.checked)
 
         if (isMobile) {
             return (
@@ -70,42 +120,10 @@ class Step3 extends Component {
                                     placeholder={"— wybierz —"}
                             />
                         </div>
-                        <div className='whoYouHelp'>
-                            <span className='chooseHelp'>Komu chcesz pomóc?</span>
 
-                            <form className='checkboxFormHelp'>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='kids' name="whoToHelp" value="dzieciom"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='kids'>dzieciom</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='mothers' name="whoToHelp" value="samotnym matkom"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='mothers'>samotnym matkom</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='homeless' name="whoToHelp" value="bezdomnym"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='homeless'>bezdomnym</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='disabled' name="whoToHelp" value="niepełnosprawnym"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='disabled'>niepełnosprawnym</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='old' name="whoToHelp" value="osobom starszym"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='old'>osobom starszym</label>
-                                </div>
-                            </form>
+                        <Step3Form handleCheckboxChange={this.props.handleCheckboxChange} checkboxValues={ this.props.checkboxValues}
+                                   handlewriteOrganization={this.props.handlewriteOrganization}/>
 
-                            <span className='chooseHelp'>Wpisz nazwę konkretnej organizacji (opcjonalnie)</span>
-                            <input type='text' id='organization' name="organization"
-                                   onChange={this.props.handlewriteOrganization}/>
-
-                        </div>
                         {this.props.errorStep3 && <span className="errorStyle errorLocalization">
                         Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
                         <div className='nextPrevButtons'>
@@ -138,42 +156,10 @@ class Step3 extends Component {
                                     placeholder={"— wybierz —"}
                             />
                         </div>
-                        <div className='whoYouHelp'>
-                            <span className='chooseHelp'>Komu chcesz pomóc?</span>
 
-                            <form className='checkboxFormHelp'>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='kids' name="whoToHelp" value="dzieciom"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='kids'>dzieciom</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='mothers' name="whoToHelp" value="samotnym matkom"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='mothers'>samotnym matkom</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='homeless' name="whoToHelp" value="bezdomnym"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='homeless'>bezdomnym</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='disabled' name="whoToHelp" value="niepełnosprawnym"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='disabled'>niepełnosprawnym</label>
-                                </div>
-                                <div className='checkboxOptionsHelp'>
-                                    <input type='checkbox' id='old' name="whoToHelp" value="osobom starszym"
-                                           onClick={this.props.handleCheckboxChange}/>
-                                    <label htmlFor='old'>osobom starszym</label>
-                                </div>
-                            </form>
+                        <Step3Form handleCheckboxChange={this.props.handleCheckboxChange} checkboxValues={ this.props.checkboxValues}
+                                   handlewriteOrganization={this.props.handlewriteOrganization}/>
 
-                            <span className='chooseHelp'>Wpisz nazwę konkretnej organizacji (opcjonalnie)</span>
-                            <input type='text' id='organization' name="organization"
-                                   onChange={this.props.handlewriteOrganization}/>
-
-                        </div>
                         {this.props.errorStep3 && <span className="errorStyle errorLocalization">
                         Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
                         <div className='nextPrevButtons'>

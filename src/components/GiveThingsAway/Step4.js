@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import lastStep from "../../assets/Icon-7.svg";
 import info from "../../assets/Icon-8.svg";
 
-class Step3 extends Component {
+class Step4 extends Component {
     state = {
         width: window.innerWidth,
     };
@@ -208,4 +208,4 @@ class Step3 extends Component {
     }
 }
 
-export default Step3;
+export default Step4;

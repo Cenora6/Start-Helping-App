@@ -31,7 +31,6 @@ class HeaderTitle extends Component {
         const isMobile = width <= 767;
 
         if (isMobile) {
-
             return (
                 <div className='headerMobile' id='start'>
                     <div className='mobileSubtitle'>Masz w domu rzeczy, z którymi nie wiesz co zrobić?</div>
@@ -45,17 +44,33 @@ class HeaderTitle extends Component {
             )
 
         } else {
-
-            return (
-                <div className='headerTitle' id='start'>
-                    <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
-                    <img src={decoration} alt='decoration'/>
-                    <div className='headerButtons'>
-                        <Link to='/logowanie' style={buttonStyle} className='hoverLink'> <p>Oddaj<br/>rzeczy</p></Link>
-                        <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p> Zorganizuj zbiórkę</p></Link>
+            if (sessionStorage.getItem("email") == null) {
+                return (
+                    <div className='headerTitle' id='start'>
+                        <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
+                        <img src={decoration} alt='decoration'/>
+                        <div className='headerButtons'>
+                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p>Oddaj<br/>rzeczy</p>
+                            </Link>
+                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p> Zorganizuj zbiórkę</p>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-            )
+                )
+            } else {
+                return (
+                    <div className='headerTitle' id='start'>
+                        <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
+                        <img src={decoration} alt='decoration'/>
+                        <div className='headerButtons'>
+                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p>Oddaj<br/>rzeczy</p>
+                            </Link>
+                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p> Zorganizuj zbiórkę</p>
+                            </Link>
+                        </div>
+                    </div>
+                )
+            }
         }
     }
 }

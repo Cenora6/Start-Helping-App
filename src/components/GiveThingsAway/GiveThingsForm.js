@@ -117,6 +117,7 @@ class GiveThingsAwayForm extends Component {
     };
 
     handleCheckboxChange = (e) => {
+        console.log("1", e.checked);
 
         const checkboxValues = this.state.checkboxValues;
         let array;
@@ -129,7 +130,7 @@ class GiveThingsAwayForm extends Component {
         }
 
         this.setState({
-            checkboxValues: checkboxValues
+            checkboxValues: checkboxValues,
         });
     };
 
@@ -241,7 +242,7 @@ class GiveThingsAwayForm extends Component {
         const step1 =
             <>
                 <Step1 handleNext={this.handleNext} handleRadioChange={this.handleRadioChange}
-                       radioError={this.state.radioError}/>
+                       radioError={this.state.radioError} radioValue={this.state.radioValue}/>
             </>;
 
         const step2 =
@@ -257,7 +258,7 @@ class GiveThingsAwayForm extends Component {
                 <Step3 handleNext={this.handleNext} handlePrevious={this.handlePrevious}
                        handleCheckboxChange={this.handleCheckboxChange} errorStep3={this.state.errorStep3}
                        handleSelectCityChange={this.handleSelectCityChange} selectedCityOrOrganization={this.state.selectedCityOrOrganization}
-                       handlewriteOrganization={this.handlewriteOrganization}/>
+                       handlewriteOrganization={this.handlewriteOrganization} checkboxValues={this.state.checkboxValues}/>
             </>;
 
         const step4 =
