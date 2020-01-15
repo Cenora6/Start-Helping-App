@@ -655,11 +655,6 @@
 
   @media only screen and (min-width: 1025px) {
     width: 70%;
-
-    p {
-      font-size: 2.5rem;
-      width: 40rem;
-    }
   }
 
   p {
@@ -669,6 +664,11 @@
     width: 30rem;
     line-height: 3.4375rem;
     margin-bottom: 1.625rem;
+
+    @media only screen and (min-width: 1025px) {
+      font-size: 2.5rem;
+      width: 44rem;
+    }
   }
 }
 

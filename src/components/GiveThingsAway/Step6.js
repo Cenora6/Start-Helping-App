@@ -12,7 +12,7 @@ class Step6 extends Component {
                 <section className='steps'>
 
                     <div className='thankYou'>
-                        <p>Dziękujemy za przesłanie formularza Na maila prześlemy wszelkie informacje o odbiorze.</p>
+                        <p>Dziękujemy za przesłanie formularza.<br/> Na maila prześlemy wszelkie informacje o odbiorze.</p>
                         <img src={decoration} alt={decoration}/>
                     </div>
 
