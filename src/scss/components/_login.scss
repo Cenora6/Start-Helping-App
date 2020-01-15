@@ -19,9 +19,13 @@
     color: $buttonBorder;
     font-size: 2.5rem;
     font-weight: 500;
-    width: 30rem;
+    width: 100%;
     text-align: center;
     line-height: 3.4375rem;
+
+    @media only screen and (min-width: 1025px) {
+      width: 30rem;
+    }
   }
 
   img {
@@ -29,13 +33,17 @@
   }
 
   .loginFormProper {
-    width: 24.0625rem;
+    width: 80%;
     height: 16rem;
     background: $boxColor;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (min-width: 1025px) {
+      width: 24.0625rem;
+    }
 
     .loginEmailName {
       display: flex;
@@ -64,13 +72,17 @@
   }
 
   .loginButtons {
-    width: 30rem;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 3rem;
     font-size: 1.125rem;
     font-family: $font-base;
     font-weight: 300;
+
+    @media only screen and (min-width: 1025px) {
+      width: 30rem;
+    }
 
     span {
       padding: 1rem;

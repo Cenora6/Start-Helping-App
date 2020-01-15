@@ -6,7 +6,25 @@ import {Link} from "react-router-dom";
 
 class LogOut extends Component {
 
+    state = {
+        width: window.innerWidth,
+    };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render() {
+        const {width} = this.state;
+        const isMobile = width <= 767;
 
         const linkStyle = {
             padding: "1rem",
@@ -14,23 +32,40 @@ class LogOut extends Component {
             color: "#000",
         };
 
-        return (
-            <>
-                <section className='loginNavigation'>
-                    <LogReg/>
+        if (isMobile) {
+            return (
+                <>
                     <Navigation/>
-                </section>
-                <section className='loginForm'>
-                    <h3>Wylogowanie nastąpiło pomyślnie!</h3>
-                    <img src={decoration} alt='decoration'/>
+                    <section className='loginForm'>
+                        <h3>Wylogowanie nastąpiło pomyślnie!</h3>
+                        <img src={decoration} alt='decoration'/>
 
-                    <div className='backHome'>
-                        <Link to='/' style={linkStyle}><span className='clickButton'>Strona główna</span></Link>
-                    </div>
+                        <div className='backHome'>
+                            <Link to='/' style={linkStyle}><span className='clickButton'>Strona główna</span></Link>
+                        </div>
 
-                </section>
-            </>
-        )
+                    </section>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <section className='loginNavigation'>
+                        <LogReg/>
+                        <Navigation/>
+                    </section>
+                    <section className='loginForm'>
+                        <h3>Wylogowanie nastąpiło pomyślnie!</h3>
+                        <img src={decoration} alt='decoration'/>
+
+                        <div className='backHome'>
+                            <Link to='/' style={linkStyle}><span className='clickButton'>Strona główna</span></Link>
+                        </div>
+
+                    </section>
+                </>
+            )
+        }
     }
 }
 

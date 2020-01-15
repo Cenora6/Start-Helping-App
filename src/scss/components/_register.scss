@@ -1,5 +1,5 @@
 .registerFormProper {
-  width: 24.0625rem;
+  width: 80%;
   height: 22.5rem;
   background: $boxColor;
   display: flex;
@@ -7,6 +7,10 @@
   justify-content: center;
   align-items: center;
   font-family: $font-base;
+
+  @media only screen and (min-width: 1025px) {
+    width: 24.0625rem;
+  }
 
   .registerEmailName {
     display: flex;

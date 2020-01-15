@@ -27,6 +27,12 @@ class HeaderTitle extends Component {
             color: "#3C3C3C",
         };
 
+        const buttonStyleMobile = {
+            textDecoration: "none",
+            paddingTop: "1rem",
+            color: "#3C3C3C",
+        };
+
         const { width } = this.state;
         const isMobile = width <= 767;
 
@@ -36,7 +42,7 @@ class HeaderTitle extends Component {
                     <div className='mobileSubtitle'>Masz w domu rzeczy, z którymi nie wiesz co zrobić?</div>
                     <div className='mobileTitle'>ODDAJ JE POTRZEBUJĄCYM <br/> - szybko i w zaufane ręce</div>
                     <div className='headerButtons'>
-                        <Link to='/rejestracja' style={buttonStyle} className='hoverLink'>
+                        <Link to='/rejestracja' style={buttonStyleMobile} className='hoverLink'>
                             <p>Załóż konto</p>
                         </Link>
                     </div>

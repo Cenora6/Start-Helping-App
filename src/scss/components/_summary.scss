@@ -8,6 +8,10 @@
   width: 100vw;
   height: 45rem;
 
+  @media only screen and (max-width: 670px) {
+    height: 85rem;
+  }
+
   &:before {
     content: "";
     background-image: url("./../../assets/Form-Hero-Image.jpg");
@@ -28,18 +32,45 @@
     margin-right: 1rem;
     line-height: 2rem;
     margin-top: 10rem;
+
+    @media only screen and (max-width: 670px) {
+      margin-top: 6rem;
+
+    }
   }
 
   .headerButtons {
+    @media only screen and (max-width: 670px) {
+      display: flex;
+      flex-direction: column;
+      }
+    }
+
     .firstButton {
       padding: 2.4rem 0;
     }
   }
+
+  @media only screen and (max-width: 670px) {
+    .buttonsAfterLogin {
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 .summaryStatistics {
   display: flex;
   margin-top: 7rem;
+
+  @media only screen and (max-width: 670px) {
+    flex-direction: column;
+  }
+
+  .statistics {
+    @media only screen and (max-width: 670px) {
+      margin: 3rem 0;
+    }
+  }
 
   span {
     border: 3px solid $registerBorderColor;

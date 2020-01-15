@@ -28,9 +28,7 @@ class GiveThingsAwayHeader extends Component {
         if (isMobile) {
             return (
                 <section className='giveThingsAway'>
-                    <div className='giveThingsAwayHeader'>
                         <Navigation/>
-                    </div>
                     <div className='giveThingsAwayWelcome'>
                         <div className='giveThingsAwayText'>
                             <h2>Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM</h2>

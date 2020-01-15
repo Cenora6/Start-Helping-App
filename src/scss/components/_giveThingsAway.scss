@@ -1,6 +1,10 @@
 .giveThingsAway {
   height: 30rem;
 
+  @media only screen and (max-width: 670px) {
+    height: 100%
+  }
+
   @media only screen and (min-width: 1025px) {
     height: 53.3125rem;
     background-image: url("./../../assets/Form-Hero-Image.jpg");
@@ -120,6 +124,10 @@
   font-family: $font-base;
   position: relative;
 
+  @media only screen and (max-width: 670px) {
+    height: 100%;
+  }
+
   img {
     width: 3rem;
     height: 3rem;
@@ -131,11 +139,18 @@
   h2 {
     font-size: 1.8rem;
     margin: 0 7rem;
+    @media only screen and (max-width: 670px) {
+      margin-top: 1rem;
+    }
   }
 
   p {
     font-size: 1.2rem;
     margin: 0 7rem;
+
+    @media only screen and (max-width: 670px) {
+      margin: 1rem 2rem 1rem 7rem;
+    }
   }
 
   .warning {
@@ -165,6 +180,10 @@
   height: 40rem;
   background-image: url("./../../assets/Background-Form.jpg");
 
+  @media only screen and (max-width: 670px) {
+    align-items: center;
+  }
+
   @media only screen and (min-width: 1025px) {
     height: 55.1875rem;
   }
@@ -182,6 +201,10 @@
 
   .radioForm {
     margin: 0 3.125rem 3.5rem 5.875rem;
+
+    @media only screen and (max-width: 670px) {
+      margin: 0 1.5rem 3.5rem 1.5rem;
+    }
 
     @media only screen and (min-width: 1025px) {
       margin: 0 3.125rem 3.125rem 8.875rem;
@@ -237,6 +260,11 @@
   justify-content: flex-end;
   align-items: flex-end;
 
+  @media only screen and (max-width: 670px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+
   @media only screen and (min-width: 1025px) {
     justify-content: flex-start;
   }
@@ -248,6 +276,11 @@
     font-weight: 300;
     cursor: pointer;
     margin-right: 8.875rem;
+
+    @media only screen and (max-width: 670px) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
 
     @media only screen and (min-width: 1025px) {
       font-size: 1.5rem;
@@ -266,6 +299,12 @@
     font-weight: 300;
     cursor: pointer;
 
+    @media only screen and (max-width: 670px) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 0;
+    }
+
     @media only screen and (min-width: 1025px) {
       margin-left: 8.875rem;
       font-size: 1.5rem;
@@ -280,6 +319,10 @@
   vertical-align: middle;
   position: relative;
   margin: 0 3.125rem 23rem 5.875rem;
+
+  @media only screen and (max-width: 670px) {
+    margin-left: 2rem;
+  }
 
   @media only screen and (min-width: 1025px) {
     margin: 3.0625rem 3.125rem 21.5rem 8.875rem;
@@ -388,6 +431,10 @@
 .localization {
   margin: 0.5rem 3.125rem 2rem 3rem;
 
+  @media only screen and (max-width: 670px) {
+    margin-left: 2rem;
+  }
+
   @media only screen and (min-width: 1025px) {
     margin: 2.5rem 3.125rem 3rem 8.875rem;
   }
@@ -397,6 +444,10 @@
   margin-bottom: -4.7rem;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 670px) {
+    margin-bottom: 0;
+  }
 
   input[type='text'] {
     height: 2.5rem;
@@ -413,6 +464,10 @@
       margin: 1rem 1rem 5.1rem 9.875rem;
       width: 35.625rem;
     }
+
+    @media only screen and (max-width: 670px) {
+      margin: 1rem 3rem 2rem 3rem;
+    }
   }
 }
 
@@ -426,6 +481,14 @@
   font-family: $font-base;
   margin: 1rem 0 3rem 0;
 
+  @media only screen and (max-width: 670px) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
   @media only screen and (min-width: 1025px) {
     width: 60%;
     margin: 1rem 0 1.5rem 0;
@@ -433,6 +496,17 @@
 
   .checkboxOptionsHelp {
     padding: 1rem;
+    @media only screen and (max-width: 670px) {
+      margin-bottom: 1rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:nth-of-type(4) {
+        margin-left: 0;
+      }
+    }
 
     &:first-of-type {
       margin-left: 2rem;
@@ -442,17 +516,17 @@
       margin-left: 2rem;
     }
 
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (max-width: 670px) {
       &:first-of-type {
-        margin: 1rem 1rem 1rem 8.875rem;
+        margin: 0;
       }
 
       &:nth-of-type(4) {
-        margin: 1rem 1rem 2rem 8.875rem;
+        margin: 0;
       }
 
       &:last-of-type {
-        margin: 1rem 1rem 2rem 1rem;
+        margin: 0;
       }
     }
 
@@ -465,6 +539,10 @@
       border: 1px solid $buttonBorder;
       padding: 0.8rem 1rem;
       border-radius: 3rem;
+
+      @media only screen and (max-width: 670px) {
+        font-size: 1rem;
+      }
 
       @media only screen and (min-width: 1025px) {
         border-radius: 0;
@@ -492,6 +570,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 670px) {
+    margin-bottom: 2rem;
+  }
 
   @media only screen and (min-width: 1025px) {
     flex-direction: row;
@@ -521,6 +603,7 @@
     justify-content: space-between;
     width: 100%;
 
+
     @media only screen and (min-width: 1025px) {
       margin: 1.75rem 0;
       width: 26rem;
@@ -537,6 +620,11 @@
       font-weight: 300;
       line-height: 2rem;
       width: 50%;
+
+      @media only screen and (max-width: 670px) {
+        margin: 0 1rem;
+        width: 40%;
+      }
     }
   }
 
@@ -549,6 +637,10 @@
     font-weight: 300;
     height: 2rem;
     width: 15rem;
+
+    @media only screen and (max-width: 670px) {
+      width: 9rem;
+    }
 
     @media only screen and (min-width: 1025px) {
       width: 16rem;
@@ -564,6 +656,10 @@
     padding: 0.5rem 1rem;
     resize: none;
 
+    @media only screen and (max-width: 670px) {
+      width: 9rem;
+    }
+
     @media only screen and (min-width: 1025px) {
       width: 16rem;
     }
@@ -574,6 +670,10 @@
   font-size: 1.2rem;
   margin-left: 3rem;
   margin-right: 2rem;
+
+  @media only screen and (max-width: 670px) {
+    margin-left: 1rem;
+  }
 
   @media only screen and (min-width: 1025px) {
     margin-left: 8.875rem;
@@ -608,6 +708,10 @@
     display: flex;
     justify-content: space-between;
     width: 30rem;
+
+    @media only screen and (max-width: 670px) {
+      width: 20rem;
+    }
 
     @media only screen and (min-width: 1025px) {
       width: 25rem;
@@ -668,6 +772,10 @@
     @media only screen and (min-width: 1025px) {
       font-size: 2.5rem;
       width: 44rem;
+    }
+
+    @media only screen and (max-width: 670px) {
+      width: 80%;
     }
   }
 }
@@ -745,6 +853,11 @@
   top: 84rem;
   right: 9.5rem;
 
+  @media only screen and (max-width: 670px) {
+    top: 90rem;
+    right: 9.5rem;
+  }
+
   @media only screen and (min-width: 1025px) {
     top: 108rem;
     left: 11rem;
@@ -808,6 +921,11 @@
     font-family: $font-base;
     font-size: 1.4rem;
     margin: 0 2rem;
+
+    @media only screen and (max-width: 670px) {
+      margin: 0 1rem;
+      line-height: 2rem;
+    }
   }
 }
 

@@ -179,24 +179,62 @@ const Registration = withRouter(withFirebase(RegisterForm));
 
 class Register extends Component {
 
+    state = {
+        width: window.innerWidth,
+    };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render() {
-        return (
-            <>
-                <section className='loginNavigation'>
-                    <LogReg/>
+
+        const {width} = this.state;
+        const isMobile = width <= 767;
+
+        if (isMobile) {
+            return (
+                <>
                     <Navigation/>
-                </section>
-                <section className='loginForm'>
-                    <h3>Załóż konto</h3>
-                    <img src={decoration} alt='decoration'/>
 
-                    <FirebaseContext.Consumer>
-                        {firebase => <Registration firebase={firebase} />}
-                    </FirebaseContext.Consumer>
+                    <section className='loginForm'>
+                        <h3>Załóż konto</h3>
+                        <img src={decoration} alt='decoration'/>
 
-                </section>
-            </>
-        )
+                        <FirebaseContext.Consumer>
+                            {firebase => <Registration firebase={firebase}/>}
+                        </FirebaseContext.Consumer>
+
+                    </section>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <section className='loginNavigation'>
+                        <LogReg/>
+                        <Navigation/>
+                    </section>
+                    <section className='loginForm'>
+                        <h3>Załóż konto</h3>
+                        <img src={decoration} alt='decoration'/>
+
+                        <FirebaseContext.Consumer>
+                            {firebase => <Registration firebase={firebase}/>}
+                        </FirebaseContext.Consumer>
+
+                    </section>
+                </>
+            )
+        }
     }
 }
 

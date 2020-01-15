@@ -145,25 +145,65 @@ class LoginForm extends Component {
 const LoginIn = withRouter(withFirebase(LoginForm));
 
 class Login extends Component {
+
+    state = {
+        width: window.innerWidth,
+    };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
+    };
+
     render() {
-        return (
-            <>
-                <section className='loginNavigation'>
-                    <LogReg/>
+
+        const {width} = this.state;
+        const isMobile = width <= 767;
+
+        if (isMobile) {
+            return (
+                <>
                     <Navigation/>
-                </section>
 
-                <section className='loginForm'>
-                    <h3>Zaloguj się</h3>
-                    <img src={decoration} alt='decoration'/>
+                    <section className='loginForm'>
+                        <h3>Zaloguj się</h3>
+                        <img src={decoration} alt='decoration'/>
 
-                    <FirebaseContext.Consumer>
-                        {firebase => <LoginIn firebase={firebase} />}
-                    </FirebaseContext.Consumer>
+                        <FirebaseContext.Consumer>
+                            {firebase => <LoginIn firebase={firebase}/>}
+                        </FirebaseContext.Consumer>
 
-                </section>
-            </>
-        )
+                    </section>
+                </>
+            )
+        } else {
+
+            return (
+                <>
+                    <section className='loginNavigation'>
+                        <LogReg/>
+                        <Navigation/>
+                    </section>
+
+                    <section className='loginForm'>
+                        <h3>Zaloguj się</h3>
+                        <img src={decoration} alt='decoration'/>
+
+                        <FirebaseContext.Consumer>
+                            {firebase => <LoginIn firebase={firebase}/>}
+                        </FirebaseContext.Consumer>
+
+                    </section>
+                </>
+            )
+        }
     }
 }
 

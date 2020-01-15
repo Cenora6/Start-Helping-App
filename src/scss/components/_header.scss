@@ -70,9 +70,13 @@ width: 100%;
 }
 
 .headerButtons {
-  padding-top: 4.0625rem;
+  padding: 1rem 0;
   display: flex;
-  line-height: 45px;
+  line-height: 3rem;
+
+  @media only screen and (min-width: 1025px) {
+    padding-top: 4.0625rem;
+  }
 
   p {
     padding: 1rem 0.3rem;
@@ -98,7 +102,7 @@ width: 100%;
 
 .mobileNavigation {
   display: flex;
-  position: fixed;
+  position: sticky;
   justify-content: flex-end;
   align-items: flex-end;
   background: $registerBorderColor;
@@ -212,7 +216,7 @@ width: 100%;
 
   .mobileTitle {
     text-align: left;
-    font-size: 2.375rem;
+    font-size: 2rem;
     font-family: $font-base;
     font-weight: 500;
     letter-spacing: -0.76px;

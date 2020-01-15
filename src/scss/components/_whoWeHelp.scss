@@ -25,6 +25,10 @@
       justify-content: center;
       align-items: center;
 
+      @media only screen and (max-width: 670px) {
+        flex-direction: column;
+      }
+
       li {
         text-align: center;
         height: 30rem;
@@ -32,6 +36,14 @@
         font-family: $font-base;
         font-size: 1.25rem;
         line-height: 1.5rem;
+
+        @media only screen and (max-width: 670px) {
+          height: 19rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
 
         span {
           margin: 0 1rem;
@@ -52,6 +64,10 @@
           font-size: 1rem;
           font-family: $font-base;
           line-height: 1.5rem;
+
+          @media only screen and (max-width: 670px) {
+            width: 22rem;
+          }
         }
 
         @media only screen and (min-width: 1025px) {
