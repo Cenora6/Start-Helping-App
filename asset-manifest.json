@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Start-Helping-App/static/css/main.471ca0c2.chunk.css",
+    "main.js": "/Start-Helping-App/static/js/main.0b5ba6c3.chunk.js",
+    "main.js.map": "/Start-Helping-App/static/js/main.0b5ba6c3.chunk.js.map",
+    "runtime-main.js": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js",
+    "runtime-main.js.map": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js.map",
+    "static/js/2.dd06d03e.chunk.js": "/Start-Helping-App/static/js/2.dd06d03e.chunk.js",
+    "static/js/2.dd06d03e.chunk.js.map": "/Start-Helping-App/static/js/2.dd06d03e.chunk.js.map",
+    "index.html": "/Start-Helping-App/index.html",
+    "precache-manifest.4191320c6b26e9ae92a5efaba477231d.js": "/Start-Helping-App/precache-manifest.4191320c6b26e9ae92a5efaba477231d.js",
+    "service-worker.js": "/Start-Helping-App/service-worker.js",
+    "static/css/main.471ca0c2.chunk.css.map": "/Start-Helping-App/static/css/main.471ca0c2.chunk.css.map",
+    "static/js/2.dd06d03e.chunk.js.LICENSE": "/Start-Helping-App/static/js/2.dd06d03e.chunk.js.LICENSE",
+    "static/media/main.scss": "/Start-Helping-App/static/media/Home-Hero-Image.e99903ed.jpg",
+    "static/media/Decoration.svg": "/Start-Helping-App/static/media/Decoration.2290784e.svg",
+    "static/media/Facebook.svg": "/Start-Helping-App/static/media/Facebook.df65b6c0.svg",
+    "static/media/Icon-1.svg": "/Start-Helping-App/static/media/Icon-1.91147906.svg",
+    "static/media/Icon-2.svg": "/Start-Helping-App/static/media/Icon-2.db91e33e.svg",
+    "static/media/Icon-3.svg": "/Start-Helping-App/static/media/Icon-3.2cfe9dfe.svg",
+    "static/media/Icon-4.svg": "/Start-Helping-App/static/media/Icon-4.436df0aa.svg",
+    "static/media/Icon-5.svg": "/Start-Helping-App/static/media/Icon-5.bacc2d0a.svg",
+    "static/media/Icon-6.svg": "/Start-Helping-App/static/media/Icon-6.82189696.svg",
+    "static/media/Icon-7.svg": "/Start-Helping-App/static/media/Icon-7.e597acab.svg",
+    "static/media/Icon-8.svg": "/Start-Helping-App/static/media/Icon-8.d9a24d05.svg",
+    "static/media/Instagram.svg": "/Start-Helping-App/static/media/Instagram.703479fd.svg",
+    "static/media/People.jpg": "/Start-Helping-App/static/media/People.6fa36651.jpg",
+    "static/media/Signature.svg": "/Start-Helping-App/static/media/Signature.e54cfcfc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0636f0a1.js",
+    "static/js/2.dd06d03e.chunk.js",
+    "static/css/main.471ca0c2.chunk.css",
+    "static/js/main.0b5ba6c3.chunk.js"
+  ]
+}
