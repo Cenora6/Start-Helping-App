@@ -585,6 +585,10 @@
   .giveThingsAndWhere {
     margin-top: 1rem;
 
+    @media only screen and (min-width: 1025px) {
+      width: 70%;
+    }
+
     img {
       margin: 0 1.25rem 0 0;
       width: 3.125rem;
@@ -654,7 +658,7 @@
 
     p {
       font-size: 2.5rem;
-      width: 42rem;
+      width: 40rem;
     }
   }
 
