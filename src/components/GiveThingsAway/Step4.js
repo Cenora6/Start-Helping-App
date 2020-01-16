@@ -47,6 +47,16 @@ class Step4 extends Component {
                     </div>
 
                     <div className='steps'>
+                        <div className='errors'>
+                        <span className='errorMobileStyle'>
+                            {this.props.errorStreet && "Błędna ulica! "}
+                            {this.props.errorCity && "Błędne miasto! "}
+                            {this.props.errorPostcode && "Błędny kod pocztowy! "}
+                            {this.props.errorPhone && "Błędny telefon! "}
+                            {this.props.errorDate && "Błędna data! "}
+                            {this.props.errorTime &&  "Błędna godzina! "}
+                        </span>
+                        </div>
                         <div className='addressDate'>
                             <form className='address' onSubmit={this.props.handleSubmit}>
                                 <span className='title'>Adres odbioru:</span>
@@ -56,32 +66,24 @@ class Step4 extends Component {
                                            value={this.props.street}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorStreet &&
-                                <span className="errorStyle">Podana ulica jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='city'>Miasto</label>
                                     <input type='text' id='city' name="city"
                                            value={this.props.city}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorCity &&
-                                <span className="errorStyle">Podane miasto jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='zipcode'>Kod pocztowy</label>
                                     <input type='phone' id='zipcode' name="zipcode"
                                            value={this.props.zipcode}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorPostcode && <span className="errorStyle">Podany kod pocztowy jest nieprawidłowe!</span>}
                                 <div className='input'>
                                     <label htmlFor='phone'>Numer telefonu</label>
                                     <input type='text' id='phone' name="phone"
                                            value={this.props.phone}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorPhone &&
-                                <span className="errorStyle">Podany telefon jest nieprawidłowy!</span>}
-
                             </form>
                             <form className='date' onSubmit={this.props.handleSubmit}>
                                 <span className='title'>Termin odbioru</span>
@@ -91,16 +93,12 @@ class Step4 extends Component {
                                            value={this.props.date}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorDate &&
-                                <span className="errorStyle">Podana data jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='time'>Godzina</label>
                                     <input type='time' id='time' name="time"
                                            value={this.props.time}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorTime &&
-                                <span className="errorStyle">Podana godzina jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='notes'>Uwagi dla kuriera</label>
                                     <textarea id='notes' name="notes"

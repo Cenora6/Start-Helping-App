@@ -204,6 +204,7 @@
 
   @media only screen and (max-width: 670px) {
     align-items: center;
+    height: 44rem;
   }
 
   @media only screen and (min-width: 1025px) {
@@ -663,7 +664,6 @@
       width: 50%;
 
       @media only screen and (max-width: 670px) {
-        margin: 0 1rem;
         width: 40%;
       }
     }
@@ -822,12 +822,9 @@
 }
 
 .errorStyle {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: red;
   position: absolute;
-  @media only screen and (min-width: 1025px) {
-    font-size: 0.8rem;
-  }
 }
 
 .errorStreet {
@@ -969,9 +966,28 @@
 }
 
 .errorRadioMobile {
-  top: 57rem;
+  font-size: 0.8rem;
+  color: red;
 }
 
 .errorLocalizationMobile {
-  top: 58rem;
+  top: 56rem;
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  color: red;
+  text-align: center;
+}
+
+.errors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorMobileStyle {
+  font-size: 0.7rem;
+  color: red;
+  width: 14rem;
+  text-align: center;
+  margin: 1rem;
 }

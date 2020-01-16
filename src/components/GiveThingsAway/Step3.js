@@ -108,6 +108,11 @@ class Step3 extends Component {
                     </div>
 
                     <div className='steps'>
+
+
+                        {this.props.errorStep3 && <span className="errorLocalizationMobile">
+                        Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
+
                         <div className='selectForm localization'>
                             <span className=''>Lokalizacja</span>
                             <Select value={this.props.selectedCityOrOrganization}
@@ -124,8 +129,6 @@ class Step3 extends Component {
                         <Step3Form handleCheckboxChange={this.props.handleCheckboxChange} checkboxValues={ this.props.checkboxValues}
                                    handlewriteOrganization={this.props.handlewriteOrganization}/>
 
-                        {this.props.errorStep3 && <span className="errorStyle errorLocalizationMobile">
-                        Wybierz miasto lub wpisz organizację! Zaznacz przynajmniej jedną z opcji!</span>}
                         <div className='nextPrevButtons'>
                             <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
                             <span className='nextButton hoverLink' onClick={this.props.handleNext}>Dalej</span>
