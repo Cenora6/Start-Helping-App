@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
+import { matchPath } from "react-router-dom";
+
 
 class Navigation extends Component {
     state = {
@@ -40,7 +42,7 @@ class Navigation extends Component {
                     <section className='mobileNavigation'>
                         <div className='hamburger' id='hamburger'>
                         </div>
-                        <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"}>
+                        <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}>
                             <Link activeClass="active" to="start" spy={true} smooth={true} offset={50} duration={500}>
                                 <div>Start</div>
                             </Link>
@@ -70,8 +72,7 @@ class Navigation extends Component {
                     <section className='mobileNavigation'>
                         <div className='hamburger' id='hamburger'>
                         </div>
-                        <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"}>
-
+                        <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}>
                             <NavLink to="/">
                                 <div>Start</div>
                             </NavLink>

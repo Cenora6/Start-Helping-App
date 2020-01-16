@@ -14,6 +14,11 @@
   height: 50rem;
   font-family: $font-base;
 
+  @media only screen and (max-width: 670px) {
+    font-size: 90%;
+    height: 40rem;
+  }
+
   h3 {
     letter-spacing: -0.8px;
     color: $buttonBorder;
@@ -26,6 +31,10 @@
     @media only screen and (min-width: 1025px) {
       width: 30rem;
     }
+
+    @media only screen and (max-width: 670px) {
+      font-size: 1.7rem;
+    }
   }
 
   img {
@@ -33,7 +42,7 @@
   }
 
   .loginFormProper {
-    width: 80%;
+    width: 50%;
     height: 16rem;
     background: $boxColor;
     display: flex;
@@ -43,6 +52,10 @@
 
     @media only screen and (min-width: 1025px) {
       width: 24.0625rem;
+    }
+
+    @media only screen and (max-width: 670px) {
+      width: 90%;
     }
 
     .loginEmailName {
@@ -97,4 +110,11 @@
       border: 0.75px solid $buttonBorder;
     }
   }
+}
+
+.errorEmailMobile {
+  border-top: 1px solid red;
+  padding-top: 0.5rem;
+  color: red;
+  font-size: 0.8rem;
 }

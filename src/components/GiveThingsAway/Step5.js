@@ -94,7 +94,7 @@ class Step5 extends Component {
 
                         <div className='nextPrevButtons'>
                             <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
-                            <span className='nextButton hoverLink' onClick={this.props.handleConfirm}>Potwierdzam</span>
+                            <span className='nextButton hoverLink confirmButton' onClick={this.props.handleConfirm}>Potwierdzam</span>
                         </div>
 
                     </section>

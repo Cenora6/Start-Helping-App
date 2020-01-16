@@ -13,6 +13,19 @@ class LoginForm extends Component {
         validEmail: false,
         validPassword: false,
         loginError: false,
+        width: window.innerWidth,
+    };
+
+    componentWillMount() {
+        window.addEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowSizeChange);
+    }
+
+    handleWindowSizeChange = () => {
+        this.setState({ width: window.innerWidth });
     };
 
     handleEmailChange = (e) => {
@@ -117,6 +130,9 @@ class LoginForm extends Component {
             top: "25.5rem",
         };
 
+        const {width} = this.state;
+        const isMobile = width <= 767;
+
         return (
             <>
                 <form className='loginFormProper'>
@@ -124,12 +140,18 @@ class LoginForm extends Component {
                     <div className='loginEmailName'>
                         <span>Email</span>
                         <input type='text' value={this.state.email} onChange={this.handleEmailChange}/>
-                        {this.state.validEmail && <span style={errorEmail}>Podany email jest nieprawidłowy!</span>}
+                        {isMobile ?
+                            this.state.validEmail && <p className={'errorEmailMobile'}>Podany email jest nieprawidłowy!</p> :
+                            this.state.validEmail && <p style={errorEmail}>Podany email jest nieprawidłowy!</p>
+                        }
                     </div>
                     <div className='loginEmailName'>
                         <span>Hasło</span>
                         <input type='password' value={this.state.password} onChange={this.handlePasswordChange}/>
-                        {this.state.validPassword && <span style={errorPassword}>Podane hasło jest za krótkie!</span>}
+                        {isMobile ?
+                            this.state.validPassword && <p className={'errorEmailMobile'}>Podane hasło jest za krótkie!</p> :
+                            this.state.validPassword && <p style={errorPassword}>Podane hasło jest za krótkie!</p>
+                        }
                     </div>
                 </form>
 

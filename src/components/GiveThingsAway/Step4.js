@@ -57,7 +57,7 @@ class Step4 extends Component {
                                            onChange={this.props.handleChange}/>
                                 </div>
                                 {this.props.errorStreet &&
-                                <span className="errorStyle errorStreet">Podana ulica jest nieprawidłowa!</span>}
+                                <span className="errorStyle">Podana ulica jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='city'>Miasto</label>
                                     <input type='text' id='city' name="city"
@@ -65,14 +65,14 @@ class Step4 extends Component {
                                            onChange={this.props.handleChange}/>
                                 </div>
                                 {this.props.errorCity &&
-                                <span className="errorStyle errorCity">Podane miasto jest nieprawidłowa!</span>}
+                                <span className="errorStyle">Podane miasto jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='zipcode'>Kod pocztowy</label>
                                     <input type='phone' id='zipcode' name="zipcode"
                                            value={this.props.zipcode}
                                            onChange={this.props.handleChange}/>
                                 </div>
-                                {this.props.errorPostcode && <span className="errorStyle errorPostcode">Podany kod pocztowy jest nieprawidłowe!</span>}
+                                {this.props.errorPostcode && <span className="errorStyle">Podany kod pocztowy jest nieprawidłowe!</span>}
                                 <div className='input'>
                                     <label htmlFor='phone'>Numer telefonu</label>
                                     <input type='text' id='phone' name="phone"
@@ -80,7 +80,7 @@ class Step4 extends Component {
                                            onChange={this.props.handleChange}/>
                                 </div>
                                 {this.props.errorPhone &&
-                                <span className="errorStyle errorPhone">Podany telefon jest nieprawidłowy!</span>}
+                                <span className="errorStyle">Podany telefon jest nieprawidłowy!</span>}
 
                             </form>
                             <form className='date' onSubmit={this.props.handleSubmit}>
@@ -92,7 +92,7 @@ class Step4 extends Component {
                                            onChange={this.props.handleChange}/>
                                 </div>
                                 {this.props.errorDate &&
-                                <span className="errorStyle errorDate">Podana data jest nieprawidłowa!</span>}
+                                <span className="errorStyle">Podana data jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='time'>Godzina</label>
                                     <input type='time' id='time' name="time"
@@ -100,7 +100,7 @@ class Step4 extends Component {
                                            onChange={this.props.handleChange}/>
                                 </div>
                                 {this.props.errorTime &&
-                                <span className="errorStyle errorTime">Podana godzina jest nieprawidłowa!</span>}
+                                <span className="errorStyle">Podana godzina jest nieprawidłowa!</span>}
                                 <div className='input'>
                                     <label htmlFor='notes'>Uwagi dla kuriera</label>
                                     <textarea id='notes' name="notes"

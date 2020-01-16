@@ -4,7 +4,7 @@ header {
   .headerImage {
     flex-grow: 0;
     margin: 0 -30rem 0;
-width: 100%;
+    width: 100%;
   }
 
   .headerNavigation {
@@ -73,6 +73,7 @@ width: 100%;
   padding: 1rem 0;
   display: flex;
   line-height: 3rem;
+  justify-content: flex-end;
 
   @media only screen and (min-width: 1025px) {
     padding-top: 4.0625rem;
@@ -88,6 +89,11 @@ width: 100%;
     text-transform: uppercase;
     width: 17rem;
     text-align: center;
+
+    @media only screen and (max-width: 670px) {
+      width: 10em;
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -102,7 +108,7 @@ width: 100%;
 
 .mobileNavigation {
   display: flex;
-  position: sticky;
+  position: fixed;
   justify-content: flex-end;
   align-items: flex-end;
   background: $registerBorderColor;
@@ -157,7 +163,7 @@ width: 100%;
 
   .bm-menu {
     background: $buttonBorder;
-    padding: 2.5em 1.5em 0;
+    padding: 2.5rem 1.5rem 0;
     font-size: 1.15em;
   }
 
@@ -193,6 +199,11 @@ width: 100%;
   flex-direction: column;
   margin: 3rem 2rem;
 
+  @media only screen and (max-width: 670px) {
+    margin: 1rem;
+    height: 25rem;
+  }
+
   &:before {
     content: "";
     background-image: url("./../../assets/Home-Hero-Image.jpg");
@@ -212,6 +223,10 @@ width: 100%;
     font-family: $font-base;
     text-align: center;
     margin: 4rem 0;
+
+    @media only screen and (max-width: 670px) {
+      font-size: 1.2rem;
+    }
   }
 
   .mobileTitle {
@@ -223,9 +238,9 @@ width: 100%;
     color: $buttonBorder;
     padding-bottom: 1.5625rem;
     line-height: 3.4375rem;
-  }
 
-  .headerButtons {
-    justify-content: flex-end;
+    @media only screen and (max-width: 670px) {
+      font-size: 1.7rem;
+    }
   }
 }

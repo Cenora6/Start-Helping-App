@@ -83,7 +83,7 @@ class Step2 extends Component {
 
                         <Step2Form selectedOption={this.props.selectedOption} handleSelectChange={this.props.handleSelectChange}/>
 
-                        {this.props.errorSelect && <span className="errorStyle errorRadio">Wybierz jedną z opcji!</span>}
+                        {this.props.errorSelect && <span className="errorStyle errorRadioMobile">Wybierz jedną z opcji!</span>}
                         <div className='nextPrevButtons'>
                             <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
                             <span className='nextButton hoverLink' onClick={this.props.handleNext}>Dalej</span>

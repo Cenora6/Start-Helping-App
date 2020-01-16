@@ -94,7 +94,7 @@ class Step1 extends Component {
                     </div>
 
                     <div className='steps'>
-                        {this.props.radioError && <span className="errorStyle errorRadio">Zaznacz jedną z opcji!</span>}
+                        {this.props.radioError && <span className="errorStyle errorRadioMobile">Zaznacz jedną z opcji!</span>}
 
                         <Step1Form handleRadioChange={this.props.handleRadioChange} radioValue={this.props.radioValue}/>
 
