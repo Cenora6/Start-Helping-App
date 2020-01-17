@@ -2,15 +2,13 @@ import React, {Component} from 'react';
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
-import { matchPath } from "react-router-dom";
-
 
 class Navigation extends Component {
     state = {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 
@@ -25,6 +23,12 @@ class Navigation extends Component {
     handleSessionEnd = () => {
         sessionStorage.clear();
     };
+
+    handleClick() {
+        this.setState({
+            open: !this.state.open
+        });
+    }
 
     render() {
 
@@ -42,7 +46,8 @@ class Navigation extends Component {
                     <section className='mobileNavigation'>
                         <div className='hamburger' id='hamburger'>
                         </div>
-                        <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}>
+                        <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}
+                              menuClicked={this.handleClick}>
                             <Link activeClass="active" to="start" spy={true} smooth={true} offset={50} duration={500}>
                                 <div>Start</div>
                             </Link>

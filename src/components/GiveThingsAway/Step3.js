@@ -56,7 +56,7 @@ class Step3 extends Component {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 

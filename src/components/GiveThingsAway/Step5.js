@@ -8,7 +8,7 @@ class Step5 extends Component {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 

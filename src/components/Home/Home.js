@@ -15,7 +15,7 @@ class Home extends Component {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 

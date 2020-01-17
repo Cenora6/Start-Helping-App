@@ -75,11 +75,34 @@ class RegisterForm extends Component {
                         password: "",
                         password2: ""
                     });
-                    console.log("sukces!");
 
                     sessionStorage.setItem("email", `${authUser.user.email}`);
                     const { history } = this.props;
-                    history.push("/");
+
+                    let newDate = new Date();
+                    let date = newDate.getDate();
+                    let month = newDate.getMonth() + 1;
+                    let year = newDate.getFullYear();
+
+                    this.props.firebase
+                        .getUserList()
+                        .add({
+                            registerDate: {date, month, year},
+                            email: `${authUser.user.email}`,
+                        })
+                        .then(function(docRef) {
+                            console.log("Document written with ID: ", docRef.id);
+                        })
+                        .catch(function(error) {
+                            console.error("Error adding document: ", error);
+                        });
+
+                    if(authUser.user.email === "admin@admin.pl") {
+                        history.push("/admin");
+                    } else {
+                        history.push("/");
+                    }
+
                 })
                 .catch((error) => {
 
@@ -208,7 +231,7 @@ class Register extends Component {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 

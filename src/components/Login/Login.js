@@ -16,7 +16,7 @@ class LoginForm extends Component {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 
@@ -61,13 +61,19 @@ class LoginForm extends Component {
                 .then(authUser => {
                     this.setState({
                         email: "",
-                        password: ""
+                        password: "",
+                        user: authUser.user
                     });
-                    console.log("sukces!");
-
                     sessionStorage.setItem("email", `${authUser.user.email}`);
+                    sessionStorage.setItem("uid", `${authUser.user.uid}`);
+
                     const { history } = this.props;
-                    history.push("/");
+
+                    if(authUser.user.email === "admin@admin.pl") {
+                        history.push("/admin");
+                    } else {
+                        history.push("/");
+                    }
                 })
                 .catch((error) => {
 
@@ -93,6 +99,10 @@ class LoginForm extends Component {
             }
         }
     };
+
+    componentDidMount() {
+
+    }
 
     render() {
 
@@ -172,7 +182,7 @@ class Login extends Component {
         width: window.innerWidth,
     };
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
     }
 
