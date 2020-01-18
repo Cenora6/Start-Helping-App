@@ -530,7 +530,7 @@
   }
 
   @media only screen and (min-width: 1025px) {
-    width: 60%;
+    width: 50%;
     margin: 1rem 0 1.5rem 0;
   }
 
@@ -543,14 +543,21 @@
       @media only screen and (max-width: 670px) {
         margin-left: 0;
       }
+
+      @media only screen and (min-width: 1025px) {
+        margin-left: 8.875rem;
+      }
     }
 
     &:nth-of-type(4) {
       margin-left: 0;
 
-
       @media only screen and (max-width: 670px) {
         font-size: 1.7rem;
+      }
+
+      @media only screen and (min-width: 1025px) {
+        margin-left: 8.875rem;
       }
     }
 

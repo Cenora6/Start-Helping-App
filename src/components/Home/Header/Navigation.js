@@ -222,6 +222,7 @@ class NavigationForm extends Component {
                     </Link>
                     <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
                         <div>Kontakt</div>
+
                     </Link>
                 </div>
             )
