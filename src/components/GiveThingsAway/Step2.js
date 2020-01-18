@@ -15,7 +15,7 @@ class Step2Form extends Component {
         ];
 
         return (
-            <div className='selectForm'>
+            <div className='selectForm' id='form'>
                 <span>Liczba 60L worków:</span>
 
                 <Select

@@ -26,7 +26,7 @@ class Step4 extends Component {
         if (isMobile) {
             return (
                 <>
-                    <div className='progressBar'>
+                    <div className='progressBar' id='form'>
                         <span className='bar doneBar'>1</span>
                         <span className='bar doneBar'>2</span>
                         <span className='bar doneBar'>3</span>

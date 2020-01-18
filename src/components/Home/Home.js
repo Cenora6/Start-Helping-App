@@ -5,7 +5,7 @@ import StepsMain from "./ThreeSimpleSteps/StepsMain";
 import AboutUs from "./AboutUs/AboutUs";
 import WhoWeHelpMain from "./WhoWeHelp/WhoWeHelpMain";
 import ContactUs from "./ContactUs/ContactUs";
-import Navigation from "./Header/Navigation";
+import {NavigationStart} from "./Header/Navigation";
 import HeaderTitle from "./Header/HeaderTitle";
 import Summary from "../GiveThingsAway/Summary";
 
@@ -35,7 +35,7 @@ class Home extends Component {
             if (sessionStorage.getItem("email") == null) {
                 return (
                     <>
-                        <Navigation/>
+                        <NavigationStart/>
                         <HeaderTitle/>
                         <StepsMain/>
                         <WhoWeHelpMain/>
@@ -45,7 +45,7 @@ class Home extends Component {
             } else {
                 return (
                     <>
-                        <Navigation/>
+                        <NavigationStart/>
                         <Summary/>
                         <StepsMain/>
                         <WhoWeHelpMain/>

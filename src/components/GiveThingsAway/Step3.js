@@ -6,7 +6,7 @@ import lastStep from "../../assets/Icon-7.svg";
 class Step3Form extends Component {
     render() {
         return (
-            <div className='whoYouHelp'>
+            <div className='whoYouHelp' id='form'>
                 <span className='chooseHelp'>Komu chcesz pomóc?</span>
 
                 <form className='checkboxFormHelp'>

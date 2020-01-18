@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Navigation from "../Home/Header/Navigation";
+import {NavigationLogReg} from "../Home/Header/Navigation";
 import LogReg from "../Home/Header/LogReg";
 import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
@@ -35,7 +35,7 @@ class LogOut extends Component {
         if (isMobile) {
             return (
                 <>
-                    <Navigation/>
+                    <NavigationLogReg/>
                     <section className='loginForm'>
                         <h3>Wylogowanie nastąpiło pomyślnie!</h3>
                         <img src={decoration} alt='decoration'/>
@@ -52,7 +52,7 @@ class LogOut extends Component {
                 <>
                     <section className='loginNavigation'>
                         <LogReg/>
-                        <Navigation/>
+                        <NavigationLogReg/>
                     </section>
                     <section className='loginForm'>
                         <h3>Wylogowanie nastąpiło pomyślnie!</h3>

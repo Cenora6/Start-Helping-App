@@ -5,7 +5,7 @@ import info from './../../assets/Icon-8.svg'
 class Step1Form extends Component {
     render() {
         return (
-            <form className='radioForm'>
+            <form className='radioForm' id='form'>
                 <div className='radioOptions'>
                     <input type='radio' id='clothesToUse' name="whatToGive"
                            value="ubrania, które nadają się do ponownego użycia"

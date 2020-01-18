@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Navigation from "../Home/Header/Navigation";
+import {NavigationLogReg} from "../Home/Header/Navigation";
 import LogReg from "../Home/Header/LogReg";
 import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
@@ -78,24 +78,6 @@ class RegisterForm extends Component {
 
                     sessionStorage.setItem("email", `${authUser.user.email}`);
                     const { history } = this.props;
-
-                    let newDate = new Date();
-                    let date = newDate.getDate();
-                    let month = newDate.getMonth() + 1;
-                    let year = newDate.getFullYear();
-
-                    this.props.firebase
-                        .getUserList()
-                        .add({
-                            registerDate: {date, month, year},
-                            email: `${authUser.user.email}`,
-                        })
-                        .then(function(docRef) {
-                            console.log("Document written with ID: ", docRef.id);
-                        })
-                        .catch(function(error) {
-                            console.error("Error adding document: ", error);
-                        });
 
                     if(authUser.user.email === "admin@admin.pl") {
                         history.push("/admin");
@@ -251,7 +233,7 @@ class Register extends Component {
         if (isMobile) {
             return (
                 <>
-                    <Navigation/>
+                    <NavigationLogReg/>
 
                     <section className='loginForm'>
                         <h3>Załóż konto</h3>
@@ -269,7 +251,7 @@ class Register extends Component {
                 <>
                     <section className='loginNavigation'>
                         <LogReg/>
-                        <Navigation/>
+                        <NavigationLogReg/>
                     </section>
                     <section className='loginForm'>
                         <h3>Załóż konto</h3>

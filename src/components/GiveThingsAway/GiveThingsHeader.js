@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import LogReg from "../Home/Header/LogReg";
-import Navigation from "../Home/Header/Navigation";
+import Navigation, {NavigationForm} from "../Home/Header/Navigation";
 import decoration from "./../../assets/Decoration.svg"
 
 class GiveThingsAwayHeader extends Component {
@@ -28,11 +28,11 @@ class GiveThingsAwayHeader extends Component {
         if (isMobile) {
             return (
                 <section className='giveThingsAway'>
-                        <Navigation/>
+                        <NavigationForm/>
                     <div className='giveThingsAwayWelcome'>
                         <div className='giveThingsAwayText'>
                             <h2>Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM</h2>
-                            <h3>Wystarczą 4 proste kroki:</h3>
+                            <h3>Wystarczą 4 proste kroki</h3>
                         </div>
                     </div>
                 </section>
@@ -42,7 +42,7 @@ class GiveThingsAwayHeader extends Component {
                 <section className='giveThingsAway'>
                     <div className='giveThingsAwayHeader'>
                         <LogReg/>
-                        <Navigation/>
+                        <NavigationForm/>
                     </div>
                     <div className='giveThingsAwayWelcome'>
                         <div className='giveThingsAwayText'>

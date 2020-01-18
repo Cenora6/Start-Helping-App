@@ -9,7 +9,7 @@ class Step6 extends Component {
         return (
             <>
 
-                <section className='steps'>
+                <section className='steps' id='form'>
 
                     <div className='thankYou'>
                         <p>Dziękujemy za przesłanie formularza.<br/> Na maila prześlemy wszelkie informacje o odbiorze.</p>

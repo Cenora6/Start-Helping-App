@@ -25,7 +25,7 @@ class Firebase {
         this.auth.signInWithEmailAndPassword(email, password);
     addDonation = () => this.db.collection('donations');
     getDonation = () => this.db.collection('donations');
-    isLoggedIn = (user) => this.auth.onAuthStateChanged(user)
+    isLoggedIn = (user) => this.auth.onAuthStateChanged(user);
 }
 
 export default Firebase;
