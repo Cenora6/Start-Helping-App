@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Start-Helping-App/static/css/main.ae62bf27.chunk.css",
-    "main.js": "/Start-Helping-App/static/js/main.b66f970a.chunk.js",
-    "main.js.map": "/Start-Helping-App/static/js/main.b66f970a.chunk.js.map",
+    "main.css": "/Start-Helping-App/static/css/main.25358ce1.chunk.css",
+    "main.js": "/Start-Helping-App/static/js/main.34bf570b.chunk.js",
+    "main.js.map": "/Start-Helping-App/static/js/main.34bf570b.chunk.js.map",
     "runtime-main.js": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js",
     "runtime-main.js.map": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js.map",
-    "static/js/2.d638ae05.chunk.js": "/Start-Helping-App/static/js/2.d638ae05.chunk.js",
-    "static/js/2.d638ae05.chunk.js.map": "/Start-Helping-App/static/js/2.d638ae05.chunk.js.map",
+    "static/js/2.1de0d92c.chunk.js": "/Start-Helping-App/static/js/2.1de0d92c.chunk.js",
+    "static/js/2.1de0d92c.chunk.js.map": "/Start-Helping-App/static/js/2.1de0d92c.chunk.js.map",
     "index.html": "/Start-Helping-App/index.html",
-    "precache-manifest.3f8280f8a8b1ca8fb03e877de39535b0.js": "/Start-Helping-App/precache-manifest.3f8280f8a8b1ca8fb03e877de39535b0.js",
+    "precache-manifest.8127acd32788d5ab53b3de4bacb3c682.js": "/Start-Helping-App/precache-manifest.8127acd32788d5ab53b3de4bacb3c682.js",
     "service-worker.js": "/Start-Helping-App/service-worker.js",
-    "static/css/main.ae62bf27.chunk.css.map": "/Start-Helping-App/static/css/main.ae62bf27.chunk.css.map",
-    "static/js/2.d638ae05.chunk.js.LICENSE": "/Start-Helping-App/static/js/2.d638ae05.chunk.js.LICENSE",
+    "static/css/main.25358ce1.chunk.css.map": "/Start-Helping-App/static/css/main.25358ce1.chunk.css.map",
+    "static/js/2.1de0d92c.chunk.js.LICENSE": "/Start-Helping-App/static/js/2.1de0d92c.chunk.js.LICENSE",
     "static/media/main.scss": "/Start-Helping-App/static/media/Home-Hero-Image.e99903ed.jpg",
     "static/media/Decoration.svg": "/Start-Helping-App/static/media/Decoration.2290784e.svg",
     "static/media/Facebook.svg": "/Start-Helping-App/static/media/Facebook.df65b6c0.svg",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0636f0a1.js",
-    "static/js/2.d638ae05.chunk.js",
-    "static/css/main.ae62bf27.chunk.css",
-    "static/js/main.b66f970a.chunk.js"
+    "static/js/2.1de0d92c.chunk.js",
+    "static/css/main.25358ce1.chunk.css",
+    "static/js/main.34bf570b.chunk.js"
   ]
 }
