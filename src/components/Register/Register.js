@@ -75,15 +75,11 @@ class RegisterForm extends Component {
                         password: "",
                         password2: ""
                     });
-
                     sessionStorage.setItem("email", `${authUser.user.email}`);
-                    const { history } = this.props;
+                    sessionStorage.setItem("uid", `${authUser.user.uid}`);
 
-                    if(authUser.user.email === "admin@admin.pl") {
-                        history.push("/admin");
-                    } else {
-                        history.push("/");
-                    }
+                    const { history } = this.props;
+                    history.push("/");
 
                 })
                 .catch((error) => {

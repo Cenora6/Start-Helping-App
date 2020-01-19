@@ -64,6 +64,7 @@ class LoginForm extends Component {
                         password: "",
                         user: authUser.user
                     });
+
                     sessionStorage.setItem("email", `${authUser.user.email}`);
                     sessionStorage.setItem("uid", `${authUser.user.uid}`);
 

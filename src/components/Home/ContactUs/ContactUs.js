@@ -64,7 +64,7 @@ class ContactUs extends Component {
         const {name, email, message} = this.state;
 
         const emailValidation = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const nameValidation = /^[a-zA-Z]{2,}$/i;
+        const nameValidation = /^[a-zA-ZąćęłńóśźżĄĘŁŃÓŚŹŻ]{2,}$/i;
 
         if (nameValidation.test(name) &&
             emailValidation.test(email)
