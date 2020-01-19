@@ -1,0 +1,12 @@
+.donationTable {
+  font-family: $font-base;
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  tr {
+    text-align: center;
+    height: 4rem;
+  }
+}
