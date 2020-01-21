@@ -12,13 +12,13 @@ You can register and login to your own account, where you fill a form. There you
 - React
 
 ### Additional dependencies: 
-- Node Sass
-- React Router Dom
-- React Burger Menu
-- React Scroll
-- React Styled Select
-- Styled Components
-- Firebase
+- [Node Sass](https://www.npmjs.com/package/node-sass/)
+- [React Router Dom](https://www.npmjs.com/package/react-router-dom/)
+- [React Burger Menu](https://www.npmjs.com/package/react-burger-menu/)
+- [React Scroll](https://www.npmjs.com/package/react-scroll/)
+- [React Styled Select](https://www.npmjs.com/package/react-styled-select/)
+- [Styled Components](https://www.npmjs.com/package/styled-components/)
+- [Firebase](https://www.npmjs.com/package/firebase/)
 
 ### Installation:
 
