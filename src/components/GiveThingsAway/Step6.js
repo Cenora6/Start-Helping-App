@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import decoration from './../../assets/Decoration.svg'
+import {Text} from "../Language/LanguageProvider";
 
 class Step6 extends Component {
 
@@ -12,7 +13,7 @@ class Step6 extends Component {
                 <section className='steps' id='form'>
 
                     <div className='thankYou'>
-                        <p>Dziękujemy za przesłanie formularza.<br/> Na maila prześlemy wszelkie informacje o odbiorze.</p>
+                        <p><Text tid="step59"/><br/><Text tid="step60"/></p>
                         <img src={decoration} alt={decoration}/>
                     </div>
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Select from 'react-styled-select';
 import lastStep from "../../assets/Icon-7.svg";
 import info from "../../assets/Icon-8.svg";
+import {Text} from "../Language/LanguageProvider";
 
 class Step2Form extends Component {
     render() {
@@ -16,7 +17,7 @@ class Step2Form extends Component {
 
         return (
             <div className='selectForm' id='form'>
-                <span>Liczba 60L worków:</span>
+                <span><Text tid="step12"/></span>
 
                 <Select
                     value={this.props.selectedOption}
@@ -68,26 +69,26 @@ class Step2 extends Component {
                     </div>
 
                     <div className='titleStep'>
-                        <span className='mobilechoose'>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</span>
+                        <span className='mobilechoose'><Text tid="step13"/></span>
                     </div>
 
                     <div className='warningStep'>
                         <img src={info} alt={info}/>
                         <div className='warning'>
-                            <h2>Ważne!</h2>
-                            <p>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.</p>
+                            <h2><Text tid="step7"/></h2>
+                            <p><Text tid="step14"/></p>
                         </div>
                     </div>
 
                     <div className='steps'>
 
-                        {this.props.errorSelect && <span className="errorRadioMobile">Wybierz jedną z opcji!</span>}
+                        {this.props.errorSelect && <span className="errorRadioMobile"><Text tid="step9"/></span>}
 
                         <Step2Form selectedOption={this.props.selectedOption} handleSelectChange={this.props.handleSelectChange}/>
 
                         <div className='nextPrevButtons'>
-                            <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
-                            <span className='nextButton hoverLink' onClick={this.props.handleNext}>Dalej</span>
+                            <span className='prevButton hoverLink' onClick={this.props.handlePrevious}><Text tid="step15"/></span>
+                            <span className='nextButton hoverLink' onClick={this.props.handleNext}><Text tid="step11"/></span>
                         </div>
                     </div>
                 </>
@@ -96,20 +97,20 @@ class Step2 extends Component {
             return (
                 <>
                     <div className='warningStep'>
-                        <h2>Ważne!</h2>
-                        <p>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.</p>
+                        <h2><Text tid="step7"/></h2>
+                        <p><Text tid="step14"/></p>
                     </div>
 
                     <div className='steps'>
-                        <span className='stepNum'>Krok 2/4</span>
-                        <span className='choose'>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</span>
+                        <span className='stepNum'><Text tid="step16"/></span>
+                        <span className='choose'><Text tid="step13"/></span>
 
                         <Step2Form selectedOption={this.props.selectedOption} handleSelectChange={this.props.handleSelectChange}/>
 
-                        {this.props.errorSelect && <span className="errorStyle errorRadio">Wybierz jedną z opcji!</span>}
+                        {this.props.errorSelect && <span className="errorStyle errorRadio"><Text tid="step9"/></span>}
                         <div className='nextPrevButtons'>
-                            <span className='prevButton hoverLink' onClick={this.props.handlePrevious}>Cofnij</span>
-                            <span className='nextButton hoverLink' onClick={this.props.handleNext}>Dalej</span>
+                            <span className='prevButton hoverLink' onClick={this.props.handlePrevious}><Text tid="step15"/></span>
+                            <span className='nextButton hoverLink' onClick={this.props.handleNext}><Text tid="step11"/></span>
                         </div>
                     </div>
                 </>

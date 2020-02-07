@@ -5,6 +5,7 @@ import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
 import {FirebaseContext, withFirebase} from '../firebase/context';
 import {withRouter} from "react-router-dom"
+import {Text} from "../Language/LanguageProvider";
 
 class RegisterForm extends Component {
     state = {
@@ -164,36 +165,36 @@ class RegisterForm extends Component {
         return (
             <>
                 <form className='registerFormProper'>
-                    {this.state.registerError && <span style={errorRegister}>Podany email już istnieje w bazie!</span>}
+                    {this.state.registerError && <span style={errorRegister}><Text tid="register1"/></span>}
                     <div className='registerEmailName'>
                         <span>Email</span>
                         <input type='text' value={this.state.email} onChange={this.handleEmailChange}/>
                         {isMobile ?
-                            this.state.validEmail && <p className={'errorEmailMobile'}>Podany email jest nieprawidłowy!</p> :
-                            this.state.validEmail && <p style={errorEmail}>Podany email jest nieprawidłowy!</p>
+                            this.state.validEmail && <p className={'errorEmailMobile'}><Text tid="login2"/></p> :
+                            this.state.validEmail && <p style={errorEmail}><Text tid="login2"/></p>
                         }
                     </div>
                     <div className='registerEmailName'>
                         <span>Hasło</span>
                         <input type='password' value={this.state.password} onChange={this.handlePasswordChange}/>
                         {isMobile ?
-                            this.state.validPassword && <p className={'errorEmailMobile'}>Podane hasło jest za krótkie!</p> :
-                            this.state.validPassword && <p style={errorPassword}>Podane hasło jest za krótkie!</p>
+                            this.state.validPassword && <p className={'errorEmailMobile'}><Text tid="login3"/></p> :
+                            this.state.validPassword && <p style={errorPassword}><Text tid="login3"/></p>
                         }
                     </div>
                     <div className='registerEmailName'>
                         <span>Powtórz hasło</span>
                         <input type='password' value={this.state.password2} onChange={this.handlePassword2Change}/>
                         {isMobile ?
-                            this.state.validPassword2 && <p className={'errorEmailMobile'}>Hasło nie zgadza się z poprzednim!</p> :
-                            this.state.validPassword2 && <p style={errorPassword2}>Hasło nie zgadza się z poprzednim!</p>
+                            this.state.validPassword2 && <p className={'errorEmailMobile'}><Text tid="register2"/></p> :
+                            this.state.validPassword2 && <p style={errorPassword2}><Text tid="register2"/></p>
                         }
                     </div>
                 </form>
 
                 <div className='loginButtons'>
-                    <Link to='/logowanie' style={linkStyle}><span>Zaloguj się</span></Link>
-                    <span className='logIn' onClick={this.handleFormSubmit}>Załóż konto</span>
+                    <Link to='/logowanie' style={linkStyle}><span><Text tid="logReg1"/></span></Link>
+                    <span className='logIn' onClick={this.handleFormSubmit}><Text tid="logReg2"/></span>
                 </div>
 
             </>
@@ -232,7 +233,7 @@ class Register extends Component {
                     <NavigationLogReg/>
 
                     <section className='loginForm'>
-                        <h3>Załóż konto</h3>
+                        <h3><Text tid="logReg2"/></h3>
                         <img src={decoration} alt='decoration'/>
 
                         <FirebaseContext.Consumer>
@@ -250,7 +251,7 @@ class Register extends Component {
                         <NavigationLogReg/>
                     </section>
                     <section className='loginForm'>
-                        <h3>Załóż konto</h3>
+                        <h3><Text tid="logReg2"/></h3>
                         <img src={decoration} alt='decoration'/>
 
                         <FirebaseContext.Consumer>

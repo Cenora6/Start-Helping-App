@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withFirebase} from "../../firebase/context";
 import {Link} from "react-router-dom";
+import {Text} from "../../Language/LanguageProvider";
 
 class ThreeColumns extends Component {
     state = {
@@ -96,29 +97,29 @@ class ThreeColumns extends Component {
                 <>
                     <div className='summary' id='summary'>
                         <div className='mobileSummaryTitle'>
-                            Zacznij pomagać! <br/>Oddaj niechciane rzeczy w zaufane ręce
+                            <Text tid="headerTitle3a"/><br/><Text tid="headerTitle3b"/>
                         </div>
                         <div className='summaryStatistics'>
                             <div className='statistics'>
                                 <span>{this.state.bags}</span>
-                                <p>oddanych worków</p>
+                                <p><Text tid="threeColumns1"/></p>
                             </div>
                             <div className='statistics'>
                                 <span>{this.state.fundations}</span>
-                                <p>wspartych organizacji</p>
+                                <p><Text tid="threeColumns2"/></p>
                             </div>
                             <div className='statistics'>
                                 <span>{parseInt(this.state.bags) - parseInt(this.state.fundations)}</span>
-                                <p>zorganizowanych zbiórek</p>
+                                <p><Text tid="threeColumns3"/></p>
                             </div>
 
                         </div>
                         <div className='headerButtons buttonsAfterLogin'>
                             <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
-                                <p className='firstButton'>Oddaj rzeczy</p>
+                                <p className='firstButton'><Text tid="logReg3"/></p>
                             </Link>
                             <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
-                                <p>Zorganizuj zbiórkę</p>
+                                <p><Text tid="threeColumns4"/></p>
                             </Link>
                         </div>
                     </div>
@@ -129,17 +130,17 @@ class ThreeColumns extends Component {
                 <section className='threeColumns'>
                     <div className='oneColumn'>
                         <h2>{this.state.bags}</h2>
-                        <span>ODDANYCH WORKÓW</span>
+                        <span><Text tid="threeColumns1"/></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
                     </div>
                     <div className='oneColumn'>
                         <h2>{this.state.fundations}</h2>
-                        <span>WSPARTYCH ORGANIZACJI</span>
+                        <span><Text tid="threeColumns2"/></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
                     </div>
                     <div className='oneColumn'>
                         <h2>{parseInt(this.state.bags) - parseInt(this.state.fundations)}</h2>
-                        <span>ZORGANIZOWANY ZBIÓREK</span>
+                        <span><Text tid="threeColumns3"/></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
                     </div>
                 </section>

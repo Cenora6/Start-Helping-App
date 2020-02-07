@@ -12,11 +12,13 @@ import GiveThingsAwayMain from "./components/GiveThingsAway/GiveThingsAwayMain";
 import PrivateRoute from "./components/Session/privateRoute";
 import { AuthProvider } from "./components/Session/auth";
 import { AnimatedSwitch } from 'react-router-transition';
+import { LanguageProvider } from './components/Language/LanguageProvider';
 
 class App extends Component {
 
     render() {
         return (
+            <LanguageProvider>
             <AuthProvider>
                 <HashRouter>
                     <AnimatedSwitch
@@ -33,6 +35,7 @@ class App extends Component {
                     </AnimatedSwitch>
                 </HashRouter>
             </AuthProvider>
+            </LanguageProvider>
         );
     }
 }

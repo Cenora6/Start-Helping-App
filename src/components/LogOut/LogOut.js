@@ -3,6 +3,7 @@ import {NavigationLogReg} from "../Home/Header/Navigation";
 import LogReg from "../Home/Header/LogReg";
 import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
+import {Text} from "../Language/LanguageProvider";
 
 class LogOut extends Component {
 
@@ -37,11 +38,11 @@ class LogOut extends Component {
                 <>
                     <NavigationLogReg/>
                     <section className='loginForm'>
-                        <h3>Wylogowanie nastąpiło pomyślnie!</h3>
+                        <h3><Text tid="logOut1"/></h3>
                         <img src={decoration} alt='decoration'/>
 
                         <div className='backHome'>
-                            <Link to='/' style={linkStyle}><span className='clickButton'>Strona główna</span></Link>
+                            <Link to='/' style={linkStyle}><span className='clickButton'><Text tid="logOut2"/></span></Link>
                         </div>
 
                     </section>
@@ -55,11 +56,11 @@ class LogOut extends Component {
                         <NavigationLogReg/>
                     </section>
                     <section className='loginForm'>
-                        <h3>Wylogowanie nastąpiło pomyślnie!</h3>
+                        <h3><Text tid="logOut1"/></h3>
                         <img src={decoration} alt='decoration'/>
 
                         <div className='backHome'>
-                            <Link to='/' style={linkStyle}><span className='clickButton'>Strona główna</span></Link>
+                            <Link to='/' style={linkStyle}><span className='clickButton'><Text tid="logOut2"/></span></Link>
                         </div>
 
                     </section>

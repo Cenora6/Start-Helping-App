@@ -5,6 +5,7 @@ import instagram from './../../../assets/Instagram.svg'
 import facebook from './../../../assets/Facebook.svg'
 import phone from './../../../assets/Icon-5.svg'
 import letter from './../../../assets/Icon-6.svg'
+import {Text} from "../../Language/LanguageProvider";
 
 class ContactUs extends Component {
     state = {
@@ -15,7 +16,6 @@ class ContactUs extends Component {
         validName: false,
         validEmail: false,
         validMessage: false,
-        endMessage: "",
         width: window.innerWidth,
     };
 
@@ -93,9 +93,6 @@ class ContactUs extends Component {
                 .then(resp => resp.json())
                 .then(success => {
                     console.log("Kod 200", success);
-                    this.setState({
-                        endMessage: "Wiadomość została wysłana. Wkrótce się skontaktujemy.",
-                    })
                 })
                 .catch(function(error) {
                     console.log("Kod 404", error);
@@ -162,14 +159,14 @@ class ContactUs extends Component {
             return (
                 <section className='contactUs' id='contact'>
                     <div className='contactIcons'>
-                        <span>Skontaktuj się z nami</span>
+                        <span><Text tid="contactUs4"/></span>
                         <img src={phone} alt={phone}/>
                         <img src={letter} alt={letter}/>
                     </div>
                     <ul className='contactList'>
-                        <li>Regulamin</li>
-                        <li>Polityka Prywatności</li>
-                        <li>Instrukcja jak spakować rzeczy do oddania</li>
+                        <li><Text tid="contactUs1"/></li>
+                        <li><Text tid="contactUs2"/></li>
+                        <li><Text tid="contactUs3"/></li>
                     </ul>
                 </section>
             )
@@ -182,40 +179,40 @@ class ContactUs extends Component {
                 <section className='contactUs' id='contact'>
                     <div className='contactUsImage'>
                         <img src={clothes} alt='clothes' className='backgroundPhoto'/>
-                        <span className='copyright'>Copyright by Coders Lab</span>
+                        <span className='copyright'>Copyright by Coders Lab | Aleksandra Gasidło</span>
                         <div className='socialMedia'>
                             <img src={facebook} alt='facebook'/>
                             <img src={instagram} alt='instagram'/>
                         </div>
                     </div>
                     <div className='contactUsText'>
-                        <h2>Skontaktuj się z nami</h2>
+                        <h2><Text tid="contactUs4"/></h2>
                         <img src={decoration} alt='decoration'/>
                         <form className='contactForm' onSubmit={this.handleFormSubmit}>
-                            {this.state.formSend && <h3 style={endTextStyle}>{this.state.endMessage}</h3>}
+                            {this.state.formSend && <h3 style={endTextStyle}><Text tid="contactUs5"/></h3>}
                             <div className='nameEmail'>
                                 <div className='name'>
-                                    <span>Wpisz swoje imię</span>
+                                    <span><Text tid="contactUs6"/></span>
                                     <input placeholder='Krzysztof' value={this.state.name} onChange={this.changeName} type='text'/>
-                                    {this.state.validName && <span style={errorStyle}>Podane imię jest nieprawidłowe!</span>}
+                                    {this.state.validName && <span style={errorStyle}><Text tid="contactUs7"/></span>}
                                 </div>
                                 <div className='email'>
-                                    <span>Wpisz swój email</span>
+                                    <span><Text tid="contactUs8"/></span>
                                     <input placeholder='abc@xyz.pl' value={this.state.email} onChange={this.changeEmail} type='text'/>
-                                    {this.state.validEmail && <span style={errorStyle}>Podany email jest nieprawidłowy!</span>}
+                                    {this.state.validEmail && <span style={errorStyle}><Text tid="contactUs9"/></span>}
                                 </div>
                             </div>
                             <div className='message'>
-                                <span>Wpisz swoją wiadomość</span>
+                                <span><Text tid="contactUs10"/></span>
                                 <textarea placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                                           value={this.state.message}
                                           onChange={this.changeMessage} type='text'></textarea>
-                                {this.state.validMessage && <span style={errorMsg}>Wiadomość musi mieć co najmniej 120 znaków!</span>}
+                                {this.state.validMessage && <span style={errorMsg}><Text tid="contactUs11"/></span>}
                             </div>
                             <div className='sendFormButton'>
-                                <button className='hoverLink'>Wyślij</button>
+                                <button className='hoverLink'><Text tid="contactUs12"/></button>
                             </div>
                         </form>
 

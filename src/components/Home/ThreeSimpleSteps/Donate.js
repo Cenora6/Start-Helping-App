@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import {Text} from "../../Language/LanguageProvider";
 
 class Donate extends Component {
 
@@ -16,7 +17,7 @@ class Donate extends Component {
                 <section className='donateSection'>
                     <Link to='/logowanie' style={buttonStyle} className='hoverLink'>
                         <p className='donateButton'>
-                            Oddaj<br/> rzeczy
+                            <Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/>
                         </p>
                     </Link>
                 </section>
@@ -26,7 +27,7 @@ class Donate extends Component {
                 <section className='donateSection'>
                     <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
                         <p className='donateButton'>
-                            Oddaj<br/> rzeczy
+                            <Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/>
                         </p>
                     </Link>
                 </section>

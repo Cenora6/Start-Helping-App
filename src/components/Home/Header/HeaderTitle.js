@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import decoration from '../../../assets/Decoration.svg'
 import {Link} from 'react-router-dom';
+import {Text} from "../../Language/LanguageProvider";
 
 class HeaderTitle extends Component {
     state = {
@@ -39,11 +40,11 @@ class HeaderTitle extends Component {
         if (isMobile) {
             return (
                 <div className='headerMobile' id='start'>
-                    <div className='mobileSubtitle'>Masz w domu rzeczy, z którymi nie wiesz co zrobić?</div>
-                    <div className='mobileTitle'>ODDAJ JE POTRZEBUJĄCYM <br/> - szybko i w zaufane ręce</div>
+                    <div className='mobileSubtitle'><Text tid="headerTitle1"/></div>
+                    <div className='mobileTitle'><Text tid="headerTitle2a"/><br/><Text tid="headerTitle2b"/></div>
                     <div className='headerButtons'>
                         <Link to='/rejestracja' style={buttonStyleMobile} className='hoverLink'>
-                            <p>Załóż konto</p>
+                            <p><Text tid="logReg2"/></p>
                         </Link>
                     </div>
                 </div>
@@ -53,12 +54,12 @@ class HeaderTitle extends Component {
             if (sessionStorage.getItem("email") == null) {
                 return (
                     <div className='headerTitle' id='start'>
-                        <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
+                        <div className='title'><Text tid="headerTitle3a"/><br/><Text tid="headerTitle3b"/></div>
                         <img src={decoration} alt='decoration'/>
                         <div className='headerButtons'>
-                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p>Oddaj<br/>rzeczy</p>
+                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
                             </Link>
-                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p> Zorganizuj zbiórkę</p>
+                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle5"/></p>
                             </Link>
                         </div>
                     </div>
@@ -66,12 +67,12 @@ class HeaderTitle extends Component {
             } else {
                 return (
                     <div className='headerTitle' id='start'>
-                        <div className='title'>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</div>
+                        <div className='title'><Text tid="headerTitle3a"/><br/><Text tid="headerTitle3a"/></div>
                         <img src={decoration} alt='decoration'/>
                         <div className='headerButtons'>
-                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p>Oddaj<br/>rzeczy</p>
+                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
                             </Link>
-                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p> Zorganizuj zbiórkę</p>
+                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle5"/></p>
                             </Link>
                         </div>
                     </div>

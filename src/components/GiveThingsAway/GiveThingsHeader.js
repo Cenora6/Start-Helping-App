@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import LogReg from "../Home/Header/LogReg";
-import Navigation, {NavigationForm} from "../Home/Header/Navigation";
+import {NavigationForm} from "../Home/Header/Navigation";
 import decoration from "./../../assets/Decoration.svg"
+import {Text} from "../Language/LanguageProvider";
 
 class GiveThingsAwayHeader extends Component {
     state = {
@@ -31,8 +32,8 @@ class GiveThingsAwayHeader extends Component {
                         <NavigationForm/>
                     <div className='giveThingsAwayWelcome'>
                         <div className='giveThingsAwayText'>
-                            <h2>Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM</h2>
-                            <h3>Wystarczą 4 proste kroki</h3>
+                            <h2><Text tid="giveThingsHeader1"/></h2>
+                            <h3><Text tid="giveThingsHeader2"/></h3>
                         </div>
                     </div>
                 </section>
@@ -46,30 +47,30 @@ class GiveThingsAwayHeader extends Component {
                     </div>
                     <div className='giveThingsAwayWelcome'>
                         <div className='giveThingsAwayText'>
-                            <h2>Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM</h2>
+                            <h2><Text tid="giveThingsHeader1"/></h2>
                             <img src={decoration} alt={decoration}/>
-                            <h3>Wystarczą 4 proste kroki:</h3>
+                            <h3><Text tid="giveThingsHeader2"/></h3>
 
                             <ul className='giveThingsAwaySteps'>
                                 <li>
                                     <div className='square'></div>
                                     <span>1</span>
-                                    <p>Wybierz<br/>rzeczy</p>
+                                    <p><Text tid="giveThingsHeader3a"/><br/><Text tid="giveThingsHeader3b"/></p>
                                 </li>
                                 <li>
                                     <div className='square'></div>
                                     <span>2</span>
-                                    <p>Spakuj je<br/>w worki</p>
+                                    <p><Text tid="giveThingsHeader4a"/><br/><Text tid="giveThingsHeader4b"/></p>
                                 </li>
                                 <li>
                                     <div className='square'></div>
                                     <span>3</span>
-                                    <p>Wybierz<br/>fundację</p>
+                                    <p><Text tid="giveThingsHeader5a"/><br/><Text tid="giveThingsHeader5b"/></p>
                                 </li>
                                 <li>
                                     <div className='square'></div>
                                     <span>4</span>
-                                    <p>Zamów<br/>kuriera</p>
+                                    <p><Text tid="giveThingsHeader6a"/><br/><Text tid="giveThingsHeader6b"/></p>
                                 </li>
                             </ul>
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import decoration from '../../../assets/Decoration.svg'
 import organizations from './../../database/organizations.json';
 import {Link} from "react-router-dom";
+import {Text} from "../../Language/LanguageProvider";
 
 class WhoWeHelpMain extends Component {
     state = {
@@ -82,7 +83,7 @@ class WhoWeHelpMain extends Component {
                         <article className='foundationList' key={index}>
                             <div className='foundationName'>
                                 <h3>{item.name}</h3>
-                                <p>Cel i misja: {item.mission}</p>
+                                <p><Text tid="whoWeHelpMain1"/> {item.mission}</p>
                             </div>
                             <div className='foundationDonations'>
                                 <p>{item.donations}</p>
@@ -118,7 +119,7 @@ class WhoWeHelpMain extends Component {
                 return (
                     <section className='whoWeHelp' id='whoWeHelp'>
                         <div className='whoWeHelpDesc'>
-                            <h2>Komu pomagamy?</h2>
+                            <h2><Text tid="whoWeHelpMain2"/></h2>
                             <img src={decoration} alt='decoration'/>
                             <ul className='organizationType'>
                                 {allOrganizations.map((organization, index) => {
@@ -134,10 +135,10 @@ class WhoWeHelpMain extends Component {
                             </ul>
                         </div>
 
-                        <div className='registerTitle'>Chcesz oddać swoje rzeczy lub zorganizować zbiórkę lokalną?</div>
+                        <div className='registerTitle'><Text tid="whoWeHelpMain3"/></div>
                         <div className='registerButton hoverLink'>
                             <Link to='/rejestracja' style={buttonStyle} className='hoverLink'>
-                                <p>Załóż konto</p>
+                                <p><Text tid="logReg2"/></p>
                             </Link>
                         </div>
                     </section>
@@ -146,7 +147,7 @@ class WhoWeHelpMain extends Component {
                 return (
                     <section className='whoWeHelp' id='whoWeHelp'>
                         <div className='whoWeHelpDesc'>
-                            <h2>Komu pomagamy?</h2>
+                            <h2><Text tid="whoWeHelpMain2"/></h2>
                             <img src={decoration} alt='decoration'/>
                             <ul className='organizationType'>
                                 {allOrganizations.map((organization, index) => {
@@ -162,13 +163,13 @@ class WhoWeHelpMain extends Component {
                             </ul>
                         </div>
 
-                        <div className='registerTitle'>Chcesz oddać swoje rzeczy lub zorganizować zbiórkę lokalną?</div>
+                        <div className='registerTitle'><Text tid="whoWeHelpMain3"/></div>
                         <div className='registerButton hoverLink buttonsAfterLogin'>
                             <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
-                                <p className='firstButton'>Oddaj rzeczy</p>
+                                <p className='firstButton'><Text tid="logReg3"/></p>
                             </Link>
                             <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
-                                <p>Zorganizuj zbiórkę</p>
+                                <p><Text tid="threeColumns4"/></p>
                             </Link>
                         </div>
                     </section>
@@ -178,7 +179,7 @@ class WhoWeHelpMain extends Component {
             return (
                 <section className='whoWeHelp' id='whoWeHelp'>
                     <div className='whoWeHelpDesc'>
-                        <h2>Komu pomagamy?</h2>
+                        <h2><Text tid="whoWeHelpMain2"/></h2>
                         <img src={decoration} alt='decoration'/>
                         <ul className='organizationType'>
 

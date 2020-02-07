@@ -5,6 +5,7 @@ import decoration from "../../assets/Decoration.svg"
 import {Link} from "react-router-dom";
 import {FirebaseContext, withFirebase} from '../firebase/context';
 import {withRouter} from "react-router-dom"
+import {Text} from "../Language/LanguageProvider";
 
 class LoginForm extends Component {
     state = {
@@ -143,28 +144,28 @@ class LoginForm extends Component {
         return (
             <>
                 <form className='loginFormProper'>
-                    {this.state.loginError && <span style={errorLogin}>Podany email nie istnieje w bazie!</span>}
+                    {this.state.loginError && <span style={errorLogin}><Text tid="login1"/></span>}
                     <div className='loginEmailName'>
                         <span>Email</span>
                         <input type='text' value={this.state.email} onChange={this.handleEmailChange}/>
                         {isMobile ?
-                            this.state.validEmail && <p className={'errorEmailMobile'}>Podany email jest nieprawidłowy!</p> :
-                            this.state.validEmail && <p style={errorEmail}>Podany email jest nieprawidłowy!</p>
+                            this.state.validEmail && <p className={'errorEmailMobile'}><Text tid="login2"/></p> :
+                            this.state.validEmail && <p style={errorEmail}><Text tid="login2"/></p>
                         }
                     </div>
                     <div className='loginEmailName'>
-                        <span>Hasło</span>
+                        <span><Text tid="login4"/></span>
                         <input type='password' value={this.state.password} onChange={this.handlePasswordChange}/>
                         {isMobile ?
-                            this.state.validPassword && <p className={'errorEmailMobile'}>Podane hasło jest za krótkie!</p> :
-                            this.state.validPassword && <p style={errorPassword}>Podane hasło jest za krótkie!</p>
+                            this.state.validPassword && <p className={'errorEmailMobile'}><Text tid="login3"/></p> :
+                            this.state.validPassword && <p style={errorPassword}><Text tid="login3"/></p>
                         }
                     </div>
                 </form>
 
                 <div className='loginButtons'>
-                    <Link to='/rejestracja' style={linkStyle}><span>Załóż konto</span></Link>
-                    <span className='logIn' onClick={this.handleFormSubmit}>Zaloguj się</span>
+                    <Link to='/rejestracja' style={linkStyle}><span><Text tid="logReg2"/></span></Link>
+                    <span className='logIn' onClick={this.handleFormSubmit}><Text tid="logReg1"/></span>
                 </div>
             </>
         )
@@ -202,7 +203,7 @@ class Login extends Component {
                     <NavigationLogReg/>
 
                     <section className='loginForm'>
-                        <h3>Zaloguj się</h3>
+                        <h3><Text tid="logReg1"/></h3>
                         <img src={decoration} alt='decoration'/>
 
                         <FirebaseContext.Consumer>
@@ -222,7 +223,7 @@ class Login extends Component {
                     </section>
 
                     <section className='loginForm'>
-                        <h3>Zaloguj się</h3>
+                        <h3><Text tid="logReg1"/></h3>
                         <img src={decoration} alt='decoration'/>
 
                         <FirebaseContext.Consumer>

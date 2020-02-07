@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
+import {Text} from "../../Language/LanguageProvider";
 
 class NavigationStart extends Component {
     state = {
@@ -48,21 +49,21 @@ class NavigationStart extends Component {
                             </Link>
                             <Link activeClass="active" to="whatIsIt" spy={true} smooth={true} offset={50}
                                   duration={500}>
-                                <div>O co chodzi?</div>
+                                <div><Text tid="navigation1"/></div>
                             </Link>
                             <Link activeClass="active" to="whoWeHelp" spy={true} smooth={true} offset={50}
                                   duration={500}>
-                                <div>Fundacja i organizacje</div>
+                                <div><Text tid="navigation2"/></div>
                             </Link>
                             <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                                <div>Kontakt</div>
+                                <div><Text tid="navigation3"/></div>
                             </Link>
                             <div className='line'/>
                             <NavLink to="/logowanie">
-                                <div>Zaloguj</div>
+                                <div><Text tid="logReg1"/></div>
                             </NavLink>
                             <NavLink to="/rejestracja">
-                                <div>Zarejestruj się</div>
+                                <div><Text tid="navigation4"/></div>
                             </NavLink>
                         </Menu>
                     </section>
@@ -75,26 +76,26 @@ class NavigationStart extends Component {
                         <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}>
                             <Link activeClass="active" to="summary" spy={true} smooth={true} offset={50}
                                   duration={500}>
-                                <div>Twoje statystyki</div>
+                                <div><Text tid="navigation5"/></div>
                             </Link>
                             <Link activeClass="active" to="whatIsIt" spy={true} smooth={true} offset={50}
                                   duration={500}>
-                                <div>O co chodzi?</div>
+                                <div><Text tid="navigation1"/></div>
                             </Link>
                             <Link activeClass="active" to="whoWeHelp" spy={true} smooth={true} offset={50}
                                   duration={500}>
-                                <div>Fundacja i organizacje</div>
+                                <div><Text tid="navigation2"/></div>
                             </Link>
                             <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                                <div>Kontakt</div>
+                                <div><Text tid="navigation3"/></div>
                             </Link>
                             <div className='line'/>
-                            <div className='hello'>Cześć {sessionStorage.getItem("email")}</div>
+                            <div className='hello'><Text tid="logReg5"/> {sessionStorage.getItem("email")}</div>
                             <NavLink to='/oddaj-rzeczy'>
-                                <span>Oddaj rzeczy</span>
+                                <span><Text tid="headerTitle5"/>Oddaj rzeczy</span>
                             </NavLink>
                             <NavLink to='/wylogowano' onClick={this.handleSessionEnd}>
-                                <div>Wyloguj</div>
+                                <div><Text tid="logReg4"/></div>
                             </NavLink>
                         </Menu>
                     </section>
@@ -108,16 +109,16 @@ class NavigationStart extends Component {
                             <div>Start</div>
                         </Link>
                         <Link activeClass="active" to="whatIsIt" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>O co chodzi?</div>
+                            <div><Text tid="navigation1"/></div>
                         </Link>
                         <Link activeClass="active" to="aboutUs" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>O nas</div>
+                            <div><Text tid="aboutUs"/></div>
                         </Link>
                         <Link activeClass="active" to="whoWeHelp" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>Fundacja i organizacje</div>
+                            <div><Text tid="navigation2"/></div>
                         </Link>
                         <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>Kontakt</div>
+                            <div><Text tid="navigation3"/></div>
                         </Link>
                     </div>
                 )
@@ -129,16 +130,16 @@ class NavigationStart extends Component {
                             <div>Start</div>
                         </Link>
                         <Link activeClass="active" to="whatIsIt" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>O co chodzi?</div>
+                            <div><Text tid="navigation1"/></div>
                         </Link>
                         <Link activeClass="active" to="aboutUs" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>O nas</div>
+                            <div><Text tid="aboutUs"/></div>
                         </Link>
                         <Link activeClass="active" to="whoWeHelp" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>Fundacja i organizacje</div>
+                            <div><Text tid="navigation2"/></div>
                         </Link>
                         <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>Kontakt</div>
+                            <div><Text tid="navigation3"/></div>
                         </Link>
                     </div>
                 )
@@ -195,18 +196,18 @@ class NavigationForm extends Component {
                             <div>Start</div>
                         </NavLink>
                         <Link activeClass="active" to="form" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>Formularz</div>
+                            <div><Text tid="navigation6"/></div>
                         </Link>
                         <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                            <div>Kontakt</div>
+                            <div><Text tid="navigation3"/></div>
                         </Link>
                         <div className='line'/>
-                        <div className='hello'>Cześć {sessionStorage.getItem("email")}</div>
+                        <div className='hello'><Text tid="logReg5"/> {sessionStorage.getItem("email")}</div>
                         <NavLink to='/oddaj-rzeczy'>
-                            <span>Oddaj rzeczy</span>
+                            <span><Text tid="logReg3"/></span>
                         </NavLink>
                         <NavLink to='/wylogowano' onClick={this.handleSessionEnd}>
-                            <div>Wyloguj</div>
+                            <div><Text tid="logReg4"/></div>
                         </NavLink>
                     </Menu>
                 </section>
@@ -218,10 +219,10 @@ class NavigationForm extends Component {
                         <div>Start</div>
                     </NavLink>
                     <Link activeClass="active" to="form" spy={true} smooth={true} offset={50} duration={500}>
-                        <div>Formularz</div>
+                        <div><Text tid="navigation6"/></div>
                     </Link>
                     <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                        <div>Kontakt</div>
+                        <div><Text tid="navigation3"/></div>
 
                     </Link>
                 </div>
@@ -278,23 +279,23 @@ class NavigationLogReg extends Component {
                             <div>Start</div>
                         </NavLink>
                         <NavLink to="/" style={linkStyle}>
-                            <div>O co chodzi?</div>
+                            <div><Text tid="navigation1"/></div>
                         </NavLink>
                         <NavLink to="/" style={linkStyle}>
-                            <div>O nas</div>
+                            <div><Text tid="aboutUs"/></div>
                         </NavLink>
                         <NavLink to="/" style={linkStyle}>
-                            <div>Fundacja i organizacje</div>
+                            <div><Text tid="navigation2"/></div>
                         </NavLink>
                         <NavLink to="/" style={linkStyle}>
-                            <div>Kontakt</div>
+                            <div><Text tid="navigation3"/></div>
                         </NavLink>
                         <div className='line'/>
                         <NavLink to="/logowanie" style={linkStyle}>
-                            <div>Zaloguj</div>
+                            <div><Text tid="logReg1"/></div>
                         </NavLink>
                         <NavLink to="/rejestracja" style={linkStyle}>
-                            <div>Zarejestruj się</div>
+                            <div><Text tid="navigation4"/></div>
                         </NavLink>
                     </Menu>
                 </section>
@@ -306,16 +307,16 @@ class NavigationLogReg extends Component {
                         <div>Start</div>
                     </NavLink>
                     <NavLink to="/" style={linkStyle}>
-                        <div>O co chodzi?</div>
+                        <div><Text tid="navigation1"/></div>
                     </NavLink>
                     <NavLink to="/" style={linkStyle}>
-                        <div>O nas</div>
+                        <div><Text tid="aboutUs"/></div>
                     </NavLink>
                     <NavLink to="/" style={linkStyle}>
-                        <div>Fundacja i organizacje</div>
+                        <div><Text tid="navigation2"/></div>
                     </NavLink>
                     <NavLink to="/" style={linkStyle}>
-                        <div>Kontakt</div>
+                        <div><Text tid="navigation3"/></div>
                     </NavLink>
                 </div>
             )

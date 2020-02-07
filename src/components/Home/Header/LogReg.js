@@ -1,7 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {Link} from "react-router-dom";
+import LanguageSelector from './../../Language/LanguageSelector';
+import { Text } from '../../Language/LanguageProvider';
 
 class LogReg extends Component {
+    state = {
+        clickText: null,
+        setClickText: null,
+    };
 
     handleSessionEnd = () => {
         sessionStorage.clear();
@@ -26,19 +32,21 @@ class LogReg extends Component {
         const LoggedOut =
             <>
                 <div className='logReg'>
-                    <Link to='/logowanie' style={linkStyle}><span className='hoverLink'>Zaloguj</span></Link>
-                    <Link to='/rejestracja' style={linkStyle}><span className='register hoverLink'>Załóż konto</span></Link>
+                    <LanguageSelector />
+                    <Link to='/logowanie' style={linkStyle}><span className='hoverLink'><Text tid="logReg1"/></span></Link>
+                    <Link to='/rejestracja' style={linkStyle}><span className='register hoverLink'><Text tid="logReg2"/></span></Link>
                 </div>
             </>;
 
         const LoggedIn =
             <>
                 <div className='logReg'>
-                    <span>Cześć {sessionStorage.getItem("email")}</span>
-                    <Link to='/oddaj-rzeczy' style={linkStyle}><span className='giveTheThings hoverLink'>Oddaj rzeczy</span></Link>
+                    <LanguageSelector />
+                    <span><Text tid="logReg5"/> {sessionStorage.getItem("email")}</span>
+                    <Link to='/oddaj-rzeczy' style={linkStyle}><span className='giveTheThings hoverLink'><Text tid="logReg3"/></span></Link>
 
                     <Link to='/wylogowano' style={logOutStyle} onClick={this.handleSessionEnd} >
-                        <span className='hoverLink'>Wyloguj</span>
+                        <span className='hoverLink'><Text tid="logReg4"/></span>
                     </Link>
 
                 </div>
