@@ -195,34 +195,23 @@ class GiveThingsAwayForm extends Component {
 
     handleConfirm = () => {
 
-        const donation = {
-            donation: {
-                what: this.state.radioValue,
-                howMany: this.state.selectedOption,
-                where: this.state.selectedCityOrOrganization,
-                who: this.state.checkboxValues,
-                address: {street: this.state.street,
-                    city: this.state.city,
-                    zipcode: this.state.zipcode,
-                    phone: this.state.phone,
-                    date: this.state.date,
-                    time: this.state.time,
-                    notes: this.state.notes}
-            }
-        };
-
-        this.setState({
-            donation: donation,
-        });
-
-        const donationMap = Object.keys(donation).map(key => ({
-            ...donation[key],
-        }));
-
         this.props.firebase
             .addDonation()
             .add({
-                donations: donationMap,
+                donations:
+                    {
+                    what: this.state.radioValue,
+                    howMany: this.state.selectedOption,
+                    where: this.state.selectedCityOrOrganization,
+                    who: this.state.checkboxValues,
+                    address: {street: this.state.street,
+                        city: this.state.city,
+                        zipcode: this.state.zipcode,
+                        phone: this.state.phone,
+                        date: this.state.date,
+                        time: this.state.time,
+                        notes: this.state.notes}
+                },
                 email: sessionStorage.getItem("email"),
             })
             .then(function(docRef) {

@@ -11,6 +11,8 @@ class WhoWeHelpMain extends Component {
         currentPage: 1,
         active: "",
         width: window.innerWidth,
+        inProp: false,
+        setInProp: false,
     };
 
     componentDidMount() {

@@ -75,12 +75,12 @@ class RegisterForm extends Component {
                         password: "",
                         password2: ""
                     });
+
                     sessionStorage.setItem("email", `${authUser.user.email}`);
                     sessionStorage.setItem("uid", `${authUser.user.uid}`);
 
                     const { history } = this.props;
                     history.push("/");
-
                 })
                 .catch((error) => {
 

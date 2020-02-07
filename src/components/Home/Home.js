@@ -7,7 +7,6 @@ import WhoWeHelpMain from "./WhoWeHelp/WhoWeHelpMain";
 import ContactUs from "./ContactUs/ContactUs";
 import {NavigationStart} from "./Header/Navigation";
 import HeaderTitle from "./Header/HeaderTitle";
-import Summary from "../GiveThingsAway/Summary";
 
 class Home extends Component {
 
@@ -46,7 +45,7 @@ class Home extends Component {
                 return (
                     <>
                         <NavigationStart/>
-                        <Summary/>
+                        <ThreeColumns/>
                         <StepsMain/>
                         <WhoWeHelpMain/>
                         <ContactUs/>
