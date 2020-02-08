@@ -7,6 +7,6 @@ export const dictionaryList = {
 };
 
 export const languageOptions = [
-    { key: 'pl', id: 'pl', label: 'Polski', class: "pl", value: 'pl', },
-    { key: 'en', id: 'en', label: 'English', class: "en", value: 'en' },
+    { key: 'pl', id: 'pl', label: '🇵🇱', class: "pl", value: 'pl', },
+    { key: 'en', id: 'en', label: '🇬🇧', class: "en", value: 'en' },
 ];

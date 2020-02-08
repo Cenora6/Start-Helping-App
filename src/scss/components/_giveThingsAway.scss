@@ -34,7 +34,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-right: 9rem;
   }
 
   .giveThingsAwayWelcome {
@@ -111,6 +110,10 @@
     color: $buttonBorder;
     font-family: $font-base;
     margin: 3.125rem 1.5rem;
+
+    p {
+      text-align: center;
+    }
 
     span {
       margin-bottom: 0.625rem;

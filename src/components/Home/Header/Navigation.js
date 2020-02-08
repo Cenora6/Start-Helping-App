@@ -35,6 +35,9 @@ class NavigationStart extends Component {
 
         const { width } = this.state;
         const isMobile = width <= 767;
+        const style = {
+            margin: "0 1rem",
+        };
 
         if (isMobile) {
             if (sessionStorage.getItem("email") == null) {
@@ -92,7 +95,7 @@ class NavigationStart extends Component {
                             <div className='line'/>
                             <div className='hello'><Text tid="logReg5"/> {sessionStorage.getItem("email")}</div>
                             <NavLink to='/oddaj-rzeczy'>
-                                <span><Text tid="headerTitle5"/>Oddaj rzeczy</span>
+                                <span><Text tid="logReg3"/></span>
                             </NavLink>
                             <NavLink to='/wylogowano' onClick={this.handleSessionEnd}>
                                 <div><Text tid="logReg4"/></div>
@@ -179,7 +182,7 @@ class NavigationForm extends Component {
 
         const linkStyle = {
             textDecoration: "none",
-            border: "none"
+            border: "none",
         };
 
         const { width } = this.state;

@@ -7,6 +7,7 @@ import WhoWeHelpMain from "./WhoWeHelp/WhoWeHelpMain";
 import ContactUs from "./ContactUs/ContactUs";
 import {NavigationStart} from "./Header/Navigation";
 import HeaderTitle from "./Header/HeaderTitle";
+import ScrollUpButton from "react-scroll-up-button";
 
 class Home extends Component {
 
@@ -34,6 +35,7 @@ class Home extends Component {
             if (sessionStorage.getItem("email") == null) {
                 return (
                     <>
+                        <ScrollUpButton />
                         <NavigationStart/>
                         <HeaderTitle/>
                         <StepsMain/>
@@ -44,6 +46,7 @@ class Home extends Component {
             } else {
                 return (
                     <>
+                        <ScrollUpButton />
                         <NavigationStart/>
                         <ThreeColumns/>
                         <StepsMain/>
@@ -56,6 +59,7 @@ class Home extends Component {
         } else {
             return (
                 <>
+                    <ScrollUpButton />
                     <MainHeader/>
                     <ThreeColumns/>
                     <StepsMain/>

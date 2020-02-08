@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import LanguageSelector from './../../Language/LanguageSelector';
 import { Text } from '../../Language/LanguageProvider';
@@ -18,7 +18,6 @@ class LogReg extends Component {
         const linkStyle = {
             textDecoration: "none",
             paddingLeft: "1rem",
-            paddingTop: "2.3125rem",
             color: "#737373",
         };
 

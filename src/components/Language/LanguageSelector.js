@@ -20,7 +20,7 @@ export default function LanguageSelector() {
                 selectValue: 'my-custom-value',
                 selectArrow: 'my-custom-arrow'
             }}
+            searchable={false}
         />
-
     );
 };

@@ -67,7 +67,7 @@ class HeaderTitle extends Component {
             } else {
                 return (
                     <div className='headerTitle' id='start'>
-                        <div className='title'><Text tid="headerTitle3a"/><br/><Text tid="headerTitle3a"/></div>
+                        <div className='title'><Text tid="headerTitle3a"/><br/><Text tid="headerTitle3b"/></div>
                         <img src={decoration} alt='decoration'/>
                         <div className='headerButtons'>
                             <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
