@@ -2,7 +2,7 @@
   "name": "start_helping_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://cenora6.github.io/Start-Helping-App/#/",
+  "homepage": "http://cenora6.github.io/Start-Helping-App/",
   "dependencies": {
     "firebase": "^7.6.1",
     "node-sass": "^4.13.1",
@@ -43,8 +43,6 @@
     ]
   },
   "devDependencies": {
-    "firebase-functions": "^3.3.0",
-    "gh-pages": "^2.2.0",
-    "@material-ui/icons": "latest"
+    "gh-pages": "^2.2.0"
   }
 }
