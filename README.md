@@ -19,6 +19,8 @@ You can register and login to your own account, where you fill a form. There you
 - [React Styled Select](https://www.npmjs.com/package/react-styled-select/)
 - [Styled Components](https://www.npmjs.com/package/styled-components/)
 - [Firebase](https://www.npmjs.com/package/firebase/)
+- [React Router Transition](https://www.npmjs.com/package/react-router-transition)
+- [React Scroll Up Button](https://www.npmjs.com/package/react-scroll-up-button)
 
 ### Installation:
 
