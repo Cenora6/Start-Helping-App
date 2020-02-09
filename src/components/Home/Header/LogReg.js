@@ -4,10 +4,6 @@ import LanguageSelector from './../../Language/LanguageSelector';
 import {Text} from '../../Language/LanguageProvider';
 
 class LogReg extends Component {
-    state = {
-        clickText: null,
-        setClickText: null,
-    };
 
     handleSessionEnd = () => {
         sessionStorage.clear();

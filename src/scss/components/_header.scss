@@ -130,6 +130,20 @@ header {
   top: 0;
   z-index: 1000;
 
+
+  .sc-gqjmRU {
+    width: 4rem;
+    margin: 1rem 0;
+    background: $buttonBorder;
+    border: none;
+  }
+
+  .sc-jzJRlG {
+    width: 4rem;
+    text-align: center;
+    background: $formBorderBottomColor;
+  }
+
   .hamburger {
     top: 0;
     margin: 2rem;

@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import {Text} from "../../Language/LanguageProvider";
+import LanguageSelector from "../../Language/LanguageSelector";
 
 class NavigationStart extends Component {
     state = {
@@ -44,6 +45,7 @@ class NavigationStart extends Component {
                         </div>
                         <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}
                               menuClicked={this.handleClick}>
+                            <LanguageSelector />
                             <Link activeClass="active" to="start" spy={true} smooth={true} offset={50} duration={500}>
                                 <div>Start</div>
                             </Link>
@@ -74,6 +76,7 @@ class NavigationStart extends Component {
                         <div className='hamburger' id='hamburger'>
                         </div>
                         <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}>
+                            <LanguageSelector />
                             <Link activeClass="active" to="summary" spy={true} smooth={true} offset={50}
                                   duration={500}>
                                 <div><Text tid="navigation5"/></div>
@@ -192,6 +195,7 @@ class NavigationForm extends Component {
                     </div>
                     <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}
                           menuClicked={this.handleClick}>
+                        <LanguageSelector />
                         <NavLink to="/">
                             <div>Start</div>
                         </NavLink>
@@ -275,6 +279,7 @@ class NavigationLogReg extends Component {
                     </div>
                     <Menu pageWrapId={"page-wrap"} outerContainerId={"hamburger"} isOpen={true}
                           menuClicked={this.handleClick}>
+                        <LanguageSelector />
                         <NavLink to="/" style={linkStyle}>
                             <div>Start</div>
                         </NavLink>

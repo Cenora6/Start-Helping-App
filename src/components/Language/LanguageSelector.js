@@ -11,8 +11,6 @@ export default function LanguageSelector() {
         languageContext.setLanguage(selectedLanguage);
     };
 
-    console.log(languageContext.language.id)
-
     return (
         <Select
             onChange={handleLanguageChange}
