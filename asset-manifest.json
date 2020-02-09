@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Start-Helping-App/static/css/main.08a26406.chunk.css",
-    "main.js": "/Start-Helping-App/static/js/main.bc9ffa3a.chunk.js",
-    "main.js.map": "/Start-Helping-App/static/js/main.bc9ffa3a.chunk.js.map",
+    "main.css": "/Start-Helping-App/static/css/main.7fd16193.chunk.css",
+    "main.js": "/Start-Helping-App/static/js/main.8cae1d9a.chunk.js",
+    "main.js.map": "/Start-Helping-App/static/js/main.8cae1d9a.chunk.js.map",
     "runtime-main.js": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js",
     "runtime-main.js.map": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js.map",
     "static/js/2.dcf4df19.chunk.js": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js",
     "static/js/2.dcf4df19.chunk.js.map": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js.map",
     "index.html": "/Start-Helping-App/index.html",
-    "precache-manifest.f8fd022b9de8180b095f674eacaa4229.js": "/Start-Helping-App/precache-manifest.f8fd022b9de8180b095f674eacaa4229.js",
+    "precache-manifest.1c66f80d71d4ec1e458c8785b163c40f.js": "/Start-Helping-App/precache-manifest.1c66f80d71d4ec1e458c8785b163c40f.js",
     "service-worker.js": "/Start-Helping-App/service-worker.js",
-    "static/css/main.08a26406.chunk.css.map": "/Start-Helping-App/static/css/main.08a26406.chunk.css.map",
+    "static/css/main.7fd16193.chunk.css.map": "/Start-Helping-App/static/css/main.7fd16193.chunk.css.map",
     "static/js/2.dcf4df19.chunk.js.LICENSE": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js.LICENSE",
     "static/media/main.scss": "/Start-Helping-App/static/media/Home-Hero-Image.e99903ed.jpg",
     "static/media/Decoration.svg": "/Start-Helping-App/static/media/Decoration.2290784e.svg",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.0636f0a1.js",
     "static/js/2.dcf4df19.chunk.js",
-    "static/css/main.08a26406.chunk.css",
-    "static/js/main.bc9ffa3a.chunk.js"
+    "static/css/main.7fd16193.chunk.css",
+    "static/js/main.8cae1d9a.chunk.js"
   ]
 }
