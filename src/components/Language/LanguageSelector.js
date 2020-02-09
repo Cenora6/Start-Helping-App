@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { languageOptions } from './languages';
 import { LanguageContext } from './LanguageProvider';
 import Select from 'react-styled-select'
@@ -11,15 +11,13 @@ export default function LanguageSelector() {
         languageContext.setLanguage(selectedLanguage);
     };
 
+    console.log(languageContext.language.id)
+
     return (
         <Select
             onChange={handleLanguageChange}
             value={languageContext.language.id}
             options={languageOptions}
-            classes={{
-                selectValue: 'my-custom-value',
-                selectArrow: 'my-custom-arrow'
-            }}
             searchable={false}
         />
     );

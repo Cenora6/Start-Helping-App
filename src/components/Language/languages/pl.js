@@ -131,6 +131,14 @@ const pl = {
     step59: "Dziękujemy za przesłanie formularza.",
     step60: "Na maila prześlemy wszelkie informacje o odbiorze.",
 
+    city1: "Poznań",
+    city2: "Warszawa",
+    city3: "Kraków",
+    city4: "Wrocław",
+    city5: "Katowice",
+
+    placeholder: "— wybierz —",
+
     aboutUs: "O nas",
 
     contactUs1: "Regulamin",

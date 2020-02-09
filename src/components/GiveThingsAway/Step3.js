@@ -2,43 +2,46 @@ import React, {Component} from 'react';
 import Select from 'react-styled-select';
 import info from "../../assets/Icon-8.svg";
 import lastStep from "../../assets/Icon-7.svg";
-import {Text} from "../Language/LanguageProvider";
+import {LanguageContext, Text} from "../Language/LanguageProvider";
 
 class Step3Form extends Component {
+    static contextType = LanguageContext;
+
     render() {
+        const dictionary = this.context.dictionary;
         return (
             <div className='whoYouHelp' id='form'>
                 <span className='chooseHelp'><Text tid="step17"/></span>
 
                 <form className='checkboxFormHelp'>
                     <div className='checkboxOptionsHelp'>
-                        <input type='checkbox' id='kids' name="whoToHelp" value="dzieciom"
+                        <input type='checkbox' id='kids' name="whoToHelp" value={dictionary.step18}
                                onClick={this.props.handleCheckboxChange}
-                               checked={ this.props.checkboxValues.indexOf("dzieciom") > -1}/>
+                               checked={ this.props.checkboxValues.indexOf(dictionary.step18) > -1}/>
                         <label htmlFor='kids'><Text tid="step18"/></label>
                     </div>
                     <div className='checkboxOptionsHelp'>
-                        <input type='checkbox' id='mothers' name="whoToHelp" value="samotnym matkom"
+                        <input type='checkbox' id='mothers' name="whoToHelp" value={dictionary.step19}
                                onClick={this.props.handleCheckboxChange}
-                               checked={ this.props.checkboxValues.indexOf("samotnym matkom") > -1}/>
+                               checked={ this.props.checkboxValues.indexOf(dictionary.step19) > -1}/>
                         <label htmlFor='mothers'><Text tid="step19"/></label>
                     </div>
                     <div className='checkboxOptionsHelp'>
-                        <input type='checkbox' id='homeless' name="whoToHelp" value="bezdomnym"
+                        <input type='checkbox' id='homeless' name="whoToHelp" value={dictionary.step20}
                                onClick={this.props.handleCheckboxChange}
-                               checked={ this.props.checkboxValues.indexOf("bezdomnym") > -1}/>
+                               checked={ this.props.checkboxValues.indexOf(dictionary.step20) > -1}/>
                         <label htmlFor='homeless'><Text tid="step20"/></label>
                     </div>
                     <div className='checkboxOptionsHelp'>
-                        <input type='checkbox' id='disabled' name="whoToHelp" value="niepełnosprawnym"
+                        <input type='checkbox' id='disabled' name="whoToHelp" value={dictionary.step21}
                                onClick={this.props.handleCheckboxChange}
-                               checked={ this.props.checkboxValues.indexOf("niepełnosprawnym") > -1}/>
+                               checked={ this.props.checkboxValues.indexOf(dictionary.step21) > -1}/>
                         <label htmlFor='disabled'><Text tid="step21"/></label>
                     </div>
                     <div className='checkboxOptionsHelp'>
-                        <input type='checkbox' id='old' name="whoToHelp" value="osobom starszym"
+                        <input type='checkbox' id='old' name="whoToHelp" value={dictionary.step22}
                                onClick={this.props.handleCheckboxChange}
-                               checked={ this.props.checkboxValues.indexOf("osobom starszym") > -1}/>
+                               checked={ this.props.checkboxValues.indexOf(dictionary.step22) > -1}/>
                         <label htmlFor='old'><Text tid="step22"/></label>
                     </div>
                 </form>
@@ -68,14 +71,17 @@ class Step3 extends Component {
         this.setState({ width: window.innerWidth });
     };
 
+    static contextType = LanguageContext;
+
     render() {
+        const dictionary = this.context.dictionary;
 
         const options = [
-            {label: "Poznań", value: "Poznań"},
-            {label: "Warszawa", value: "Warszawa"},
-            {label: "Kraków", value: "Kraków"},
-            {label: "Wrocław", value: "Wrocław"},
-            {label: "Katowice", value: "Katowice"},
+            {label: `${dictionary.city1}`, value: `${dictionary.city1}`},
+            {label: `${dictionary.city2}`, value: `${dictionary.city2}`},
+            {label: `${dictionary.city3}`, value: `${dictionary.city3}`},
+            {label: `${dictionary.city4}`, value: `${dictionary.city4}`},
+            {label: `${dictionary.city5}`, value: `${dictionary.city5}`},
         ];
 
         const {width} = this.state;
@@ -119,7 +125,7 @@ class Step3 extends Component {
                                     searchable={false}
                                     className="selectTheme cities"
                                     options={options}
-                                    placeholder={"— wybierz —"}
+                                    placeholder={dictionary.placeholder}
                             />
                         </div>
 

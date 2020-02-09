@@ -1,50 +1,54 @@
 import React, {Component} from 'react';
 import lastStep from './../../assets/Icon-7.svg'
 import info from './../../assets/Icon-8.svg'
-import {Text} from "../Language/LanguageProvider";
+import {LanguageContext, Text} from "../Language/LanguageProvider";
 
 class Step1Form extends Component {
+    static contextType = LanguageContext;
+
     render() {
+        const dictionary = this.context.dictionary;
+
         return (
-            <form className='radioForm' id='form'>
-                <div className='radioOptions'>
-                    <input type='radio' id='clothesToUse' name="whatToGive"
-                           value="ubrania, które nadają się do ponownego użycia"
-                           onClick={this.props.handleRadioChange}
-                           checked={this.props.radioValue.indexOf("ubrania, które nadają się do ponownego użycia") > -1}
-                    />
-                    <label htmlFor='clothesToUse'><Text tid="step1"/></label>
-                </div>
-                <div className='radioOptions'>
-                    <input type='radio' id='clothesToThrow' name="whatToGive"
-                           value="ubrania, do wyrzucenia"
-                           onClick={this.props.handleRadioChange}
-                           checked={this.props.radioValue.indexOf("ubrania, do wyrzucenia") > -1}
-                    />
-                    <label htmlFor='clothesToThrow'><Text tid="step2"/></label>
-                </div>
-                <div className='radioOptions'>
-                    <input type='radio' id='toys' name="whatToGive"
-                           value="zabawki" onClick={this.props.handleRadioChange}
-                           checked={ this.props.radioValue.indexOf("zabawki") > -1}
-                    />
-                    <label htmlFor='toys'><Text tid="step3"/></label>
-                </div>
-                <div className='radioOptions'>
-                    <input type='radio' id='books' name="whatToGive"
-                           value="książki" onClick={this.props.handleRadioChange}
-                           checked={ this.props.radioValue.indexOf("książki") > -1}
-                    />
-                    <label htmlFor='books'><Text tid="step4"/></label>
-                </div>
-                <div className='radioOptions'>
-                    <input type='radio' id='others' name="whatToGive"
-                           value="inne" onClick={this.props.handleRadioChange}
-                           checked={ this.props.radioValue.indexOf("inne") > -1}
-                    />
-                    <label htmlFor='others'><Text tid="step5"/></label>
-                </div>
-            </form>
+                <form className='radioForm' id='form'>
+                    <div className='radioOptions'>
+                        <input type='radio' id='clothesToUse' name="whatToGive"
+                               value={dictionary.step1}
+                               onChange={this.props.handleRadioChange}
+                               checked={this.props.radioValue.indexOf(dictionary.step1) > -1}
+                        />
+                        <label htmlFor='clothesToUse'><Text tid="step1"/></label>
+                    </div>
+                    <div className='radioOptions'>
+                        <input type='radio' id='clothesToThrow' name="whatToGive"
+                               value={dictionary.step2}
+                               onChange={this.props.handleRadioChange}
+                               checked={this.props.radioValue.indexOf(dictionary.step2) > -1}
+                        />
+                        <label htmlFor='clothesToThrow'><Text tid="step2"/></label>
+                    </div>
+                    <div className='radioOptions'>
+                        <input type='radio' id='toys' name="whatToGive"
+                               value={dictionary.step3} onChange={this.props.handleRadioChange}
+                               checked={this.props.radioValue.indexOf(dictionary.step3) > -1}
+                        />
+                        <label htmlFor='toys'><Text tid="step3"/></label>
+                    </div>
+                    <div className='radioOptions'>
+                        <input type='radio' id='books' name="whatToGive"
+                               value={dictionary.step4} onChange={this.props.handleRadioChange}
+                               checked={this.props.radioValue.indexOf(dictionary.step4) > -1}
+                        />
+                        <label htmlFor='books'><Text tid="step4"/></label>
+                    </div>
+                    <div className='radioOptions'>
+                        <input type='radio' id='others' name="whatToGive"
+                               value={dictionary.step5} onChange={this.props.handleRadioChange}
+                               checked={this.props.radioValue.indexOf(dictionary.step5) > -1}
+                        />
+                        <label htmlFor='others'><Text tid="step5"/></label>
+                    </div>
+                </form>
         );
     }
 }

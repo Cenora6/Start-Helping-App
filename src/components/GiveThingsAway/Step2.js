@@ -2,10 +2,12 @@ import React, {Component} from 'react';
 import Select from 'react-styled-select';
 import lastStep from "../../assets/Icon-7.svg";
 import info from "../../assets/Icon-8.svg";
-import {Text} from "../Language/LanguageProvider";
+import {LanguageContext, Text} from "../Language/LanguageProvider";
 
 class Step2Form extends Component {
+    static contextType = LanguageContext;
     render() {
+        const dictionary = this.context.dictionary;
 
         const options = [
             { label: "1", value: 1},
@@ -27,7 +29,7 @@ class Step2Form extends Component {
                     searchable={false}
                     className="selectTheme"
                     options={options}
-                    placeholder={"— wybierz —"}
+                    placeholder={dictionary.placeholder}
                 />
             </div>
         )

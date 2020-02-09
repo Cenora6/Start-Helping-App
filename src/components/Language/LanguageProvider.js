@@ -11,17 +11,15 @@ export function LanguageProvider(props) {
     const [language, setLanguage] = useState(languageContext.language);
     const [dictionary, setDictionary] = useState(languageContext.dictionary);
 
-    const provider = {
-        language,
-        dictionary,
-        setLanguage: (selectedLanguage) => {
-            setLanguage(selectedLanguage);
-            setDictionary(dictionaryList[selectedLanguage.id]);
-        }
-    };
-
     return (
-        <LanguageContext.Provider value={provider}>
+        <LanguageContext.Provider value={{
+            language,
+            dictionary,
+            setLanguage: (selectedLanguage) => {
+                setLanguage(selectedLanguage);
+                setDictionary(dictionaryList[selectedLanguage.id]);
+            }
+        }}>
             {props.children}
         </LanguageContext.Provider>
     );
@@ -29,6 +27,5 @@ export function LanguageProvider(props) {
 
 export function Text(props) {
     const languageContext = useContext(LanguageContext);
-
     return languageContext.dictionary[props.tid];
 }

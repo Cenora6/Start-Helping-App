@@ -131,6 +131,14 @@ const en = {
     step59: "Thank you for sending the form.",
     step60: "We will send all the details to your email address.",
 
+    city1: "Poznan",
+    city2: "Warsaw",
+    city3: "Cracow",
+    city4: "Wroclaw",
+    city5: "Katowice",
+
+    placeholder: "— choose —",
+
     aboutUs: "About us",
 
     contactUs1: "Terms of use",

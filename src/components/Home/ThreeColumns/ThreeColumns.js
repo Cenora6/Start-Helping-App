@@ -6,8 +6,9 @@ import {Text} from "../../Language/LanguageProvider";
 class ThreeColumns extends Component {
     state = {
         width: window.innerWidth,
-        fundations: [],
-        bags: [],
+        fundations: "",
+        bags: "",
+        organizations: "",
     };
 
     componentDidMount() {
@@ -42,6 +43,7 @@ class ThreeColumns extends Component {
                     this.setState({
                         fundations: donationsNumber.length,
                         bags: allBags,
+                        organizations: allBags - donationsNumber.length,
                     })
                 })
             )
@@ -67,6 +69,7 @@ class ThreeColumns extends Component {
                         this.setState({
                             fundations: donationsNumber,
                             bags: bagsSum,
+                            organizations: bagsSum - donationsNumber,
                         })
 
                     });
@@ -109,7 +112,7 @@ class ThreeColumns extends Component {
                                 <p><Text tid="threeColumns2"/></p>
                             </div>
                             <div className='statistics'>
-                                <span>{parseInt(this.state.bags) - parseInt(this.state.fundations)}</span>
+                                <span>{this.state.organizations}</span>
                                 <p><Text tid="threeColumns3"/></p>
                             </div>
 
@@ -139,7 +142,7 @@ class ThreeColumns extends Component {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
                     </div>
                     <div className='oneColumn'>
-                        <h2>{parseInt(this.state.bags) - parseInt(this.state.fundations)}</h2>
+                        <h2>{this.state.organizations}</h2>
                         <span><Text tid="threeColumns3"/></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
                     </div>

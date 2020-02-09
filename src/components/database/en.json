@@ -1,0 +1,115 @@
+{
+  "organizations": [
+    {
+      "id": 1,
+      "name": "Foundations",
+      "description": "In our base you'll find a list of verified foundations with whom we cooperate. You can check what they do, who they help and what they need.",
+      "items": [
+        {
+          "name": "Foundation “Dbam o Zdrowie”",
+          "mission": "Helping those in  difficult life situations.",
+          "donations": "clothes, food, household appliances, furniture, toys"
+        },
+        {
+          "name": "Foundation “For children”",
+          "mission": "Helping children from poor families.",
+          "donations": "clothes, furniture, toys"
+        },
+        {
+          "name": "Foundation “For homeless”",
+          "mission": "Helping those, who doesn't have a place to live.",
+          "donations": "clothes, food, warm blankets"
+        },
+        {
+          "name": "Foundation “Lorem ipsum 4“",
+          "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "donations": "Ut, enim, ad, minim, veniam, quis"
+        },
+        {
+          "name": "Foundation “Lorem Ipsum 5”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Mi, quis, hendrerit, dolor"
+        },
+        {
+          "name": "Foundation “Lorem Ipsum 6”",
+          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "donations": "Ut, aliquam, purus, sit, amet"
+        },
+        {
+          "name": "Foundation “Lorem Ipsum 7”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Egestas, sed, tempus "
+        },
+        {
+          "name": "Foundation “Lorem ipsum 8“",
+          "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "donations": "Ut, enim, ad, minim, veniam, quis"
+        },
+        {
+          "name": "Foundation “Lorem Ipsum 9”",
+          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "donations": "Egestas, sed, tempus "
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Organisations",
+      "description": "We also help all the non-governmental and charity organizations, which are not foundations. They are our Partners, who will make a good use of the things donated to them.",
+      "items": [
+        {
+          "name": "Organization “Lorem Ipsum 1”",
+          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "donations": "Egestas, sed, tempus "
+        },
+        {
+          "name": "Organization “Lorem Ipsum 2”",
+          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "donations": "Ut, aliquam, purus, sit, amet"
+        },
+        {
+          "name": "Organization “Lorem Ipsum 3”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Mi, quis, hendrerit, dolor"
+        },
+        {
+          "name": "Organization “Lorem Ipsum 4”",
+          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "donations": "Ut, aliquam, purus, sit, amet"
+        },
+        {
+          "name": "Organization “Lorem Ipsum 5”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Egestas, sed, tempus "
+        },
+        {
+          "name": "Organization “Lorem Ipsum 6“",
+          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "donations": "quisque, id, diam, vel, quam"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Local Collections",
+      "description": "We support local collections organized by individual people, who care about the good for the community they live in. You also can organize your own collection  and help those, who are closest to you.",
+      "items": [
+        {
+          "name": "Collection “Lorem Ipsum 1”",
+          "mission": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+          "donations": "Mi, quis, hendrerit, dolor"
+        },
+        {
+          "name": "Collection “Lorem Ipsum 2”",
+          "mission": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+          "donations": "Egestas, sed, tempus "
+        },
+        {
+          "name": "Collection “Lorem Ipsum 3”",
+          "mission": "Scelerisque in dictum non consectetur a erat nam.",
+          "donations": "Ut, aliquam, purus, sit, amet"
+        }
+      ]
+    }
+  ]
+}

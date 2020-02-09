@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import decoration from '../../../assets/Decoration.svg'
-import organizations from './../../database/organizations.json';
+import en from '../../database/en.json';
+import pl from '../../database/pl.json';
 import {Link} from "react-router-dom";
-import {Text} from "../../Language/LanguageProvider";
+import {LanguageContext, Text} from "../../Language/LanguageProvider";
 
 class WhoWeHelpMain extends Component {
     state = {
@@ -12,9 +13,9 @@ class WhoWeHelpMain extends Component {
         currentPage: 1,
         active: "",
         width: window.innerWidth,
-        inProp: false,
-        setInProp: false,
     };
+
+    static contextType = LanguageContext;
 
     componentDidMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
@@ -29,9 +30,15 @@ class WhoWeHelpMain extends Component {
     };
 
     changeOrganization = (e, i) => {
+        const language = this.context.language.id;
 
         let buttonNumber;
-        const organizationsNumber = parseInt(organizations.organizations[i].items.length, 10);
+        let organizationsNumber;
+        if(language === "pl") {
+            organizationsNumber = parseInt(pl.organizations[i].items.length, 10);
+        } else {
+            organizationsNumber = parseInt(en.organizations[i].items.length, 10);
+        }
 
         if (organizationsNumber !== 3 && organizationsNumber % 3 === 0) {
             buttonNumber = organizationsNumber / 3;
@@ -70,7 +77,14 @@ class WhoWeHelpMain extends Component {
     buildList = () => {
 
         const {currentPage, itemsPerPage, visibleOrganizationType} = this.state;
-        const itemArray = organizations.organizations[visibleOrganizationType].items;
+        let itemArray;
+
+        const language = this.context.language.id;
+        if(language === "pl") {
+            itemArray = pl.organizations[visibleOrganizationType].items
+        } else {
+            itemArray = en.organizations[visibleOrganizationType].items
+        }
 
         const indexLast = currentPage * itemsPerPage;
         const indexFirst = indexLast - itemsPerPage;
@@ -96,7 +110,6 @@ class WhoWeHelpMain extends Component {
     };
 
     render() {
-
         const buttonStyle = {
             textDecoration: "none",
             paddingTop: "2.3125rem",
@@ -109,7 +122,13 @@ class WhoWeHelpMain extends Component {
         let foundationList;
         foundationList = this.buildList();
 
-        const allOrganizations = organizations.organizations;
+        const language = this.context.language.id;
+        let allOrganizations;
+        if(language === "pl") {
+            allOrganizations = pl.organizations;
+        } else {
+            allOrganizations = en.organizations;
+        }
 
         const { width } = this.state;
         const isMobile = width <= 767;
@@ -192,7 +211,8 @@ class WhoWeHelpMain extends Component {
 
                         </ul>
                         <p className='organizationDescription'>
-                            {organizations.organizations[this.state.visibleOrganizationType].description}
+                            {language === "pl" ? pl.organizations[this.state.visibleOrganizationType].description
+                                :  en.organizations[this.state.visibleOrganizationType].description }
                         </p>
                     </div>
                     {foundationList}

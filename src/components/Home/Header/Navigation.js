@@ -35,9 +35,6 @@ class NavigationStart extends Component {
 
         const { width } = this.state;
         const isMobile = width <= 767;
-        const style = {
-            margin: "0 1rem",
-        };
 
         if (isMobile) {
             if (sessionStorage.getItem("email") == null) {
