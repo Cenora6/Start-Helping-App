@@ -164,7 +164,7 @@ class LoginForm extends Component {
                 </form>
 
                 <div className='loginButtons'>
-                    <Link to='/rejestracja' style={linkStyle}><span><Text tid="logReg2"/></span></Link>
+                    <Link to='/register' style={linkStyle}><span><Text tid="logReg2"/></span></Link>
                     <span className='logIn' onClick={this.handleFormSubmit}><Text tid="logReg1"/></span>
                 </div>
             </>

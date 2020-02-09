@@ -27,8 +27,8 @@ class LogReg extends Component {
             <>
                 <div className='logReg'>
                     <LanguageSelector />
-                    <Link to='/logowanie' style={linkStyle}><span className='hoverLink'><Text tid="logReg1"/></span></Link>
-                    <Link to='/rejestracja' style={linkStyle}><span className='register hoverLink'><Text tid="logReg2"/></span></Link>
+                    <Link to='/login' style={linkStyle}><span className='hoverLink'><Text tid="logReg1"/></span></Link>
+                    <Link to='/register' style={linkStyle}><span className='register hoverLink'><Text tid="logReg2"/></span></Link>
                 </div>
             </>;
 
@@ -37,9 +37,9 @@ class LogReg extends Component {
                 <div className='logReg'>
                     <LanguageSelector />
                     <span><Text tid="logReg5"/> {sessionStorage.getItem("email")}</span>
-                    <Link to='/oddaj-rzeczy' style={linkStyle}><span className='giveTheThings hoverLink'><Text tid="logReg3"/></span></Link>
+                    <Link to='/donate' style={linkStyle}><span className='giveTheThings hoverLink'><Text tid="logReg3"/></span></Link>
 
-                    <Link to='/wylogowano' style={logOutStyle} onClick={this.handleSessionEnd} >
+                    <Link to='/logout' style={logOutStyle} onClick={this.handleSessionEnd} >
                         <span className='hoverLink'><Text tid="logReg4"/></span>
                     </Link>
 

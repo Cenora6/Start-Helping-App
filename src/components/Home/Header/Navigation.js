@@ -61,10 +61,10 @@ class NavigationStart extends Component {
                                 <div><Text tid="navigation3"/></div>
                             </Link>
                             <div className='line'/>
-                            <NavLink to="/logowanie">
+                            <NavLink to="/login">
                                 <div><Text tid="logReg1"/></div>
                             </NavLink>
-                            <NavLink to="/rejestracja">
+                            <NavLink to="/register">
                                 <div><Text tid="navigation4"/></div>
                             </NavLink>
                         </Menu>
@@ -94,10 +94,10 @@ class NavigationStart extends Component {
                             </Link>
                             <div className='line'/>
                             <div className='hello'><Text tid="logReg5"/> {sessionStorage.getItem("email")}</div>
-                            <NavLink to='/oddaj-rzeczy'>
+                            <NavLink to='/donate'>
                                 <span><Text tid="logReg3"/></span>
                             </NavLink>
-                            <NavLink to='/wylogowano' onClick={this.handleSessionEnd}>
+                            <NavLink to='/logout' onClick={this.handleSessionEnd}>
                                 <div><Text tid="logReg4"/></div>
                             </NavLink>
                         </Menu>
@@ -207,10 +207,10 @@ class NavigationForm extends Component {
                         </Link>
                         <div className='line'/>
                         <div className='hello'><Text tid="logReg5"/> {sessionStorage.getItem("email")}</div>
-                        <NavLink to='/oddaj-rzeczy'>
+                        <NavLink to='/donate'>
                             <span><Text tid="logReg3"/></span>
                         </NavLink>
-                        <NavLink to='/wylogowano' onClick={this.handleSessionEnd}>
+                        <NavLink to='/logout' onClick={this.handleSessionEnd}>
                             <div><Text tid="logReg4"/></div>
                         </NavLink>
                     </Menu>
@@ -296,10 +296,10 @@ class NavigationLogReg extends Component {
                             <div><Text tid="navigation3"/></div>
                         </NavLink>
                         <div className='line'/>
-                        <NavLink to="/logowanie" style={linkStyle}>
+                        <NavLink to="/login" style={linkStyle}>
                             <div><Text tid="logReg1"/></div>
                         </NavLink>
-                        <NavLink to="/rejestracja" style={linkStyle}>
+                        <NavLink to="/register" style={linkStyle}>
                             <div><Text tid="navigation4"/></div>
                         </NavLink>
                     </Menu>

@@ -50,6 +50,7 @@ const pl = {
 
     register1: "Podany email już istnieje w bazie!",
     register2: "Hasło nie zgadza się z poprzednim!",
+    register3: "Powtórz hasło",
 
     logOut1: "Wylogowanie nastąpiło pomyślnie!",
     logOut2: "Strona główna",

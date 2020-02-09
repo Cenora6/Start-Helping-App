@@ -175,7 +175,7 @@ class RegisterForm extends Component {
                         }
                     </div>
                     <div className='registerEmailName'>
-                        <span>Hasło</span>
+                        <span><Text tid="login4"/></span>
                         <input type='password' value={this.state.password} onChange={this.handlePasswordChange}/>
                         {isMobile ?
                             this.state.validPassword && <p className={'errorEmailMobile'}><Text tid="login3"/></p> :
@@ -183,7 +183,7 @@ class RegisterForm extends Component {
                         }
                     </div>
                     <div className='registerEmailName'>
-                        <span>Powtórz hasło</span>
+                        <span><Text tid="register3"/></span>
                         <input type='password' value={this.state.password2} onChange={this.handlePassword2Change}/>
                         {isMobile ?
                             this.state.validPassword2 && <p className={'errorEmailMobile'}><Text tid="register2"/></p> :
@@ -193,7 +193,7 @@ class RegisterForm extends Component {
                 </form>
 
                 <div className='loginButtons'>
-                    <Link to='/logowanie' style={linkStyle}><span><Text tid="logReg1"/></span></Link>
+                    <Link to='/login' style={linkStyle}><span><Text tid="logReg1"/></span></Link>
                     <span className='logIn' onClick={this.handleFormSubmit}><Text tid="logReg2"/></span>
                 </div>
 

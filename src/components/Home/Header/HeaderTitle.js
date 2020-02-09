@@ -43,7 +43,7 @@ class HeaderTitle extends Component {
                     <div className='mobileSubtitle'><Text tid="headerTitle1"/></div>
                     <div className='mobileTitle'><Text tid="headerTitle2a"/><br/><Text tid="headerTitle2b"/></div>
                     <div className='headerButtons'>
-                        <Link to='/rejestracja' style={buttonStyleMobile} className='hoverLink'>
+                        <Link to='/register' style={buttonStyleMobile} className='hoverLink'>
                             <p><Text tid="logReg2"/></p>
                         </Link>
                     </div>
@@ -57,9 +57,9 @@ class HeaderTitle extends Component {
                         <div className='title'><Text tid="headerTitle3a"/><br/><Text tid="headerTitle3b"/></div>
                         <img src={decoration} alt='decoration'/>
                         <div className='headerButtons'>
-                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
+                            <Link to='/login' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
                             </Link>
-                            <Link to='/logowanie' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle5"/></p>
+                            <Link to='/login' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle5"/></p>
                             </Link>
                         </div>
                     </div>
@@ -70,9 +70,9 @@ class HeaderTitle extends Component {
                         <div className='title'><Text tid="headerTitle3a"/><br/><Text tid="headerTitle3b"/></div>
                         <img src={decoration} alt='decoration'/>
                         <div className='headerButtons'>
-                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
+                            <Link to='/donate' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/></p>
                             </Link>
-                            <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle5"/></p>
+                            <Link to='/donate' style={buttonStyle} className='hoverLink'><p><Text tid="headerTitle5"/></p>
                             </Link>
                         </div>
                     </div>

@@ -28,10 +28,10 @@ class App extends Component {
                             className="switch-wrapper"
                         >
                             <Route exact path='/' component={Home}/>
-                            <Route path='/logowanie' component={Login}/>
-                            <Route path='/rejestracja' component={Register}/>
-                            <Route path='/wylogowano' component={LogOut}/>
-                            <PrivateRoute path='/oddaj-rzeczy' component={GiveThingsAwayMain}/>
+                            <Route path='/login' component={Login}/>
+                            <Route path='/register' component={Register}/>
+                            <Route path='/logout' component={LogOut}/>
+                            <PrivateRoute path='/donate' component={GiveThingsAwayMain}/>
                         </AnimatedSwitch>
                     </HashRouter>
                 </AuthProvider>

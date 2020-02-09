@@ -9,7 +9,7 @@ const en = {
     headerTitle5: "Organize a collection",
 
     logReg1: "Login",
-    logReg2: "Create an account",
+    logReg2: "Register",
     logReg3: "Donate things",
     logReg4: "Log out",
     logReg5: "Hello",
@@ -50,6 +50,7 @@ const en = {
 
     register1: "The email already exists in our database!",
     register2: "Both passwords are not the same!",
+    register3: "Repeat password",
 
     logOut1: "You've been logged out successfully!",
     logOut2: "Home",
