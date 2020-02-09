@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Start-Helping-App/static/css/main.a19a172c.chunk.css",
+    "main.css": "/Start-Helping-App/static/css/main.08a26406.chunk.css",
     "main.js": "/Start-Helping-App/static/js/main.bc9ffa3a.chunk.js",
     "main.js.map": "/Start-Helping-App/static/js/main.bc9ffa3a.chunk.js.map",
     "runtime-main.js": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js",
@@ -8,9 +8,9 @@
     "static/js/2.dcf4df19.chunk.js": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js",
     "static/js/2.dcf4df19.chunk.js.map": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js.map",
     "index.html": "/Start-Helping-App/index.html",
-    "precache-manifest.e63e4f3011dd8da1d28b2680bee92f57.js": "/Start-Helping-App/precache-manifest.e63e4f3011dd8da1d28b2680bee92f57.js",
+    "precache-manifest.f8fd022b9de8180b095f674eacaa4229.js": "/Start-Helping-App/precache-manifest.f8fd022b9de8180b095f674eacaa4229.js",
     "service-worker.js": "/Start-Helping-App/service-worker.js",
-    "static/css/main.a19a172c.chunk.css.map": "/Start-Helping-App/static/css/main.a19a172c.chunk.css.map",
+    "static/css/main.08a26406.chunk.css.map": "/Start-Helping-App/static/css/main.08a26406.chunk.css.map",
     "static/js/2.dcf4df19.chunk.js.LICENSE": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js.LICENSE",
     "static/media/main.scss": "/Start-Helping-App/static/media/Home-Hero-Image.e99903ed.jpg",
     "static/media/Decoration.svg": "/Start-Helping-App/static/media/Decoration.2290784e.svg",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.0636f0a1.js",
     "static/js/2.dcf4df19.chunk.js",
-    "static/css/main.a19a172c.chunk.css",
+    "static/css/main.08a26406.chunk.css",
     "static/js/main.bc9ffa3a.chunk.js"
   ]
 }
