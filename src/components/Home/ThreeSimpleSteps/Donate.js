@@ -15,7 +15,7 @@ class Donate extends Component {
         if (sessionStorage.getItem("email") == null) {
             return (
                 <section className='donateSection'>
-                    <Link to='/logowanie' style={buttonStyle} className='hoverLink'>
+                    <Link to='/login' style={buttonStyle} className='hoverLink'>
                         <p className='donateButton'>
                             <Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/>
                         </p>
@@ -25,7 +25,7 @@ class Donate extends Component {
         } else {
             return (
                 <section className='donateSection'>
-                    <Link to='/oddaj-rzeczy' style={buttonStyle} className='hoverLink'>
+                    <Link to='/donate' style={buttonStyle} className='hoverLink'>
                         <p className='donateButton'>
                             <Text tid="headerTitle4a"/><br/><Text tid="headerTitle4b"/>
                         </p>

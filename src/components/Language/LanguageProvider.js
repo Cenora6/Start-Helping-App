@@ -10,7 +10,8 @@ export function LanguageProvider(props) {
     const languageContext = useContext(LanguageContext);
     const [language, setLanguage] = useState(languageContext.language);
     const [dictionary, setDictionary] = useState(languageContext.dictionary);
-
+    console.log(languageContext.language)
+    console.log(languageContext.dictionary)
     return (
         <LanguageContext.Provider value={{
             language,
