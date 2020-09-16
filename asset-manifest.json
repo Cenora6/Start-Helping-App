@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Start-Helping-App/static/css/main.7fd16193.chunk.css",
-    "main.js": "/Start-Helping-App/static/js/main.8cae1d9a.chunk.js",
-    "main.js.map": "/Start-Helping-App/static/js/main.8cae1d9a.chunk.js.map",
-    "runtime-main.js": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js",
-    "runtime-main.js.map": "/Start-Helping-App/static/js/runtime-main.0636f0a1.js.map",
-    "static/js/2.dcf4df19.chunk.js": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js",
-    "static/js/2.dcf4df19.chunk.js.map": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js.map",
+    "main.css": "/Start-Helping-App/static/css/main.ee2832d3.chunk.css",
+    "main.js": "/Start-Helping-App/static/js/main.5cba3cad.chunk.js",
+    "main.js.map": "/Start-Helping-App/static/js/main.5cba3cad.chunk.js.map",
+    "runtime-main.js": "/Start-Helping-App/static/js/runtime-main.0c9a7d77.js",
+    "runtime-main.js.map": "/Start-Helping-App/static/js/runtime-main.0c9a7d77.js.map",
+    "static/js/2.4b183326.chunk.js": "/Start-Helping-App/static/js/2.4b183326.chunk.js",
+    "static/js/2.4b183326.chunk.js.map": "/Start-Helping-App/static/js/2.4b183326.chunk.js.map",
     "index.html": "/Start-Helping-App/index.html",
-    "precache-manifest.1c66f80d71d4ec1e458c8785b163c40f.js": "/Start-Helping-App/precache-manifest.1c66f80d71d4ec1e458c8785b163c40f.js",
+    "precache-manifest.3d4a4d541e53a0620307ab9c424516bc.js": "/Start-Helping-App/precache-manifest.3d4a4d541e53a0620307ab9c424516bc.js",
     "service-worker.js": "/Start-Helping-App/service-worker.js",
-    "static/css/main.7fd16193.chunk.css.map": "/Start-Helping-App/static/css/main.7fd16193.chunk.css.map",
-    "static/js/2.dcf4df19.chunk.js.LICENSE": "/Start-Helping-App/static/js/2.dcf4df19.chunk.js.LICENSE",
+    "static/css/main.ee2832d3.chunk.css.map": "/Start-Helping-App/static/css/main.ee2832d3.chunk.css.map",
+    "static/js/2.4b183326.chunk.js.LICENSE.txt": "/Start-Helping-App/static/js/2.4b183326.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/Start-Helping-App/static/media/Home-Hero-Image.e99903ed.jpg",
     "static/media/Decoration.svg": "/Start-Helping-App/static/media/Decoration.2290784e.svg",
     "static/media/Facebook.svg": "/Start-Helping-App/static/media/Facebook.df65b6c0.svg",
@@ -28,9 +28,9 @@
     "static/media/Signature.svg": "/Start-Helping-App/static/media/Signature.e54cfcfc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0636f0a1.js",
-    "static/js/2.dcf4df19.chunk.js",
-    "static/css/main.7fd16193.chunk.css",
-    "static/js/main.8cae1d9a.chunk.js"
+    "static/js/runtime-main.0c9a7d77.js",
+    "static/js/2.4b183326.chunk.js",
+    "static/css/main.ee2832d3.chunk.css",
+    "static/js/main.5cba3cad.chunk.js"
   ]
 }
