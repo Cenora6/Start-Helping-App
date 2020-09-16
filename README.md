@@ -10,6 +10,7 @@ You can register and login to your own account, where you fill a form. There you
 - HTML5
 - SASS
 - React
+- Firebase
 
 ### Additional dependencies: 
 - [Node Sass](https://www.npmjs.com/package/node-sass/)
