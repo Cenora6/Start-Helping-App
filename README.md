@@ -1,5 +1,4 @@
-# Oddam w dobre ręce
-# Start Helping App
+# Start Helping App (Oddam w dobre ręce)
 
 ## Description
 An app, which you can use to donate your old books, games, clothes etc. to others.
