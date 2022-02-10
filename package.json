@@ -5,7 +5,7 @@
   "homepage": "http://cenora6.github.io/Start-Helping-App/#/",
   "dependencies": {
     "firebase": "^7.20.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-admin": "^3.8.4",
